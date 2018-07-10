@@ -7,74 +7,18 @@
   <title>Proyecto</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style/css/header.css">
-  <link rel="stylesheet" href="style/css/footer.css">
-  <link rel="stylesheet" href="style/css/master.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/master.css">
 
 </head>
 
 <body>
   <!-- HEADER -->
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="col-8 col-sm-10 text-center navbar-brand" href="">Nombre del proyecto</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <div class="col-4 col-sm-2 collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Mi cuenta
-              </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Login</a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#modalregistro">Registrate</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-        <!-- error 1 -->
-  <!-- Button trigger modal -->
-  <a class="dropdown-item" data-toggle="modal" data-target="#modalregistro" hidden="hidden" href="#">Registrate</a>
+  <?php include "modulos/menu_top/menu_top.php"; ?>
 
-  <!-- Modal
-  <div class="modal fade" id="modalregistro" tabindex="-1" role="dialog" aria-labelledby="modalregistrolabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title col-md-9 text-left" id="modalregistrolabel">Registro</h4>
-          <div class="col-md-3 text-right"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-        </div>
-        <div class="modal-body">
-
-          <table>
-            <tr>
-              <th>Nick: </th>
-              <th>Contraseña: </th>
-            </tr>
-            <tr>
-              <td><input type="text" name="" placeholder="Nickname" value=""></td>
-              <td><input type="text" name="" placeholder="****" value=""></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><button type="button" class="btn btn-primary" name="button" data-dismiss="modal">Registrarme</button></td>
-            </tr>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>-->
   <!-- Contenido principal -->
   <section class="container-fluid">
     <div class="row">
@@ -142,47 +86,14 @@
     </div>
   </footer>
 
-  <!-- Modal -->
-  <div id="modal_registro" class="modal fade" role="dialog" aria-labelledby="modal_registro_label" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title col-md-9 text-left" id="modal_registro_label">Registro</h4>
-          <div class="col-md-3 text-right"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-        </div>
-        <div class="modal-body">
-
-          <table>
-            <tr>
-              <th>Nick: </th>
-              <th>Contraseña: </th>
-            </tr>
-            <tr>
-              <td><input type="text" name="" placeholder="Nickname" id="nick" value=""></td>
-              <td><input type="text" name="" placeholder="****" id="password" value=""></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro" data-dismiss="modal">Registrarme</button></td>
-            </tr>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- fin modal -->
+  <!-- Modal registro-->
+  <?php include "modales/modal_registro.php" ?>
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="style/jquery-3.3.1.js"></script>
+  <script src="js/jquery.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="style/bootstrap/js/bootstrap.js"></script>
+  <script src="js/bootstrap.js"></script>
 
   <!-- js independiente (registro) -->
   <script type="text/javascript">
@@ -197,12 +108,11 @@
             nick:$('#nick').val(),
             password:$('#password').val()
           }, success:function(data){
-            alert(data);
+
           }
         });
 
       });
-
 
     });
   </script>
