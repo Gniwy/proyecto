@@ -12,15 +12,23 @@
         <table>
           <tr>
             <th>Nick: </th>
-            <th>Contraseña: </th>
+            <th><input type="text" name="" placeholder="Nickname" id="nick" value=""></th>
           </tr>
           <tr>
-            <td><input type="text" name="" placeholder="Nickname" id="nick" value=""></td>
+            <th>Email: </th>
+            <th><input type="text" name="" placeholder="Email" id="email" value=""></th>
+          </tr>
+          <tr>
+            <th>Contraseña: </td>
             <td><input type="text" name="" placeholder="****" id="password" value=""></td>
           </tr>
           <tr>
+            <th>Repetir contraseña: </td>
+            <td><input type="text" name="" placeholder="****" id="password_2" value=""></td>
+          </tr>
+          <tr>
             <td></td>
-            <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro" data-dismiss="modal">Registrarme</button></td>
+            <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro">Registrarme</button></td>
           </tr>
         </table>
       </div>
