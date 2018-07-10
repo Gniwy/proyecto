@@ -9,8 +9,8 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="menu_top/css/header.css">
-  <link rel="stylesheet" href="footer/css/footer.css">
+  <link rel="stylesheet" href="modulos/menu_top/css/header.css">
+  <link rel="stylesheet" href="modulos/footer/css/footer.css">
   <link rel="stylesheet" href="css/master.css">
 
 </head>
@@ -34,7 +34,7 @@
   </section>
 
   <!--FOOTER-->
-  <?php include "footer/footer.php"; ?>
+  <?php include "modulos/footer/footer.php"; ?>
 
   <!-- Modal registro-->
   <?php include "modales/modal_registro.php"; ?>
@@ -45,7 +45,6 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.js"></script>
 
-  <!-- js independiente (registro) -->
   <script type="text/javascript" src="js/index.js"></script>
 </body>
 
