@@ -1,6 +1,6 @@
 <?php
 
-include_once "../conexion/conexion.php";
+require_once "../../conexion/conexion.php";
 
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
