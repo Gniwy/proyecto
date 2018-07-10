@@ -33,42 +33,6 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Login</a>
               <a class="dropdown-item" data-toggle="modal" data-target="#modalregistro">Registrate</a>
-              <!-- Modal -->
-              <div id="modal_registro" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="modal_registro_label" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title col-md-9 text-left" id="modal_registro_label">Registro</h4>
-                      <div class="col-md-3 text-right"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-                    </div>
-                    <div class="modal-body">
-
-                      <table>
-                        <tr>
-                          <th>Nick: </th>
-                          <th>Contraseña: </th>
-                        </tr>
-                        <tr>
-                          <td><input type="text" name="" placeholder="Nickname" id="nick" value=""></td>
-                          <td><input type="text" name="" placeholder="****" id="password" value=""></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro" data-dismiss="modal">Registrarme</button></td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <!-- fin modal -->
-
             </div>
           </li>
         </ul>
@@ -79,7 +43,7 @@
   <!-- Button trigger modal -->
   <a class="dropdown-item" data-toggle="modal" data-target="#modalregistro" hidden="hidden" href="#">Registrate</a>
 
-  <!-- Modal -->
+  <!-- Modal
   <div class="modal fade" id="modalregistro" tabindex="-1" role="dialog" aria-labelledby="modalregistrolabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -100,7 +64,7 @@
             </tr>
             <tr>
               <td></td>
-              <td> <button type="button" class="btn btn-primary" name="button" data-dismiss="modal">Registrarme</button></td>
+              <td><button type="button" class="btn btn-primary" name="button" data-dismiss="modal">Registrarme</button></td>
             </tr>
           </table>
         </div>
@@ -110,7 +74,7 @@
       </div>
 
     </div>
-  </div>
+  </div>-->
   <!-- Contenido principal -->
   <section class="container-fluid">
     <div class="row">
@@ -177,6 +141,43 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div id="modal_registro" class="modal fade" role="dialog" aria-labelledby="modal_registro_label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title col-md-9 text-left" id="modal_registro_label">Registro</h4>
+          <div class="col-md-3 text-right"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+        </div>
+        <div class="modal-body">
+
+          <table>
+            <tr>
+              <th>Nick: </th>
+              <th>Contraseña: </th>
+            </tr>
+            <tr>
+              <td><input type="text" name="" placeholder="Nickname" id="nick" value=""></td>
+              <td><input type="text" name="" placeholder="****" id="password" value=""></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro" data-dismiss="modal">Registrarme</button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- fin modal -->
+
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="style/jquery-3.3.1.js"></script>
