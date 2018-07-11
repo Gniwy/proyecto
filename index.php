@@ -21,13 +21,13 @@
   <!-- Contenido principal -->
   <section class="container-fluid">
     <div class="row">
-      <form action="vista1.html" class="form-inline col-centrada">
+      <form action="buscador.php" method="post" class="form-inline col-centrada">
         <div class="col-12 img"></div>
         <div class="row form-group col-9 mx-sm-3 mb-2">
-          <input type="text" class="col-6 col-sm-6 col-md-6 form-control" id="localidad" placeholder="Ej: Malaga">
-          <input type="text" class="col-6 col-sm-6 col-md-6 form-control" id="trabajo" placeholder="Ej: Carrefour">
+          <input type="text" class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="localidad" placeholder="Ej: Malaga">
+          <input type="text" class="col-6 col-sm-6 col-md-6 form-control" name="trabajo" id="trabajo" placeholder="Ej: Carrefour">
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+        <input type="submit" name="enviar" value="Buscar" class="btn btn-primary mb-2">
       </form>
     </div>
   </section>
