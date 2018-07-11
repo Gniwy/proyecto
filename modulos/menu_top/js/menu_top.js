@@ -44,6 +44,15 @@ $( "#btn_registro" ).click(function(){
     fallo=1;
   }
 
+  //comprobacion de las password
+  if($('#password').val()!=$('#password_2').val()){
+    fallo=1;
+    $('#password_error').show();
+  }else{
+    fallo=0;
+    $('#password_error').hide();
+  }
+
   //Comprobacion de las password >=6 caracteres
   if($('#password').val().length >= 6 ){
     fallo=0;
@@ -53,15 +62,6 @@ $( "#btn_registro" ).click(function(){
     $('#password_error_longitud').show();
   }
 
-
-  //comprobacion de las password
-  if($('#password').val()!=$('#password_2').val()){
-    fallo=0;
-    $('#password_error').show();
-  }else{
-    fallo=1;
-    $('#password_error').hide();
-  }
 
   if(fallo==0){
     $.ajax({
