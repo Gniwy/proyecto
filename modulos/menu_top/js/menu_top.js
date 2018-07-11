@@ -1,12 +1,15 @@
 
+$('#password_error').hide();
+
+
 $('#email').keyup(function() {
   $('#email').css('background','none');
 });
 $('#password, #password_2').keyup(function() {
-  $('#password').css('background','none');
-  $('#password_2').css('background','none');
+  $('#password_error').hide();
 });
 
+/* Boton registro */
 $( "#btn_registro" ).click(function(){
 
   var fallo=0;
@@ -20,11 +23,11 @@ $( "#btn_registro" ).click(function(){
     $('#email').focus();
   }
 
-  if($('#password').val()!=$('#password_2').val() || $('#password').length()<6){
+  if($('#password').val()!=$('#password_2').val()){
     fallo=1;
+    $('#password_error').show();
   }else{
-    $('#password').css('background','#ee6f6f');
-    $('#password_2').css('background','#ee6f6f');
+    $('#password_error').hide();
     $('#password').focus();
   }
 
@@ -41,5 +44,15 @@ $( "#btn_registro" ).click(function(){
     });
   }
 
+
+});
+
+/* Boton limpiar campos registro */
+
+$('#btn_limpiar_campos_registro').click(function(){
+
+  $('#modal_registro input').val('');
+  $('#password_error').hide();
+  $('#email').css('background','none');
 
 });
