@@ -75,7 +75,7 @@
   <?php include "modulos/footer/footer.php"; ?>
 
   <!-- Modal registro-->
-  <?php include "modales/modal_registro.php"; ?>
+  <div id="div_modal_registro"><?php include "modales/modal_registro.php"; ?></div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>

@@ -1,10 +1,13 @@
 
 /*Hidden de los errores al cargar*/
-$('#password_error').hide();
-$('#nick_usado').hide();
-$('#email_usado').hide();
-$('#password_error_longitud').hide();
+function hidden_errores_modal_registro(){
+  $('#password_error').hide();
+  $('#nick_usado').hide();
+  $('#email_usado').hide();
+  $('#password_error_longitud').hide();
+}
 
+hidden_errores_modal_registro();
 
 //al hacer modificaciones al email se eliminan los errores visuales (css y mensaje de error)
 $('#email').keyup(function() {
@@ -52,7 +55,7 @@ $( "#btn_registro" ).click(function(){
 
     fallo=0;
     $('#password_error').hide();
-    
+
     //Comprobacion de las password >=6 caracteres
     if($('#password').val().length >= 6 ){
       fallo=0;
@@ -91,6 +94,12 @@ $( "#btn_registro" ).click(function(){
 
         if(fallo==0){
           $('#modal_registro').modal('toggle');
+          setTimeout(function(){
+            $('#div_modal_registro').load('modales/modal_registro.php');
+            setTimeout(function(){
+              hidden_errores_modal_registro();
+            }, 300);
+          }, 300);
         }
 
       }
