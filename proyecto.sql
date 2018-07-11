@@ -219,7 +219,7 @@ INSERT INTO `provincias` (`id`, `slug`, `provincia`, `comunidad_id`, `capital_id
 
 -- --------------------------------------------------------
 
---
+-- 
 -- Estructura de tabla para la tabla `tipo_usuario`
 --
 
