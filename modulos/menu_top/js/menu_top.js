@@ -10,20 +10,20 @@ $('#password_error_longitud').hide();
 $('#email').keyup(function() {
   $('#email').css('background','none');
   $('#email_usado').hide();
-  fallo=0;
+  fallo=1;
 });
 
 //al hacer modificaciones al password se eliminan los errores visuales (css y mensaje de error)
 $('#password, #password_2').keyup(function() {
   $('#password_error').hide();
   $('#password_error_longitud').hide();
-  fallo=0;
+  fallo=1;
 });
 
 //al hacer modificaciones al nick se eliminan los errores visuales (css y mensaje de error)
 $('#nick').keyup(function() {
   $('#nick_usado').hide();
-  fallo=0;
+  fallo=1;
 });
 
 /* Boton registro */
@@ -41,6 +41,7 @@ $( "#btn_registro" ).click(function(){
   }else{
     $('#email').css('background','#ee6f6f');
     $('#email').focus();
+    fallo=1;
   }
 
   //Comprobacion de las password >=6 caracteres
@@ -48,6 +49,7 @@ $( "#btn_registro" ).click(function(){
     fallo=0;
     $('#password_error_longitud').hide();
   }else{
+    fallo=1;
     $('#password_error_longitud').show();
   }
 
@@ -57,6 +59,7 @@ $( "#btn_registro" ).click(function(){
     fallo=0;
     $('#password_error').show();
   }else{
+    fallo=1;
     $('#password_error').hide();
   }
 
