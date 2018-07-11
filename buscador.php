@@ -2,9 +2,8 @@
 include('conexion/conexion.php');
 if (isset($_POST['enviar']))
 {
-  echo $_POST['localidad'];
   // si se ha insertado la localidad se guarda
-  if (isset($_POST['localidad']))
+  if (!empty($_POST['localidad']))
   {
     $localidad = $_POST['localidad'];
     $consultaCP = "SELECT cp FROM localidad WHERE nombre = '$localidad'";
@@ -33,7 +32,6 @@ if (isset($_POST['enviar']))
   $consulta = "SELECT * FROM empresa WHERE cp='$cpLocalidad' AND nombre='$trabajo'";
   $sql=$link->query($consulta);
   echo $consulta;
-echo "string";
 }
 
  ?>
