@@ -1,5 +1,5 @@
 <?php
-include('conexion/conexion.php');
+require_once ('conexion/conexion.php');
 if (isset($_POST['enviar']))
 {
   // si se ha insertado la localidad se guarda

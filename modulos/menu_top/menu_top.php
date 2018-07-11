@@ -14,7 +14,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-    <?php if(){ ?>
+    <?php //if(){ ?>
     <div class="col-4 col-sm-2 collapse navbar-collapse" id="navbar_sesion_login">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
@@ -28,7 +28,7 @@
         </li>
       </ul>
     </div>
-  <?php } ?>
+  <?php //} ?>
 
   </nav>
 </header>
