@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2018 a las 15:58:18
+-- Tiempo de generación: 11-07-2018 a las 17:30:05
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -33,6 +33,14 @@ CREATE TABLE `categoria` (
   `nombre` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, 'reponedor'),
+(2, 'cajero');
+
 -- --------------------------------------------------------
 
 --
@@ -43,14 +51,6 @@ CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nick` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `cliente`
---
-
-INSERT INTO `cliente` (`id`, `nick`) VALUES
-(2, 'asdf'),
-(3, 'asdf');
 
 -- --------------------------------------------------------
 
@@ -118,6 +118,13 @@ CREATE TABLE `empresa` (
   `id_categoria` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `empresa`
+--
+
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`) VALUES
+(1, 'lidl', 'unica', 29640, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -127,9 +134,16 @@ CREATE TABLE `empresa` (
 CREATE TABLE `localidad` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
-  `provincia_id` varchar(255) NOT NULL,
+  `provincia_id` int(6) NOT NULL,
   `cp` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `localidad`
+--
+
+INSERT INTO `localidad` (`id`, `nombre`, `provincia_id`, `cp`) VALUES
+(1, 'fuengirola', 29, 29640);
 
 -- --------------------------------------------------------
 
@@ -206,13 +220,24 @@ INSERT INTO `provincias` (`id`, `slug`, `provincia`, `comunidad_id`, `capital_id
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tipo_usuario`
+--
+
+CREATE TABLE `tipo_usuario` (
+  `id` int(11) NOT NULL,
+  `tipo` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
   `id_cliente` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `tipo_usuario` enum('administrador','cliente','','') NOT NULL,
+  `tipo_usuario` int(11) NOT NULL DEFAULT '1',
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -269,10 +294,17 @@ ALTER TABLE `provincias`
   ADD KEY `FK_provincias` (`comunidad_id`);
 
 --
+-- Indices de la tabla `tipo_usuario`
+--
+ALTER TABLE `tipo_usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_cliente`);
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD KEY `tipo_usuario` (`tipo_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -282,13 +314,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
@@ -300,19 +332,36 @@ ALTER TABLE `comentario`
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
 --
 ALTER TABLE `localidad`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `provincias`
 --
 ALTER TABLE `provincias`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT de la tabla `tipo_usuario`
+--
+ALTER TABLE `tipo_usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tipo_usuario`) REFERENCES `tipo_usuario` (`id`),
+  ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

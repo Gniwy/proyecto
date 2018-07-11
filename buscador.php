@@ -6,9 +6,9 @@ if (isset($_POST['enviar']))
   if (isset($_POST['localidad']))
   {
     $localidad = $_POST['localidad'];
-    $consultaCP = "SELECT cp FROM localidad WHERE nombre = '$localidad'";
-    $sql = mysqli_query($link,$consultaCP);
-    $row = mysqli_fetch_assoc($sql);
+    $consulta_localidad_cp = "SELECT cp FROM localidad WHERE nombre = '$localidad'";
+    $sql_localidad_cp = mysqli_query($link,$consulta_localidad_cp);
+    $row_localidad_cp = mysqli_fetch_assoc($sql_localidad_cp);
 
     // si no se inserta localidad se cogeran todos
     if ($localidad=='1')
@@ -30,9 +30,9 @@ if (isset($_POST['enviar']))
 
   // consulta
   // falta sacar el cp de la comunidad
-  $consulta = "SELECT * FROM empresa WHERE cp='$localidad' AND nombre='$trabajo'";
-  $sql=$link->query($consulta);
-  echo $consulta;
+  $consulta_resultado_busqueda = "SELECT * FROM empresa WHERE cp='$localidad' AND nombre='$trabajo'";
+  $sql=$link->query($consulta_resultado_busqueda);
+  echo $consulta_resultado_busqueda;
 }
 
  ?>
