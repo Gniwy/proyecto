@@ -20,15 +20,19 @@
           </tr>
           <tr>
             <th>Contraseña: </td>
-            <td><input type="text" name="" placeholder="****" id="password" value=""></td>
+            <td><input type="password" name="" placeholder="****" id="password" value=""></td>
           </tr>
           <tr>
             <th>Repetir contraseña: </td>
-            <td><input type="text" name="" placeholder="****" id="password_2" value=""></td>
+            <td><input type="password" name="" placeholder="****" id="password_2" value=""></td>
+          </tr>
+          <tr id="password_error">
+            <td></td>
+            <td style="color:red;">Las contraseñas no coinciden</td>
           </tr>
           <tr>
             <td></td>
-            <td> <button type="button" class="btn btn-primary" name="button" id="btn_registro">Registrarme</button></td>
+            <td><button type="button" class="btn btn-primary" name="button" id="btn_registro">Registrarme</button> <button type="button" id="btn_limpiar_campos_registro" class="btn btn-warning" name="button">Limpiar</button> </td>
           </tr>
         </table>
       </div>
