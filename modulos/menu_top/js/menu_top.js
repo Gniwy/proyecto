@@ -49,18 +49,21 @@ $( "#btn_registro" ).click(function(){
     fallo=1;
     $('#password_error').show();
   }else{
+
     fallo=0;
     $('#password_error').hide();
+    
+    //Comprobacion de las password >=6 caracteres
+    if($('#password').val().length >= 6 ){
+      fallo=0;
+      $('#password_error_longitud').hide();
+    }else{
+      fallo=1;
+      $('#password_error_longitud').show();
+    }
+
   }
 
-  //Comprobacion de las password >=6 caracteres
-  if($('#password').val().length >= 6 ){
-    fallo=0;
-    $('#password_error_longitud').hide();
-  }else{
-    fallo=1;
-    $('#password_error_longitud').show();
-  }
 
 
   if(fallo==0){
