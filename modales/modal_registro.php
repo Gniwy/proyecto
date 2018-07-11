@@ -30,6 +30,18 @@
             <td></td>
             <td style="color:red;">Las contraseñas no coinciden</td>
           </tr>
+          <tr id="password_error_longitud">
+            <td></td>
+            <td style="color:red;">Las contraseña tiene que tener como minimo 6 caracteres.</td>
+          </tr>
+          <tr id="nick_usado">
+            <td></td>
+            <td style="color:red;">Nick en uso</td>
+          </tr>
+          <tr id="email_usado">
+            <td></td>
+            <td style="color:red;">Email en uso</td>
+          </tr>
           <tr>
             <td></td>
             <td><button type="button" class="btn btn-primary" name="button" id="btn_registro">Registrarme</button> <button type="button" id="btn_limpiar_campos_registro" class="btn btn-warning" name="button">Limpiar</button> </td>
