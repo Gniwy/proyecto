@@ -2,7 +2,7 @@
   <div class="col-12 img"></div>
   <div class="row form-group col-9 mx-sm-3 mb-2">
     <select class="col-4 col-sm-4 col-md-4 form-control" name="comunidad" id="select_comunidad">
-      <option value="1">Todas las comunidades</option>
+      <option value="">Todas las comunidades</option>
       <?php
       // barra selectora de la comunidades
         $consulta = "SELECT * FROM `comunidades` WHERE 1";
@@ -14,12 +14,11 @@
         }
        ?>
     </select>
-    <select class="col-4 col-sm-4 col-md-4 form-control" name="provincia">
-      <option value="1">Todas las provincias</option>
-      <!-- insertar aqui la consulta_provincia -->
+    <select class="col-4 col-sm-4 col-md-4 form-control" name="provincia" id="select_provincia">
+      <option value="">Todas las provincias</option>
     </select>
     <select class="col-4 col-sm-4 col-md-4 form-control" name="localidad">
-      <option value="1">Todas las localidades</option>
+      <option value="">Todas las localidades</option>
       <?php
       // barra selectora de la localidades
         $consulta = "SELECT * FROM `localidad` WHERE 1";
