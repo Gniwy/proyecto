@@ -68,7 +68,6 @@ $( "#btn_registro" ).click(function(){
   }
 
 
-
   if(fallo==0){
     $.ajax({
       type:"GET",
