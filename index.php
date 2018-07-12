@@ -1,4 +1,8 @@
-<?php include('conexion/conexion.php'); ?>
+<?php
+
+include ('conexion/conexion.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +10,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyecto</title>
-
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="modulos/menu_top/css/header.css">
   <link rel="stylesheet" href="modulos/footer/css/footer.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
 
 </head>
 
@@ -22,10 +26,9 @@
   <!-- Contenido principal -->
   <section class="container-fluid">
     <div class="row">
-      <?php include "modulos/buscador_principal/buscador_principal.php";?>
+      <!-- <?php //include "modulos/buscador_principal/buscador_principal.php";?> -->
     </div>
   </section>
-
   <!--FOOTER-->
   <?php include "modulos/footer/footer.php"; ?>
 
@@ -41,7 +44,7 @@
 
   <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
 
-  <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
+  <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
 
 </body>
 
