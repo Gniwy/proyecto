@@ -12,9 +12,13 @@ include ('conexion/conexion.php');
   <title>Proyecto</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="modulos/menu_top/css/header.css">
   <link rel="stylesheet" href="modulos/footer/css/footer.css">
+  <!-- hoja de estilos de las paginas -->
+  <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
   <link rel="stylesheet" href="css/style.css">
+
   <link rel="stylesheet" href="fontawesome/css/all.css">
 
 </head>
@@ -26,7 +30,7 @@ include ('conexion/conexion.php');
   <!-- Contenido principal -->
   <section class="container-fluid">
     <div class="row">
-      <!-- <?php //include "modulos/buscador_principal/buscador_principal.php";?> -->
+      <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
   </section>
   <!--FOOTER-->
@@ -37,12 +41,19 @@ include ('conexion/conexion.php');
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>
+
+  <!-- jQuery 12.1.1 necessary jqueryUI -->
+  <script src="js/jquery-ui.js"></script>
+
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.js"></script>
 
   <script type="text/javascript" src="js/index.js"></script>
 
   <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
+
+  <!-- jQuery autocomplete (accion select_lugar) -->
+  <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
 
   <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
 
