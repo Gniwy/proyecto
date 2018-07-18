@@ -38,6 +38,9 @@ include ('conexion/conexion.php');
 
   <!-- Modal registro-->
   <div id="div_modal_registro"><?php include "modales/modal_registro.php"; ?></div>
+  
+  <!-- Modal login-->
+  <div id="div_modal_login"><?php include "modales/modal_login.php"; ?></div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>

@@ -33,42 +33,43 @@ $('#nick').keyup(function() {
 $( "#btn_registro" ).click(function(){
 
   //fallo = si hay algun error en los valores introducidos para que no haga la insercion
-  var fallo=1;
+  var fallo_email=1;
+  var fallo_password=1;
+  var fallo=0;
 
   var comprobar_email = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 ;
 
   //comprobacion de email correcto
   if(comprobar_email.test($('#email').val())){
-    fallo=0;
+    fallo_email=0;
   }else{
     $('#email').css('background','#ee6f6f');
     $('#email').focus();
-    fallo=1;
+    fallo_email=1;
   }
 
   //comprobacion de las password
   if($('#password').val()!=$('#password_2').val()){
-    fallo=1;
+    fallo_password=1;
     $('#password_error').show();
   }else{
 
-    fallo=0;
+    fallo_password=0;
     $('#password_error').hide();
 
     //Comprobacion de las password >=6 caracteres
     if($('#password').val().length >= 6 ){
-      fallo=0;
+      fallo_password=0;
       $('#password_error_longitud').hide();
     }else{
-      fallo=1;
+      fallo_password=1;
       $('#password_error_longitud').show();
     }
 
   }
 
-
-  if(fallo==0){
+  if(fallo_email==0 && fallo_password==0){
     $.ajax({
       type:"GET",
       url:"modulos/menu_top/sql/registro.php",
