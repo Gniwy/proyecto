@@ -46,7 +46,7 @@ INSERT INTO `localidad` (`id`, `nombre`, `provincia_id`) VALUES
 (5, 'Alkmaar', 1),
 (6, 'Amstelveen', 1),
 (7, 'Hilversum', 1),
-(8, 'Nissewaard4', 1),
+(8, 'Nissewaard', 1),
 (9, 'Purmerend', 1),
 (10, 'Hoorn', 1),
 (11, 'Velsen', 1),
