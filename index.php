@@ -13,7 +13,7 @@ include ('conexion/conexion.php');
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="modulos/menu_top/css/header.css">
+  <link rel="stylesheet" href="modulos/menu_top/css/menu-.css">
   <link rel="stylesheet" href="modulos/footer/css/footer.css">
   <!-- hoja de estilos de las paginas -->
   <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
