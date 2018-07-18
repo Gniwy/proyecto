@@ -7,7 +7,12 @@ function hidden_errores_modal_registro(){
   $('#password_error_longitud').hide();
 }
 
+function hidden_errores_modal_login(){
+  $('#error_login').hide();
+}
+
 hidden_errores_modal_registro();
+hidden_errores_modal_login();
 
 //al hacer modificaciones al email se eliminan los errores visuales (css y mensaje de error)
 $('#email').keyup(function() {
