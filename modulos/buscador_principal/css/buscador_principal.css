@@ -1,0 +1,21 @@
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 100px;
+  }
+
+/* boton de busqueda */
+@media (max-width: 575.98px) {
+  #busqueda_principal{
+    margin-left: 10px;
+    height: 76px;
+    width: 100px;
+  }
+}
