@@ -14,6 +14,9 @@ function hidden_errores_modal_login(){
 hidden_errores_modal_registro();
 hidden_errores_modal_login();
 
+
+//////////////////////////////// Modal registro ////////////////////////////////////
+
 //al hacer modificaciones al email se eliminan los errores visuales (css y mensaje de error)
 $('#email').keyup(function() {
   $('#email').css('background','none');
@@ -83,6 +86,7 @@ $( "#btn_registro" ).click(function(){
         password:$('#password').val(),
         email:$('#email').val()
       }, success:function(data){
+
         var nick_usado = $(data).filter('cliente').html();
         var email_usado = $(data).filter('email').html();
 
@@ -98,19 +102,12 @@ $( "#btn_registro" ).click(function(){
         }
 
         if(fallo==0){
-          $('#modal_registro').modal('toggle');
-          setTimeout(function(){
-            $('#div_modal_registro').load('modales/modal_registro.php');
-            setTimeout(function(){
-              hidden_errores_modal_registro();
-            }, 300);
-          }, 300);
+          location.reload(true);
         }
 
       }
     });
   }
-
 
 });
 
@@ -123,3 +120,40 @@ $('#btn_limpiar_campos_registro').click(function(){
   $('#email').css('background','none');
 
 });
+
+//////////////////////////////// Fin modal registro ////////////////////////////////////
+
+
+
+//////////////////////////////// Modal login ////////////////////////////////////
+
+$('#nick_email_login, #password_login').keyup(function() {
+
+  $('#error_login').hide();
+
+});
+
+
+$('#btn_iniciar_sesion').click(function(){
+
+  $.ajax({
+    type:"GET",
+    url:"modulos/menu_top/sql/login.php",
+    data:{
+      nick:$('#nick_email_login').val(),
+      password:$('#password_login').val()
+    }, success:function(data){
+
+      if(data=="correcto"){
+        location.reload(true);
+      }else{
+        $('#error_login').show();
+      }
+
+    }
+  });
+
+});
+
+
+//////////////////////////////// Fin modal login ////////////////////////////////////

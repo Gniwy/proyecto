@@ -4,7 +4,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title col-md-9 text-left" id="modal_login_label">Registro</h4>
+        <h4 class="modal-title col-md-9 text-left" id="modal_login_label">Login</h4>
         <div class="col-md-3 text-right"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
       </div>
       <div class="modal-body">
@@ -17,6 +17,10 @@
           <tr>
             <th>Contraseña: </td>
             <td><input type="password" name="" placeholder="****" id="password_login" value=""></td>
+          </tr>
+          <tr>
+            <th></td>
+            <td> <button type="button" class="btn btn-primary" name="button" id="btn_iniciar_sesion">Iniciar sesion</button> </td>
           </tr>
           <tr id="error_login">
             <td></td>
