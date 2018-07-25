@@ -7,4 +7,4 @@
 # Tole - buscador.
 
 # Cristian - menu_top(acabado)
-# Tole - buscador ajax parseJSON.
+# Tole - buscador ajax parseJSON. vista 2

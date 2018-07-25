@@ -5,9 +5,9 @@ $.ajax({
   data: {
 
   }, success: function(data){
-    var localidades = [$('#select_provincia').html(data)];
-    // alert(data);
-    var obj = jQuery.parseJSON( '{ "name": '.localidades.' }' );
+    // var localidades = [$('#select_provincia').html(data)];
+    alert(data);
+    // var obj = jQuery.parseJSON( '{ "name": '.localidades.' }' );
     // alert( obj.name);
   }
 })
@@ -15,7 +15,7 @@ $.ajax({
 // Lugares disponibles
 $( function() {
     var availableTags = [
-      obj.name;
+      // obj.name;
       // localidades
       // "Ámsterdam",
       // "Haarlem",
