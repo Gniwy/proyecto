@@ -1,0 +1,9 @@
+
+nav a:nth-child(even) {background: rgb(102, 184, 135)}
+nav a:nth-child(odd) {background: rgb(205, 245, 153)}
+
+
+#contenido{
+  margin:50px;
+  background: rgb(176, 176, 176);
+}

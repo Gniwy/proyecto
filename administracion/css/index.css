@@ -1,0 +1,23 @@
+body{
+  background:rgb(215, 215, 215);
+  height:700px;
+}
+
+
+#div_login{
+
+  position: relative;
+  top:50%;
+
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  
+}
+
+
+#div_login{
+  background:rgb(245, 146, 92);
+  width:300px;
+}
