@@ -17,13 +17,15 @@ $aux_provincia=mysqli_query($link, $sql_localidad);
     while($ex_provincia=mysqli_fetch_assoc($aux_provincia)) {
 
       // inserto cada valor devuelta en el $array_localidades
-      array_push($array_localidades, $ex_provincia);
+      // array_push($array_localidades, $ex_provincia);
       // echo $ex_provincia['nombre'];
       // print_r($array_localidades);
+      // echo '<option value="">'.$ex_provincia['nombre'].'</option>';
       ?>
-
+      <li onClick="selectCountry('<?php echo $ex_provincia["nombre"]; ?>');"><?php echo $ex_provincia["nombre"]; ?></li>
 
 
     <?php } ?>
 
+<?php echo json_encode($array_localidades); ?>
 </select>
