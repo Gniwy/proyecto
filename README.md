@@ -6,5 +6,5 @@
 # Cristian - menu_top
 # Tole - buscador.
 
-# Cristian - menu_top(acabado)
+# Cristian - tabla empresas(admin), buscador principal
 # Tole - buscador ajax parseJSON. vista 2
