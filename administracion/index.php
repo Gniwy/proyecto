@@ -26,7 +26,6 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="../js/bootstrap.js"></script>
 
-  <script type="text/javascript" src="js/index.js"></script>
 
   <body>
 
@@ -38,5 +37,7 @@
     }?>
 
   </body>
+
+  <script type="text/javascript" src="js/index.js"></script>
 
 </html>
