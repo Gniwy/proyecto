@@ -7,4 +7,6 @@
 # Tole - buscador.
 
 # Cristian - tabla empresas(admin), buscador principal
-# Tole - buscador ajax parseJSON. vista 2
+# Tole - buscador ajax parseJSON. vista 2(vista 2 acabada, traspaso buscador)
+
+# Tole - administracion empresas (tabla_empresas.php line 18 continuar)
