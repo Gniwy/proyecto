@@ -61,6 +61,8 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
       $nombre=$ex_empresas['nombre'];
       $calle=$ex_empresas['calle'];
       $cp = $ex_empresas['cp'];
+
+      $bloqueado=$ex_empresas['activo'];
     ?>
 
     <tr id="empresas_<?php echo $id_empresas;?>" class="fila_empresas">
@@ -72,7 +74,12 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
         <button id="confirmar_edicion_<?php echo $id_empresas;?>" class="fas fa-check button_icons confirmar_edicion" style="cursor:pointer; color:green;" title="Confirmar"></button>
         <button id="cancelar_edicion_<?php echo $id_empresas;?>" class="fas fa-times button_icons cancelar_edicion" style="cursor:pointer; color:red;" title="Cancelar"></button>
       </td>
-      <td> <button id="bloquear_empresas_<?php echo $id_empresas;?>" class="fas fa-ban button_icons bloquear_empresas" style="cursor:pointer; color:#f96800;" title="Bloquear empresas"></button></td>
+      <?php if($bloqueado==0){?>
+        <td> <button id="bloquear_empresas_<?php echo $id_empresas;?>" class="fas fa-unlock button_icons bloquear_empresas" style="cursor:pointer; color:#109100;" title="Desbloqueado"></button></td>
+      <?php }else{?>
+        <td> <button id="desbloquear_empresas_<?php echo $id_empresas;?>" class="fas fa-lock button_icons desbloquear_empresas" style="cursor:pointer; color:#f96800;" title="Bloqueado"></button></td>
+      <?php }?>
+
       <td> <button id="borrar_empresas_<?php echo $id_empresas;?>" class="fas fa-trash-alt button_icons borrar_empresas" style="cursor:pointer; color:red;" title="Eliminar empresas"></button> </td>
     </tr>
 
