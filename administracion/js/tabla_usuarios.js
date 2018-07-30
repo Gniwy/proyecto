@@ -31,6 +31,7 @@ $('.editar_usuario').click(function(){
   $("#editar_usuario_" + id_elemento).hide();
   $("#borrar_usuario_" + id_elemento).hide();
   $("#bloquear_usuario_" + id_elemento).hide();
+  $("#desbloquear_usuario_" + id_elemento).hide();
 
 
 
@@ -84,6 +85,7 @@ $(".cancelar_edicion").click(function(){
   $("#editar_usuario_" + id_elemento).show();
   $("#borrar_usuario_" + id_elemento).show();
   $("#bloquear_usuario_" + id_elemento).show();
+  $("#desbloquear_usuario_" + id_elemento).show();
 
   //actualizamos las propiedades de las filas
   $('.fila_usuario button').removeAttr('disabled');
@@ -94,5 +96,50 @@ $(".cancelar_edicion").click(function(){
 
   $('#nick_' + id_elemento).css('background', 'none');
   $('#email_' + id_elemento).css('background', 'none');
+
+});
+
+$('.bloquear_usuario').click(function(){
+
+  //sacamos el id del usuario
+  var id_elemento= $(this).attr('id');
+
+  id_elemento = id_elemento.substring(17);
+
+  $.ajax({
+    type:"GET",
+    url:"sql/bloquear_usuario.php",
+    data:{
+      id_usuario:id_elemento
+    },success:function(data){
+
+      //Se vuelve a cargar la tabla de usuarios
+      $('#contenido').load('contenido_usuarios.php');
+
+    }
+  });
+
+
+});
+$('.desbloquear_usuario').click(function(){
+
+  //sacamos el id del usuario
+  var id_elemento= $(this).attr('id');
+
+  id_elemento = id_elemento.substring(20);
+
+  $.ajax({
+    type:"GET",
+    url:"sql/desbloquear_usuario.php",
+    data:{
+      id_usuario:id_elemento
+    },success:function(data){
+
+      //Se vuelve a cargar la tabla de usuarios
+      $('#contenido').load('contenido_usuarios.php');
+
+    }
+  });
+
 
 });

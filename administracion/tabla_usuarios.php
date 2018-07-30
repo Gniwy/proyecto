@@ -40,14 +40,13 @@ $aux_usuarios=mysqli_query($link,$sql_usuarios);
 
 <link rel="stylesheet" href="css/tablas.css">
 
-<br>*Falta: bloquear y eliminar
+
 <table class="table-striped" style="width:100%;">
 
   <tr>
     <th style='width:20%;'>Nick</th>
     <th style='width:30%;'>Email</th>
     <th style='width:10%;'>Tipo usuario</th>
-    <th style='width:5%;'></th>
     <th style='width:5%;'></th>
     <th style='width:5%;'></th>
   </tr>
@@ -61,9 +60,12 @@ $aux_usuarios=mysqli_query($link,$sql_usuarios);
       $aux_cliente=mysqli_query($link,$sql_cliente);
       $ex_cliente=mysqli_fetch_assoc($aux_cliente);
 
-      //sacamos el nick y su tipo de usuario
+      //sacamos el nick, su tipo de usuario y si esta blockeado y activo
       $nick=$ex_cliente['nick'];
       $id_tipo_usuario=$ex_usuarios['tipo_usuario'];
+      $bloqueado=$ex_cliente['bloqueado'];
+      $confirmado=$ex_cliente['confirmado'];
+
 
       $sql_tipo_usuario="SELECT * FROM tipo_usuario WHERE id='$id_tipo_usuario'";
       $aux_tipo_usuario=mysqli_query($link,$sql_tipo_usuario);
@@ -83,8 +85,11 @@ $aux_usuarios=mysqli_query($link,$sql_usuarios);
         <button id="confirmar_edicion_<?php echo $id_usuario;?>" class="fas fa-check button_icons confirmar_edicion" style="cursor:pointer; color:green;" title="Confirmar"></button>
         <button id="cancelar_edicion_<?php echo $id_usuario;?>" class="fas fa-times button_icons cancelar_edicion" style="cursor:pointer; color:red;" title="Cancelar"></button>
       </td>
-      <td> <button id="bloquear_usuario_<?php echo $id_usuario;?>" class="fas fa-ban button_icons bloquear_usuario" style="cursor:pointer; color:#f96800;" title="Bloquear usuario"></button></td>
-      <td> <button id="borrar_usuario_<?php echo $id_usuario;?>" class="fas fa-trash-alt button_icons borrar_usuario" style="cursor:pointer; color:red;" title="Eliminar usuario"></button> </td>
+      <?php if($bloqueado==0){?>
+        <td> <button id="bloquear_usuario_<?php echo $id_usuario;?>" class="fas fa-unlock button_icons bloquear_usuario" style="cursor:pointer; color:#109100;" title="Desbloqueado"></button></td>
+      <?php }else{?>
+        <td> <button id="desbloquear_usuario_<?php echo $id_usuario;?>" class="fas fa-lock button_icons desbloquear_usuario" style="cursor:pointer; color:#f96800;" title="Bloqueado"></button></td>
+      <?php }?>
     </tr>
 
   <?php } ?>
