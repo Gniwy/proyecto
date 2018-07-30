@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2018 a las 17:30:05
+-- Tiempo de generación: 30-07-2018 a las 17:13:54
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -49,8 +49,19 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
-  `nick` varchar(20) NOT NULL
+  `nick` varchar(20) NOT NULL,
+  `bloqueado` tinyint(1) NOT NULL DEFAULT '0',
+  `confirmado` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nick`, `bloqueado`, `confirmado`) VALUES
+(1, 'toledo', 0, 0),
+(3, 'administrador', 0, 0),
+(4, 'cristian', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -63,7 +74,8 @@ CREATE TABLE `comentario` (
   `id_cliente` int(10) NOT NULL,
   `texto` longtext NOT NULL,
   `valoracion` int(2) UNSIGNED ZEROFILL NOT NULL,
-  `id_respuesta` int(10) NOT NULL
+  `id_respuesta` int(10) NOT NULL,
+  `activo` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -77,27 +89,28 @@ CREATE TABLE `empresa` (
   `nombre` varchar(100) NOT NULL,
   `calle` varchar(100) NOT NULL,
   `cp` int(5) NOT NULL,
-  `id_categoria` int(10) NOT NULL
+  `id_categoria` int(10) NOT NULL,
+  `activo` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`) VALUES
-(1, 'lidl', 'unica', 29640, 2);
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`) VALUES
+(1, 'lidl', 'unica', 29640, 2, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `localidad`
 --
+
 CREATE TABLE `localidad` (
   `id` int(11) NOT NULL,
   `nombre` varchar(70) NOT NULL,
   `provincia_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 --
 -- Volcado de datos para la tabla `localidad`
@@ -184,7 +197,7 @@ INSERT INTO `localidad` (`id`, `nombre`, `provincia_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `provincias`
+-- Estructura de tabla para la tabla `provincia`
 --
 
 CREATE TABLE `provincia` (
@@ -209,6 +222,7 @@ INSERT INTO `provincia` (`id`, `nombre`) VALUES
 (8, 'Overijssel'),
 (3, 'Utrecht'),
 (10, 'Zelanda');
+
 -- --------------------------------------------------------
 
 --
@@ -219,6 +233,14 @@ CREATE TABLE `tipo_usuario` (
   `id` int(11) NOT NULL,
   `tipo` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipo_usuario`
+--
+
+INSERT INTO `tipo_usuario` (`id`, `tipo`) VALUES
+(1, 'cliente'),
+(2, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -232,6 +254,15 @@ CREATE TABLE `usuario` (
   `tipo_usuario` int(11) NOT NULL DEFAULT '1',
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_cliente`, `email`, `tipo_usuario`, `password`) VALUES
+(1, 'toledo@gmail.com', 1, '4983a0ab83ed86e0e7213c8783940193'),
+(3, 'admin@admin.com', 2, '91f5167c34c400758115c2a6826ec2e3'),
+(4, 'cristian@gmail.com', 1, 'b08c8c585b6d67164c163767076445d6');
 
 --
 -- Índices para tablas volcadas
@@ -262,19 +293,19 @@ ALTER TABLE `empresa`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id_empresa` (`id`);
 
-  --
-  -- Indices de la tabla `localidad`
-  --
-  ALTER TABLE `localidad`
-    ADD PRIMARY KEY (`id`),
-    ADD KEY `provincia_id` (`provincia_id`);
+--
+-- Indices de la tabla `localidad`
+--
+ALTER TABLE `localidad`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `provincia_id` (`provincia_id`);
 
-    --
-    -- Indices de la tabla `provincia`
-    --
-    ALTER TABLE `provincia`
-      ADD PRIMARY KEY (`id`),
-      ADD UNIQUE KEY `nombre` (`nombre`);
+--
+-- Indices de la tabla `provincia`
+--
+ALTER TABLE `provincia`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombre` (`nombre`);
 
 --
 -- Indices de la tabla `tipo_usuario`
@@ -287,6 +318,7 @@ ALTER TABLE `tipo_usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_cliente`),
+  ADD UNIQUE KEY `email` (`email`),
   ADD KEY `tipo_usuario` (`tipo_usuario`);
 
 --
@@ -303,7 +335,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
@@ -317,35 +349,34 @@ ALTER TABLE `comentario`
 ALTER TABLE `empresa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
-  --
-  -- AUTO_INCREMENT de la tabla `localidad`
-  --
-  ALTER TABLE `localidad`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+--
+-- AUTO_INCREMENT de la tabla `localidad`
+--
+ALTER TABLE `localidad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
-    --
-    -- AUTO_INCREMENT de la tabla `provincia`
-    --
-    ALTER TABLE `provincia`
-      MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT de la tabla `provincia`
+--
+ALTER TABLE `provincia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
 --
-
 
 --
 -- Filtros para la tabla `localidad`
 --
 ALTER TABLE `localidad`
   ADD CONSTRAINT `localidad_ibfk_1` FOREIGN KEY (`provincia_id`) REFERENCES `provincia` (`id`);
-COMMIT;
+
 --
 -- Filtros para la tabla `usuario`
 --
