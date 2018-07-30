@@ -10,26 +10,21 @@ $texto="";
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
-
 //consulta para mostar las empresas en la tabla
 $sql_empresas="SELECT * FROM empresa WHERE activo= 1 ";
 
 //si el texto contiene algo, se añaden a la consulta
 if($texto!=null){
+  //si insertan un nombre lo buscara en la tabla de empresas
+  $sql_empresas="SELECT * FROM empresa WHERE nombre LIKE '%$texto%' ";
+  $aux_empresas=mysqli_query($link,$sql_empresas);
 
-  //si insertan un nick lo buscara en la tabla de clientes
-  $sql_cliente="SELECT * FROM cliente WHERE nick LIKE '%$texto%' ";
-  $aux_cliente=mysqli_query($link,$sql_cliente);
+  //id_empresas contendra todos los id de las empresas que coinciden con la busqueda "nombre"
+  $id_empresas="0";
 
-  //id_clientes contendra todos los id de los clientes que coinciden con la busqueda "nick"
-  $id_clientes="0";
-
-  while($ex_cliente=mysqli_fetch_assoc($aux_cliente)){
-    $id_clientes.=",".$ex_cliente['id'];
+  while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
+    $id_empresas.=",".$ex_empresas['id'];
   }
-
-  // se completa el sql para buscar los empresas para mostrarlos
-  $sql_empresas.=" AND (email LIKE '%$texto%' OR id_cliente IN ($id_clientes)) ";
 
 }
 
@@ -44,47 +39,41 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
 <table class="table-striped" style="width:100%;">
 
   <tr>
-    <th style='width:20%;'>Nick</th>
-    <th style='width:30%;'>Email</th>
-    <th style='width:10%;'>Tipo usuario</th>
+    <th style='width:20%;'>Nombre</th>
+    <th style='width:30%;'>Calle</th>
+    <th style='width:10%;'>CP</th>
     <th style='width:5%;'></th>
     <th style='width:5%;'></th>
     <th style='width:5%;'></th>
   </tr>
 
+<!-- bucle de listado de las empresas -->
   <?php while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
-      //sacamos el id del usuario para mostrar la tabla de dicho usuario
-      $id_usuario=$ex_empresas['id_cliente'];
+      //sacamos el id de las empresas para mostrar la tabla de dichas empresas
+      $id_empresas=$ex_empresas['id'];
 
-      $sql_cliente="SELECT * FROM cliente WHERE id='$id_usuario'";
-      $aux_cliente=mysqli_query($link,$sql_cliente);
-      $ex_cliente=mysqli_fetch_assoc($aux_cliente);
+      $sql_empresas="SELECT * FROM empresa WHERE id='$id_empresas'";
+      $aux_empresas=mysqli_query($link,$sql_empresas);
+      $ex_empresas=mysqli_fetch_assoc($aux_empresas);
 
-      //sacamos el nick y su tipo de usuario
-      $nick=$ex_cliente['nick'];
-      $id_tipo_usuario=$ex_empresas['tipo_usuario'];
-
-      $sql_tipo_usuario="SELECT * FROM tipo_usuario WHERE id='$id_tipo_usuario'";
-      $aux_tipo_usuario=mysqli_query($link,$sql_tipo_usuario);
-      $ex_tipo_usuario=mysqli_fetch_assoc($aux_tipo_usuario);
-
-      $tipo_usuario=$ex_tipo_usuario['tipo'];
-
-
+      //sacamos el nombre, su calle y su cp
+      $nombre=$ex_empresas['nombre'];
+      $calle=$ex_empresas['calle'];
+      $cp = $ex_empresas['cp'];
     ?>
 
-    <tr id="usuario_<?php echo $id_usuario;?>" class="fila_usuario">
-      <td id="nick_<?php echo $id_usuario;?>"><?php echo $nick;?></td>
-      <td id="email_<?php echo $id_usuario;?>"><?php echo $ex_empresas['email'];?></td>
-      <td><?php echo $tipo_usuario;?></td>
+    <tr id="empresas_<?php echo $id_empresas;?>" class="fila_empresas">
+      <td id="nombre_<?php echo $id_empresas;?>"><?php echo $nombre;?></td>
+      <td id="calle_<?php echo $id_empresas;?>"><?php echo $calle;?></td>
+      <td id="cp_<?php echo $id_empresas;?>"><?php echo $cp;?></td>
       <td>
-        <button id="editar_usuario_<?php echo $id_usuario;?>" class="fas fa-user-edit button_icons editar_usuario" style="cursor:pointer;" title="Editar usuario"></button>
-        <button id="confirmar_edicion_<?php echo $id_usuario;?>" class="fas fa-check button_icons confirmar_edicion" style="cursor:pointer; color:green;" title="Confirmar"></button>
-        <button id="cancelar_edicion_<?php echo $id_usuario;?>" class="fas fa-times button_icons cancelar_edicion" style="cursor:pointer; color:red;" title="Cancelar"></button>
+        <button id="editar_empresas_<?php echo $id_empresas;?>" class="fas fa-user-edit button_icons editar_empresas" style="cursor:pointer;" title="Editar empresas"></button>
+        <button id="confirmar_edicion_<?php echo $id_empresas;?>" class="fas fa-check button_icons confirmar_edicion" style="cursor:pointer; color:green;" title="Confirmar"></button>
+        <button id="cancelar_edicion_<?php echo $id_empresas;?>" class="fas fa-times button_icons cancelar_edicion" style="cursor:pointer; color:red;" title="Cancelar"></button>
       </td>
-      <td> <button id="bloquear_usuario_<?php echo $id_usuario;?>" class="fas fa-ban button_icons bloquear_usuario" style="cursor:pointer; color:#f96800;" title="Bloquear usuario"></button></td>
-      <td> <button id="borrar_usuario_<?php echo $id_usuario;?>" class="fas fa-trash-alt button_icons borrar_usuario" style="cursor:pointer; color:red;" title="Eliminar usuario"></button> </td>
+      <td> <button id="bloquear_empresas_<?php echo $id_empresas;?>" class="fas fa-ban button_icons bloquear_empresas" style="cursor:pointer; color:#f96800;" title="Bloquear empresas"></button></td>
+      <td> <button id="borrar_empresas_<?php echo $id_empresas;?>" class="fas fa-trash-alt button_icons borrar_empresas" style="cursor:pointer; color:red;" title="Eliminar empresas"></button> </td>
     </tr>
 
   <?php } ?>
