@@ -33,8 +33,7 @@ $('.editar_empresas').click(function(){
   $("#editar_empresas_" + id_elemento).hide();
   $("#borrar_empresas_" + id_elemento).hide();
   $("#bloquear_empresas_" + id_elemento).hide();
-
-
+  $("#desbloquear_empresas_" + id_elemento).hide();
 
 });
 
@@ -78,6 +77,7 @@ $(".cancelar_edicion").click(function(){
   //sacamos el id de la empresa
   var id_elemento= $(this).attr('id');
 
+  // el tamaño del nombre del id para solo sacar su id
   id_elemento = id_elemento.substring(17);
 
   //ocultamos los elementos confirmar y cancelar de dicha fila
@@ -88,6 +88,7 @@ $(".cancelar_edicion").click(function(){
   $("#editar_empresas_" + id_elemento).show();
   $("#borrar_empresas_" + id_elemento).show();
   $("#bloquear_empresas_" + id_elemento).show();
+  $("#desbloquear_empresas_" + id_elemento).show();
 
   //actualizamos las propiedades de las filas
   $('.fila_empresas button').removeAttr('disabled');
@@ -103,3 +104,49 @@ $(".cancelar_edicion").click(function(){
   $('#cp_' + id_elemento).css('background', 'none');
 
 });
+
+// bloqueamos la empresa borrado logico
+$('.bloquear_empresas').click(function(){
+
+  //sacamos el id de la empresa
+  var id_elemento= $(this).attr('id');
+
+  // el tamaño del nombre del id para solo sacar su id
+  id_elemento = id_elemento.substring(18);
+
+  $.ajax({
+    type:"GET",
+    url:"sql/bloquear_empresas.php",
+    data:{
+      id_empresas:id_elemento
+    },success:function(data){
+
+      //Se vuelve a cargar la tabla de empresas
+      $('#contenido').load('contenido_empresas.php');
+
+    }
+  });
+
+});
+
+// // desbloqueamos la empresa
+//
+// $('.desbloquear_empresas').click(function(){
+//
+//   // sacamos el id de la empresa
+//   var id_elemento = $(this).attr('id');
+//
+//   // el tamaño del nombre del id para solo sacar su id
+//   id_elemento = id_elemento.substring(21);
+//
+//   $.ajax({
+//     type:"GET",
+//     url:"sql/desbloquear_empresas.php";
+//     data:{
+//       id_empresas:id_elemento
+//     },success:function(data){
+//       // Se vuelve a cargar la tabla de empresas
+//       $('#contenido').load('contenido_empresas.php');
+//     }
+//   });
+// });
