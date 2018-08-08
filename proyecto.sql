@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-07-2018 a las 17:13:54
--- Versión del servidor: 10.1.32-MariaDB
--- Versión de PHP: 5.6.36
+-- Tiempo de generación: 08-08-2018 a las 18:26:02
+-- Versión del servidor: 10.1.28-MariaDB
+-- Versión de PHP: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,6 +44,51 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `categorias_trabajos`
+--
+
+CREATE TABLE `categorias_trabajos` (
+  `id` int(10) NOT NULL,
+  `categoria` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `categorias_trabajos`
+--
+
+INSERT INTO `categorias_trabajos` (`id`, `categoria`) VALUES
+(1, 'Administración de empresas'),
+(2, 'Administración de empresas y secretariado'),
+(3, 'Agricultura, ganadería y pesca'),
+(4, 'Atención al cliente y dependientes'),
+(5, 'Banca y seguros'),
+(6, 'Belleza y deporte'),
+(7, 'Calidad, producción E I+D'),
+(8, 'Comercial y ventas'),
+(9, 'Compras, logística y almacén'),
+(10, 'Construcción e Inmobiliaria'),
+(11, 'Educación y formación'),
+(12, 'Energía y Agua'),
+(13, 'Hostelería y Turismo'),
+(14, 'Hostelería, restauración y turismo'),
+(15, 'Idiomas'),
+(16, 'Informática e Internet'),
+(17, 'Ingeniería y producción'),
+(18, 'Legal'),
+(19, 'Limpieza y mantenimiento'),
+(20, 'Marketing y comunicación'),
+(21, 'Mecánica y automoción'),
+(22, 'Medios editoriales y artes gráficas'),
+(23, 'Ocio y entretenimiento'),
+(24, 'Otras'),
+(25, 'Profesionales, artes y oficios'),
+(26, 'Recursos Humanos'),
+(27, 'Sanidad, salud y servicios sociales'),
+(28, 'Transporte');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `cliente`
 --
 
@@ -59,9 +104,9 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nick`, `bloqueado`, `confirmado`) VALUES
-(1, 'toledo', 0, 0),
-(3, 'administrador', 0, 0),
-(4, 'cristian', 0, 0);
+(1, 'toledo manco', 0, 1),
+(3, 'administrador', 0, 1),
+(4, 'cristian puto amo', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -117,7 +162,7 @@ CREATE TABLE `localidad` (
 --
 
 INSERT INTO `localidad` (`id`, `nombre`, `provincia_id`) VALUES
-(1, 'Ámsterdam', 1),
+(1, 'Amsterdam', 1),
 (2, 'Haarlem', 1),
 (3, 'Zaanstad', 1),
 (4, 'Haarlemmermeer', 1),
@@ -275,6 +320,12 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `categorias_trabajos`
+--
+ALTER TABLE `categorias_trabajos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
@@ -330,6 +381,12 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `categoria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `categorias_trabajos`
+--
+ALTER TABLE `categorias_trabajos`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`

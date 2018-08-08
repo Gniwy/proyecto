@@ -13,7 +13,7 @@ $array_localidades= array();
 $sql_localidad = 'SELECT * FROM localidad WHERE 1';
 
 if($texto!=null){
-  $sql_localidad.= " AND nombre LIKE '%$texto%'";
+  $sql_localidad.= " AND nombre LIKE '$texto%'";
 }
 
 $aux_provincia=mysqli_query($link, $sql_localidad);

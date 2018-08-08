@@ -3,10 +3,10 @@
 # mirar el diseño mas detenidamente que es lo que más tiene que entrar en los ojos. no me inserta nada en el php???
 
 
-# Cristian - menu_top
-# Tole - buscador.
-
-# Cristian - tabla empresas(admin), buscador principal
-# Tole - buscador ajax parseJSON. vista 2(vista 2 acabada, traspaso buscador)
+# Cristian - menu_top (terminado)
+# Cristian - tabla empresas(admin), buscador principal (terminado)
+# Tole - vista 2(vista 2 acabada)
 
 # Tole - administracion empresas (tabla_empresas.php line 18 continuar)
+
+# Cristian - Al buscar una empresa que no existe, modal para crearla
