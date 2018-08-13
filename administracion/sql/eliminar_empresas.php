@@ -5,7 +5,7 @@ foreach ($_GET as $variable => $valor) {
   $$variable=$valor;
 }
 
-$delete_empresas = "UPDATE empresa SET activo = 0  WHERE id='$id'";
+$delete_empresas = "DELETE FROM empresa WHERE id='$id_empresas'";
 mysqli_query($link,$delete_empresas);
 
 

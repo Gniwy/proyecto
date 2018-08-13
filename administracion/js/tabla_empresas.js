@@ -129,24 +129,47 @@ $('.bloquear_empresas').click(function(){
 
 });
 
-// // desbloqueamos la empresa
-//
-// $('.desbloquear_empresas').click(function(){
-//
-//   // sacamos el id de la empresa
-//   var id_elemento = $(this).attr('id');
-//
-//   // el tamaño del nombre del id para solo sacar su id
-//   id_elemento = id_elemento.substring(21);
-//
-//   $.ajax({
-//     type:"GET",
-//     url:"sql/desbloquear_empresas.php";
-//     data:{
-//       id_empresas:id_elemento
-//     },success:function(data){
-//       // Se vuelve a cargar la tabla de empresas
-//       $('#contenido').load('contenido_empresas.php');
-//     }
-//   });
-// });
+// desbloqueamos la empresa
+
+$('.desbloquear_empresas').click(function(){
+
+  // sacamos el id de la empresa
+  var id_elemento = $(this).attr('id');
+
+  // el tamaño del nombre del id para solo sacar su id
+  id_elemento = id_elemento.substring(21);
+
+  $.ajax({
+    type:"GET",
+    url:"sql/desbloquear_empresas.php",
+    data:{
+      id_empresas:id_elemento
+    },success:function(data){
+      // Se vuelve a cargar la tabla de empresas
+      $('#contenido').load('contenido_empresas.php');
+    }
+  });
+});
+
+
+// elimina la empresa de la bbdd
+
+$('.borrar_empresas').click(function(){
+
+  // sacamos el id de la empresa
+  var id_elemento = $(this).attr('id');
+
+  // el tamano del nombre del id para solo sacar el id
+  id_elemento = id_elemento.substring(16);
+
+  $.ajax({
+    type:"GET",
+    url:"sql/eliminar_empresas.php",
+    data:{
+      id_empresas:id_elemento
+    },success:function(data){
+      // se vuelve a cargar la tabla de empresas
+      $('#contenido').load('contenido_empresas.php');
+    }
+  });
+});
