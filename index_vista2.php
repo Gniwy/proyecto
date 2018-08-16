@@ -25,7 +25,7 @@
     <section class="container" id="contenido_vista2" style="border: 1px solid blue;">
       <!-- contenido del filtro de busqueda -->
       <div class="row">
-        <div class="col-sm-3 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
+        <div class="col-sm-2 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
 
             <?php include "modulos/filtro/filtro.php"; ?>
         </div>
