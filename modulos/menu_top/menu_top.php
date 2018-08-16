@@ -2,6 +2,7 @@
 
 session_start();
 
+
 ?>
 <!-- <style media="screen">
   #navbarSupportedContent{

@@ -24,13 +24,14 @@ $ex_comprobar_login=mysqli_fetch_assoc($aux_comprobar_login);
 $id_cliente=$ex_comprobar_login['id'];
 
 
-$sql_comprobar_login_3="SELECT * FROM usuario WHERE id_cliente='$id_cliente' AND password='".md5($password)."' AND tipo_usuario='$id_tipo_admin'";
+$sql_comprobar_login_3="SELECT * FROM usuario WHERE id_cliente='$id_cliente' AND tipo_usuario='$id_tipo_admin'";
 $aux_comprobar_login_3=mysqli_query($link,$sql_comprobar_login_3);
 $ex_comprobar_login_3=mysqli_fetch_assoc($aux_comprobar_login_3);
 
+$password_consulta=$ex_comprobar_login_3['password'];
 $nick_usuario=$nick;
 
-if($ex_comprobar_login_3['id_cliente']!=null){
+if($ex_comprobar_login_3['id_cliente']!=null && password_verify($password, $password_consulta)){
   $correcto="si";
   echo "correcto";
 }else{

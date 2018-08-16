@@ -50,7 +50,7 @@ $ex_id_usuario=mysqli_fetch_assoc($aux_id_usuario);
 $id_usuario=$ex_id_usuario['id'];
 
 /* password encriptada*/
-$password_encriptada=md5($password);
+$password_encriptada=password_hash($password, PASSWORD_BCRYPT);
 
 if($fallo==0){
   $sql_usuario="INSERT INTO usuario(id_cliente,email,password) VALUES ($id_usuario,'$email','$password_encriptada')";
