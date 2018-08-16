@@ -22,10 +22,7 @@
       <div class="row">
         <div class="col-sm-2 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
 
-            filtro <br>
-            mas valorado <br>
-            mejor comentado <br>
-            ultimos comentario <br>
+            <?php include "../filtro/filtro.php"; ?>
         </div>
 
         <!-- contenido del filtro en xs -->
