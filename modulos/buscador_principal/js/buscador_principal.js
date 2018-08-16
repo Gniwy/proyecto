@@ -29,19 +29,12 @@ $("#select_lugar").keyup(function(){
 });
 //To select country name
 function selectCountry(val) {
-$("#select_lugar").val(val);
-$("#solucion_localidad").hide();
+  $("#select_lugar").val(val);
+  $("#solucion_localidad").hide();
 }
 
-// // trabajos disponibles
-//   $( function() {
-//       var availableTags = [
-//         "Abogado",
-//         "Administrador",
-//         "Camarero",
-//         "Carpintero"
-//       ];
-//       $( "#select_trabajo" ).autocomplete({
-//         source: availableTags
-//       });
-//     } );
+$('#btn_busqueda_principal').click(function(){
+
+  
+
+});
