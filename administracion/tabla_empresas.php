@@ -11,7 +11,7 @@ foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 //consulta para mostar las empresas en la tabla
-$sql_empresas="SELECT * FROM empresa ";
+$sql_empresas="SELECT * FROM empresa WHERE 1";
 
 //si el texto contiene algo, se añaden a la consulta
 if($texto!=null){
@@ -29,7 +29,6 @@ if($texto!=null){
   // completar el sql si se inserta algun nombre
   $sql_empresas .= " AND (nombre LIKE '%$texto%' OR id IN ($id_empresas)) ";
 }
-
 
 $aux_empresas=mysqli_query($link,$sql_empresas);
 
