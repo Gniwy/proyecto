@@ -3,26 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Vista2</title>
-    <?php include"../include_css_basic.php"; ?>
-    <!-- <link rel="stylesheet" href="../..modulos/menu_top/css/menu-top.css"> -->
-    <!-- <link rel="stylesheet" href="../../modulos/buscador_avanzado/css/buscador_avanzado.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
+    <link rel="stylesheet" href="modulos/footer/css/footer.css">
+    <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <?php include"modulos/include_css_basic.php"; ?>
+    <link rel="stylesheet" href="modulos/filtro/css/style.css">
+    <link rel="stylesheet" href="css/style_vista2.css">
   </head>
   <body>
     <section>
-      <?php include"../menu_top/menu_top.php" ?>
+      <?php include"modulos/menu_top/menu_top.php" ?>
     </section>
     <section class="container mt-5">
       <div class="col col-sm-12 col-md-12" id="fondoBuscador">
-        <?php include"../buscador_avanzado/buscador_avanzado.php" ?>
+        <?php include"modulos/buscador_avanzado/buscador_avanzado.php" ?>
       </div>
     </section>
     <section class="container" id="contenido_vista2" style="border: 1px solid blue;">
       <!-- contenido del filtro de busqueda -->
       <div class="row">
-        <div class="col-sm-2 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
+        <div class="col-sm-3 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
 
-            <?php include "../filtro/filtro.php"; ?>
+            <?php include "modulos/filtro/filtro.php"; ?>
         </div>
 
         <!-- contenido del filtro en xs -->
@@ -101,8 +106,20 @@
 
     </section>
     <footer>
-      <?php include"../footer/footer.php"; ?>
-      <?php include"../include_js_basic.php"; ?>
+      <script src="js/jquery.js"></script>
+
+      <!-- jQuery 12.1.1 necessary jqueryUI -->
+      <script src="js/jquery-ui.js"></script>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.js"></script>
+
+      <script type="text/javascript" src="js/index.js"></script>
+
+      <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
+
+      <!-- jQuery autocomplete (accion select_lugar) -->
+      <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
     </footer>
   </body>
 </html>
