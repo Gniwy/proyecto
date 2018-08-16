@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2018 a las 18:26:02
+-- Tiempo de generación: 16-08-2018 a las 18:39:48
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -104,9 +104,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nick`, `bloqueado`, `confirmado`) VALUES
-(1, 'toledo manco', 0, 1),
-(3, 'administrador', 0, 1),
-(4, 'cristian puto amo', 0, 1);
+(7, 'prueba3', 0, 0),
+(8, 'administrador', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -297,7 +296,7 @@ CREATE TABLE `usuario` (
   `id_cliente` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `tipo_usuario` int(11) NOT NULL DEFAULT '1',
-  `password` varchar(100) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -305,9 +304,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_cliente`, `email`, `tipo_usuario`, `password`) VALUES
-(1, 'toledo@gmail.com', 1, '4983a0ab83ed86e0e7213c8783940193'),
-(3, 'admin@admin.com', 2, '91f5167c34c400758115c2a6826ec2e3'),
-(4, 'cristian@gmail.com', 1, 'b08c8c585b6d67164c163767076445d6');
+(7, 'prueba3@asdf.com', 1, '$2y$10$XdOXQUtBcyFtqDRmthRD/eQ9wPF85lubPcop/MquwKKOZUpoUcl3O'),
+(8, 'admin@hotmail.com', 2, '$2y$10$/e3d.Ae2TIuRKhsmOm1/ve5VhF8ZoA1bEFgBdOBCXNFTirJU7YnXq');
 
 --
 -- Índices para tablas volcadas
@@ -392,7 +390,7 @@ ALTER TABLE `categorias_trabajos`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
