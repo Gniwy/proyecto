@@ -35,6 +35,9 @@ function selectCountry(val) {
 
 $('#btn_busqueda_principal').click(function(){
 
-  
+  var lugar = $('#select_lugar').val();
+  var trabajo = $('#select_trabajo').val();
+
+  open("index_vista2.php?lugar=" + lugar + "&trabajo=" + trabajo);
 
 });
