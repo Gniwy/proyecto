@@ -56,9 +56,18 @@
         </div>
         <!-- fin del contendido del filtro en xs -->
 
+        <!-- modal crear empresa -->
+
+        <?php include "modales/modal_crear_empresa.php"; ?>
+
         <!-- contenido de la busqueda -->
         <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">
+
+          <?php include "modulos/lista_empresas/lista_empresas.php";?>
+
+
           <!-- primera fila de la busqueda -->
+          <!--
           <div class="row mt-4">
             <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
               1
@@ -70,7 +79,7 @@
               3
             </div>
           </div>
-          <!-- segunda fila de la busqueda -->
+          <!-- segunda fila de la busqueda --
           <div class="row mt-2">
             <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
               4
@@ -82,7 +91,7 @@
               6
             </div>
           </div>
-          <!-- tercera fila de la busqueda -->
+          <!-- tercera fila de la busqueda --
           <div class="row mt-2">
             <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
               7
@@ -94,12 +103,16 @@
               9
             </div>
           </div>
-          <!-- paginacion -->
+        -->
+
+
+          <!-- paginacion --
           <div class="row mt-5 mb-3">
               <div class="col" style="border: 1px solid;">
                   paginacion
               </div>
           </div>
+          -->
         </div>
       </div>
 
