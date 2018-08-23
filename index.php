@@ -29,7 +29,7 @@ include ('conexion/conexion.php');
 
   <!-- Contenido principal -->
   <section class="container-fluid">
-    <div class="row">
+    <div class="row col-10 offset-1">
       <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
   </section>
