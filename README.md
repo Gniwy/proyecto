@@ -12,5 +12,5 @@
 # Cristian - Cambiado tipo de encriptado a tipo hash (terminado)                                     
 # Cristian - Mandar datos a vista 2 (si no hay resultados de busqueda de la empresa mostrar todas) (terminado)
 
-# Tole - cambiar la vista2 de xs a sm el modal, buscador principal boton grande abajo en xs
-# Cristian - Ficha de la empresa 
+# Tole - cambiar la vista2 de xs a sm el modal, buscador principal boton grande abajo en xs , mapa
+# Cristian - Ficha de la empresa
