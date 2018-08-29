@@ -61,9 +61,7 @@
         <?php include "modales/modal_crear_empresa.php"; ?>
 
         <!-- contenido de la busqueda -->
-        <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">
-
-          <?php include "modulos/lista_empresas/lista_empresas.php";?>
+      
 
 
           <!-- primera fila de la busqueda -->

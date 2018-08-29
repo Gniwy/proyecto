@@ -33,6 +33,11 @@ include ('conexion/conexion.php');
       <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
   </section>
+  <!-- Mapa -->
+  <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">
+
+    <?php include "modulos/lista_empresas/lista_empresas.php";?>
+
   <!--FOOTER-->
   <?php include "modulos/footer/footer.php"; ?>
 
