@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vista2</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
+    <link rel="stylesheet" href="modulos/footer/css/footer.css">
+    <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="modulos/filtro/css/style.css">
+    <link rel="stylesheet" href="css/style_vista2.css">
+    <link rel="stylesheet" href="css/ficha_empresa.css">
+    <script src="js/jquery.js"></script>
+
+    <!-- jQuery 12.1.1 necessary jqueryUI -->
+    <script src="js/jquery-ui.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
+
+    <!-- jQuery autocomplete (accion select_lugar) -->
+    <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
+
+  </head>
+  <body>
+    <section>
+      <?php include"modulos/menu_top/menu_top.php" ?>
+    </section>
+
+    <div class="offset-md-2 col-md-8" style="border:solid 1px black;">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-stripped">
+            <tr>
+              <th style="font-size:30px;">Datos de -Empresa-</th>
+            </tr>
+            <tr>
+              <td class="text-right" width="50%">Nombre:</td>
+              <td> --- </td>
+            </tr>
+            <tr>
+              <td class="text-right">Localidad:</td>
+              <td> --- </td>
+            </tr>
+            <tr>
+              <td class="text-right">CP:</td>
+              <td> --- </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200">
+        </div>
+      </div>
+
+      <div class="row">
+        <p style="font-size:30px;">Reputación:</p>
+          <div style="margin-top:11px; margin-left:10px; margin-bottom:25px;">
+            <?php $i=0; while($i<5){?>
+            <i class="fas fa-star" style="font-size:20px; color:#ff8a00;"></i>&nbsp;
+            <?php $i++; } ?>
+          </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h3 class="redondeado" style="background:#ffec88;">Comentario relevante</h3>
+          <div class="">
+            !Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
