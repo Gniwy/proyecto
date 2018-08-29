@@ -18,9 +18,10 @@ include ('conexion/conexion.php');
   <!-- hoja de estilos de las paginas -->
   <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="modulos/modulo_mapa/css/style.css">
 
   <link rel="stylesheet" href="fontawesome/css/all.css">
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -32,11 +33,14 @@ include ('conexion/conexion.php');
     <div class="row col-10 offset-1">
       <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
+    <!-- mapa -->
+    <div style="position:relative;" class="mapbox">
+      <?php include"modulos/modulo_mapa/mapa.php"; ?>
+    </div>
   </section>
-  <!-- Mapa -->
-  <div id="mapid" style="width:500px; height:500px;"></div>
 
-  <?php include"modulos/modulo_mapa/mapa.php"; ?>
+  <!-- Mapa -->
+  <!-- <div id="mapid" style="width:500px; height:500px;"></div> -->
 
   <!--FOOTER-->
   <?php include "modulos/footer/footer.php"; ?>
@@ -64,7 +68,14 @@ include ('conexion/conexion.php');
   <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
 
   <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
-
+  <!-- mapa  -->
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+  <script type="text/javascript">
+  var map = L.map('map', {
+  center: [51.505, -0.09],
+  zoom: 13
+});
+  </script>
 </body>
 
 </html>
