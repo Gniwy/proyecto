@@ -2,13 +2,15 @@
 
 
 # Cristian - menu_top (terminado)
-# Cristian - tabla empresas(admin), buscador principal (terminado)
-# Tole - vista 2(vista 2 acabada)
+# Cristian - (admin) tabla usuarios con funciones editar, borrar - buscador principal (terminado)
 
-# Tole - administracion empresas (terminado)
+# Tole - vista 2 maquetacion (terminado)
+
+# Tole - (admin) administracion empresas (terminado)
 # Cristian - Al buscar una empresa que no existe, modal para crearla
 
 # Cristian - Cambiado tipo de encriptado a tipo hash (terminado)                                     
-# Cristian - Mandar datos a vista 2 (si no hay resultados de busqueda de la empresa)
+# Cristian - Mandar datos a vista 2 (si no hay resultados de busqueda de la empresa mostrar todas) (terminado)
 
 # Tole - cambiar la vista2 de xs a sm el modal, buscador principal boton grande abajo en xs
+# Cristian - Ficha de la empresa 

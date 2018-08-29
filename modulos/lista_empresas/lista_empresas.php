@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="modulos/lista_empresas/css/lista_empresas.css">
+
 <?php
 
 require_once "conexion/conexion.php";
@@ -21,7 +24,7 @@ if($lugar!=null){
   $sql_empresas.=" AND cp IN ($cp_lugares) ";
 }
 
-if($trabajo!=null){
+if($trabajo!="null" && $trabajo!="" && $trabajo!=null){
   $sql_empresas.=" AND  id_categoria=$trabajo ";
 }
 
@@ -30,6 +33,7 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
 
 $cont_filas=0;
 $cont_elementos=0;
+
 
 while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
@@ -42,7 +46,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
       <div class="row mt-4">
     <?php }?>
 
-    <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
+    <div class="col col-sm-4 col-md-4 item empresa pointer borde" id="empresa_<?php echo $ex_empresas['id'];?>">
       <?php echo $ex_empresas['nombre']; ?>
     </div>
 
@@ -56,3 +60,6 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
     }
 
 }
+?>
+
+<script type="text/javascript" src="modulos/lista_empresas/js/lista_empresas.js"></script>

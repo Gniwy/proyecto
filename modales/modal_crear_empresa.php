@@ -12,19 +12,11 @@
         <table>
           <tr>
             <th>Nombre: </th>
-            <th><input type="text" name="" placeholder="Nickname" id="Nombre empresa" value=""></th>
-          </tr>
-          <tr>
-            <th>Contraseña: </td>
-            <td><input type="password" name="" placeholder="****" id="" value=""></td>
+            <th><input type="text" name="" placeholder="Nombre de la empresa" id="Nombre empresa" value=""></th>
           </tr>
           <tr>
             <th></td>
-            <td> <button type="button" class="btn btn-primary" name="button" id="btn_iniciar_sesion">Iniciar sesion</button> </td>
-          </tr>
-          <tr id="error_crear_empresa">
-            <td></td>
-            <td style="color:red;">Email / contraseña incorrecta.</td>
+            <td> <button type="button" class="btn btn-primary" name="button" id="btn_iniciar_sesion">Crear</button> </td>
           </tr>
         </table>
       </div>
