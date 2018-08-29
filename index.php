@@ -34,9 +34,9 @@ include ('conexion/conexion.php');
     </div>
   </section>
   <!-- Mapa -->
-  <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">
+  <div id="mapid" style="width:500px; height:500px;"></div>
 
-    <?php include "modulos/lista_empresas/lista_empresas.php";?>
+  <?php include"modulos/modulo_mapa/mapa.php"; ?>
 
   <!--FOOTER-->
   <?php include "modulos/footer/footer.php"; ?>

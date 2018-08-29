@@ -40,9 +40,3 @@
     <button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa" data-toggle="modal" data-target="#modal_crear_empresa">Creala</button>
   </div>
 </form>
-
-
-
-<div id="mapid" style="width:500px; height:500px;"></div>
-
-<?php include"modulos/modulo_mapa/mapa.php"; ?>
