@@ -9,9 +9,24 @@
     <link rel="stylesheet" href="modulos/footer/css/footer.css">
     <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <?php include"modulos/include_css_basic.php"; ?>
     <link rel="stylesheet" href="modulos/filtro/css/style.css">
     <link rel="stylesheet" href="css/style_vista2.css">
+
+    <script src="js/jquery.js"></script>
+
+    <!-- jQuery 12.1.1 necessary jqueryUI -->
+    <script src="js/jquery-ui.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
+
+    <!-- jQuery autocomplete (accion select_lugar) -->
+    <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
+
   </head>
   <body>
     <section>
@@ -119,20 +134,7 @@
 
     </section>
     <footer>
-      <script src="js/jquery.js"></script>
 
-      <!-- jQuery 12.1.1 necessary jqueryUI -->
-      <script src="js/jquery-ui.js"></script>
-
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.js"></script>
-
-      <script type="text/javascript" src="js/index.js"></script>
-
-      <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
-
-      <!-- jQuery autocomplete (accion select_lugar) -->
-      <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
     </footer>
   </body>
 </html>
