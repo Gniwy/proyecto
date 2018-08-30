@@ -34,7 +34,7 @@ include ('conexion/conexion.php');
       <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
     <!-- mapa -->
-    <div style="position:relative;" class="mapbox">
+    <div style="position:relative;" class="row mapbox">
       <?php include"modulos/modulo_mapa/mapa.php"; ?>
     </div>
   </section>
@@ -70,11 +70,8 @@ include ('conexion/conexion.php');
   <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
   <!-- mapa  -->
   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
-  <script type="text/javascript">
-  var map = L.map('map', {
-  center: [51.505, -0.09],
-  zoom: 13
-});
+  <script type="text/javascript" src="modulos/modulo_mapa/js/mapa.js">
+
   </script>
 </body>
 
