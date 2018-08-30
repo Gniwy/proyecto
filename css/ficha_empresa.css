@@ -3,3 +3,12 @@
   -moz-border-radius: 33px 33px 33px 33px;
   -webkit-border-radius: 33px 33px 33px 33px;
 }
+
+.pointer{
+  cursor:pointer;
+}
+
+.ui-progressbar.ui-widget-header {
+     color: Blue;
+     background: url(images/lime-1x100.png) #cccccc repeat-x 50% 50%;
+  }

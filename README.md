@@ -13,4 +13,4 @@
 # Cristian - Mandar datos a vista 2 (si no hay resultados de busqueda de la empresa mostrar todas) (terminado)
 
 # Tole - cambiar la vista2 de xs a sm el modal, buscador principal boton grande abajo en xs
-# Cristian - Ficha de la empresa 
+# Cristian - Ficha de la empresa (filtro falta ordenar por mas puntuados positivo y negativamente, y por fecha)
