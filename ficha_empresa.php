@@ -30,10 +30,11 @@
   </head>
   <body>
     <section>
-      <?php include"modulos/menu_top/menu_top.php" ?>
+      <?php include"modulos/menu_top/menu_top.php"; ?>
     </section>
 
     <div class="offset-md-2 col-md-8" style="border:solid 1px black;">
+      <!-- Datos de la empresa-->
       <div class="row">
         <div class="col-md-6">
           <table class="table table-stripped">
@@ -58,7 +59,9 @@
           <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200">
         </div>
       </div>
+      <!-- Fin datos de la empresa-->
 
+      <!-- Reputacion + estrellas-->
       <div class="row">
         <p style="font-size:30px;">Reputación:</p>
           <div style="margin-top:11px; margin-left:10px; margin-bottom:25px;">
@@ -67,14 +70,86 @@
             <?php $i++; } ?>
           </div>
       </div>
+      <!-- Fin eputacion + estrellas-->
 
       <div class="row">
 
+        <!-- Comentario relevante -->
         <div class="col-md-6">
           <h3 class="redondeado" style="background:#ffec88;">Comentario relevante</h3>
-          <div class="">
-            !Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div class="Comentario">
+
+            <div class="row">
+              <div class="col-md-6">
+                <h4>Manueh</h4>
+              </div>
+              <div class="col-md-6 text-right">
+                (Hace 1 dia) 12:38
+              </div>
+            </div>
+
+
+            <div class="">
+              !Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt orum... <a href="#">Leer más</a>
+            </div>
+
+            <div class="text-right">
+              <i class="far fa-thumbs-up fa-2x pointer" style="color:green;"></i>
+              5 votos
+              &nbsp;
+              <i class="far fa-thumbs-down fa-2x pointer" style="color:red;"></i>
+              10 votos
+            </div>
+
           </div>
+          <hr>
+        </div>
+        <!-- Fin comentario relevante -->
+
+        <div class="col-md-12" style="margin-top:10px;">
+          <div class="col-md-4">
+            <div class="col-md-12">
+              Puntuación
+            </div>
+              <div class="col-md-12">
+                <?php $i=0; while($i<5){ ?>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="checkbox" name="" value="">
+                      Excelente
+                    </div>
+                    <div class="col-md-6">
+                      <div class="progressbar" style="height:10px; margin-top:5px;">
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      56
+                    </div>
+                  </div>
+                <?php $i++; }?>
+                <!--
+              <div class="col-md-12">
+                <input type="checkbox" name="" value=""> Muy bueno
+              </div>
+              <div class="col-md-12">
+                <input type="checkbox" name="" value=""> Normal
+              </div>
+              <div class="col-md-12">
+                <input type="checkbox" name="" value=""> Malo
+              </div>
+              <div class="col-md-12">
+                <input type="checkbox" name="" value=""> Pésimo
+              </div>
+            -->
+            </div>
+
+
+
+
         </div>
 
       </div>
@@ -82,3 +157,11 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  $( ".progressbar" ).progressbar({
+    value: 600,
+    max: 1024,
+    create: function(event, ui) {$(this).find('.ui-widget-header').css({'background-color':'green'})}
+  });
+</script>
