@@ -1,0 +1,62 @@
+
+/* estilo boton despliegue de perfil */
+#botonDropdown{
+  position: absolute;
+  right: 30px;
+  min-width: 50px;
+}
+
+/* estilo <a> cuenta */
+.cuenta{
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 991px) {
+  .cuenta {
+    margin-top: -45px;
+  }
+}
+
+/* estilo div donde se encuentra nuestro perfil */
+.contenidoPerfil{
+  position: absolute;
+  text-align: right;
+  width: 150px;
+  top: 50px;
+  right: 20px;
+  z-index: 9;
+}
+
+/* opciones de perfil */
+#perfilOpc{
+  position: static;
+  text-align: right;
+  width: 100px;
+  margin-left: -30px;
+}
+
+@media only screen and (min-width: 991px) {
+  #perfilOpc {
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+
+/* posicionar el titulo en tamanos mas pequenos */
+@media only screen and (max-width: 400px) {
+    #titulo {
+      text-align: inherit;
+      margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #titulo {
+      text-align: inherit;
+      margin-left: -40px;
+    }
+}
