@@ -15,10 +15,10 @@ L.Control.Search = L.Control.extend({
 		container.appendChild(wrapper);
 		var link = L.DomUtil.create('a', '', wrapper);
 		link.href = '#';
-		link.style.width = '26px';
-		link.style.height = '26px';
+		link.style.width = '50px';
+		link.style.height = '50px';
 		link.style.backgroundImage = 'url(' + this._icon + ')';
-		link.style.backgroundSize = '26px 26px';
+		link.style.backgroundSize = '50px 50px';
 		link.style.backgroundRepeat = 'no-repeat';
 		link.title = this.options.title;
 
@@ -34,11 +34,11 @@ L.Control.Search = L.Control.extend({
 		var form = this._form = document.createElement('form');
 		form.style.display = 'none';
 		form.style.position = 'absolute';
-		form.style.left = '27px';
+		form.style.left = '55px';
 		form.style.top = '0px';
 		form.style.zIndex = -10;
 		var input = this._input = document.createElement('input');
-		input.style.height = '25px';
+		input.style.height = '35px';
 		input.style.border = '1px solid grey';
 		input.style.padding = '0 0 0 10px';
 		form.appendChild(input);

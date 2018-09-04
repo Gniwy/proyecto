@@ -29,3 +29,7 @@ a{
 .pointer{
   cursor:pointer;
 }
+
+.leaflet-bar{
+  margin-top: 100px;
+}

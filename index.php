@@ -24,6 +24,7 @@ include ('conexion/conexion.php');
   <!-- mapa -->
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
+  <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.scss">
 
 </head>
 
@@ -73,14 +74,27 @@ include ('conexion/conexion.php');
   <script type="text/javascript" src="leaflet/leaflet.js"></script>
   <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
   <script type="text/javascript" src="leaflet/plugins/L.Control.MousePosition.js"></script>
+  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js">
 
+  </script>
   <script type="text/javascript">
 
   let map = L.map('map').setView([40.7277831, -74.0080852], 18)
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 15,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+   maxZoom: 18,
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  // crear localizador geografico
+  var lc = L.control.locate().addTo(map);
+
+  lc.start();
+
+  //
+  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	// maxZoom: 15,
+	// attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
   //mapa geografico
   // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
