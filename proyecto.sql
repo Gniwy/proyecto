@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2018 a las 19:10:08
+-- Tiempo de generación: 04-09-2018 a las 20:20:01
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -119,8 +119,18 @@ CREATE TABLE `comentario` (
   `texto` longtext NOT NULL,
   `valoracion` int(2) UNSIGNED ZEROFILL NOT NULL,
   `id_respuesta` int(10) NOT NULL,
-  `activo` tinyint(1) NOT NULL DEFAULT '1'
+  `activo` tinyint(1) NOT NULL DEFAULT '1',
+  `id_empresa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentario`
+--
+
+INSERT INTO `comentario` (`id`, `id_cliente`, `texto`, `valoracion`, `id_respuesta`, `activo`, `id_empresa`) VALUES
+(1, 7, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 00, 0, 1, 1),
+(2, 7, 'asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe .\r\naasdasd  sdfscssd asdas  dasdasd asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe ', 02, 0, 1, 1),
+(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -337,7 +347,9 @@ ALTER TABLE `cliente`
 -- Indices de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `id_empresa` (`id_empresa`);
 
 --
 -- Indices de la tabla `empresa`
@@ -400,7 +412,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
@@ -429,6 +441,13 @@ ALTER TABLE `tipo_usuario`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`);
 
 --
 -- Filtros para la tabla `localidad`

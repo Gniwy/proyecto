@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+<?php
+
+require_once "conexion/conexion.php";
+
+foreach($_GET as $variable => $valor){
+  $$variable=$valor;
+}
+
+
+?>
+
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -110,7 +123,8 @@
         </div>
         <!-- Fin comentario relevante -->
 
-        <div class="col-md-12" style="margin-top:10px;">
+        <!-- Filtro -->
+        <div class="col-md-12" style="margin-top:10px; background:#ffe1af;">
           <div class="col-md-4">
             <div class="col-md-12">
               Puntuación
@@ -148,20 +162,21 @@
             </div>
 
 
-
-
         </div>
 
       </div>
+
+      <!-- Fin filtro -->
+
+      <div class="col-md-12" style="margin-top:20px;">
+        <h1>Comentarios</h1>
+
+        <?php include "modulos/comentarios/comentarios.php";?>
+      </div>
+
 
     </div>
   </body>
 </html>
 
-<script type="text/javascript">
-  $( ".progressbar" ).progressbar({
-    value: 600,
-    max: 1024,
-    create: function(event, ui) {$(this).find('.ui-widget-header').css({'background-color':'green'})}
-  });
-</script>
+<script type="text/javascript" src="js/ficha_empresa.js"></script>
