@@ -81,20 +81,30 @@ include ('conexion/conexion.php');
 
   let map = L.map('map').setView([40.7277831, -74.0080852], 18)
 
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-   maxZoom: 18,
-   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+  //map
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    minZoom: 2,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
   // crear localizador geografico
   var lc = L.control.locate().addTo(map);
 
   lc.start();
 
-  //
-  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	// maxZoom: 15,
-	// attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+
+  //marker (puntero)
+  var myIcon = L.icon({
+    iconUrl: 'leaflet/images/marker-icon.png',
+    iconSize: [5, 9],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: 'my-icon-shadow.png',
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+    });
+  L.marker([40.7277831, -74.0080852], {icon: myIcon}).addTo(map);
+
 
   //mapa geografico
   // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
