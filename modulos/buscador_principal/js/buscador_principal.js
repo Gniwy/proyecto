@@ -15,9 +15,6 @@ $("#select_lugar").keyup(function(){
     data:{
       texto:texto
     },
-    beforeSend: function(){
-			$("#select_lugar").css("background","#FFF url('https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif') no-repeat 165px");
-		},
     success: function(data){
 
        $( "#select_lugar" ).autocomplete({
