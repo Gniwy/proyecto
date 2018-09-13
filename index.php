@@ -24,7 +24,7 @@ include ('conexion/conexion.php');
   <!-- mapa -->
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
-  <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.scss">
+  <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css">
 
 </head>
 
@@ -99,7 +99,7 @@ include ('conexion/conexion.php');
     iconSize: [5, 9],
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
-    shadowUrl: 'my-icon-shadow.png',
+    shadowUrl: 'leaflet/images/marker-icon.png',
     shadowSize: [68, 95],
     shadowAnchor: [22, 94]
     });
