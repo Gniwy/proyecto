@@ -24,7 +24,7 @@ include ('conexion/conexion.php');
   <!-- mapa -->
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
-  <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css">
+  <!-- <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css"> -->
 
 </head>
 
