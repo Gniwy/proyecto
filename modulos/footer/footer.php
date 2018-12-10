@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-6">
             <ul class="list-unstyled">
-              <li><a href="">Product</a></li>
+              <li><a href="">Productos</a></li>
               <li><a href="">Benefits</a></li>
               <li><a href="">Partners</a></li>
               <li><a href="">Team</a></li>
