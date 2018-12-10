@@ -1,4 +1,8 @@
-
+/*navbar*/
+nav.navbar {
+  position: absolute;
+  width: 100%;
+}
 /* estilo boton despliegue de perfil */
 #botonDropdown{
   position: absolute;

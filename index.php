@@ -9,7 +9,8 @@ include ('conexion/conexion.php');
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proyecto</title>
+  <link rel="icon" type="image/png" href="image\favicon.png" />
+  <title>IReferences</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
@@ -33,14 +34,14 @@ include ('conexion/conexion.php');
   <?php include "modulos/menu_top/menu_top.php"; ?>
 
   <!-- Contenido principal -->
-  <section class="container-fluid">
+  <section class="container-fluid buscadorPrincipal">
     <div class="row col-10 offset-1">
       <?php include "modulos/buscador_principal/buscador_principal.php";?>
     </div>
     <!-- mapa -->
-    <div style="position: relative;">
-      <?php include"modulos/modulo_mapa/mapa.php"; ?>
-    </div>
+    <!-- <div style="position: relative;">
+      <?php /*include"modulos/modulo_mapa/mapa.php";*/ ?>
+    </div> -->
   </section>
 
   <!--FOOTER-->
@@ -76,6 +77,7 @@ include ('conexion/conexion.php');
   <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js">
 
   </script>
+  <!-- SCRIPT MAP -->
   <script type="text/javascript">
 
   let map = L.map('map').setView([36.543880623629846, -4.6306729316711435], 18)

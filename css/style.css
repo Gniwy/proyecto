@@ -1,6 +1,6 @@
 /* Pag Principal */
-section{
-}
+
+
 .img{
     height: 150px;
     background-image: url("http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png");
@@ -19,7 +19,15 @@ section{
     background-color:red;
     height: 150px;
     padding-top:30px;
+}
 
+/*Searcher page first*/
+.buscadorPrincipal {
+    min-height: 74vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a{
