@@ -12,7 +12,7 @@
         <table>
           <tr>
             <th>Nombre: </th>
-            <th><input type="text" name="" placeholder="Nombre de la empresa" id="Nombre empresa" value=""></th>
+            <th><input type="text" name="" placeholder="Nombre de la empresa" id="nombre_empresa" value=""></th>
           </tr>
           <tr>
             <th></td>
