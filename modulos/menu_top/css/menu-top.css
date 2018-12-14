@@ -1,6 +1,6 @@
 /*navbar*/
 nav.navbar {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 /* estilo boton despliegue de perfil */
@@ -8,6 +8,29 @@ nav.navbar {
   position: absolute;
   right: 30px;
   min-width: 50px;
+}
+#perfilOpc{
+  border: 0px;
+  top: -14px!important;
+}
+#perfilOpc a{
+  text-align: left;
+  padding-left: 38px;
+}
+
+/* estilo buton login*/
+#navbarDropdown{
+  padding-bottom: 3px;
+  border: 0px solid;
+  border-radius: 0;
+  border-bottom: 0px solid;
+  transition: border .3s;
+}
+#navbarDropdown:hover{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.79);
+}
+.dropdown-toggle::after{
+  display: none!important;
 }
 
 /* estilo <a> cuenta */

@@ -16,7 +16,7 @@ session_start();
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle cuenta" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Mi cuenta
+              Mi cuenta <i class="fas fa-user"></i>
             </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="perfilOpc">
             <a class="dropdown-item" data-toggle="modal" data-target="#modal_login">Login</a>
