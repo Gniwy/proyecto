@@ -19,6 +19,8 @@
             <td> <button type="button" class="btn btn-primary" name="button" id="btn_iniciar_sesion">Crear</button> </td>
           </tr>
         </table>
+        <div id="mapVista"  style="width: 100%; height: 500px;">          
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

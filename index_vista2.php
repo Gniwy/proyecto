@@ -26,7 +26,8 @@
 
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
-
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
   <body>
     <section>
@@ -134,7 +135,16 @@
 
     </section>
     <footer>
-
     </footer>
+  
+    <script type="text/javascript">
+    var map = L.map('mapVista').setView([41.66, -4.72], 15);
+
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18}).addTo(map);
+
+    </script>
   </body>
 </html>
