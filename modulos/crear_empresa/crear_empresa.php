@@ -118,6 +118,14 @@
       <div style="width: 45%; margin: auto; border-bottom: 1px solid;"></div>
     </section>
 
+<!-- coordenadas hidden  -->
+
+<input type="hidden" name="lat" id="lat" value="">
+<input type="hidden" name="lng" id="lng" value="">
+
+
+<!-- fin coordenadas hidden -->
+
     <!-- paso 3 PUBLICACION/REVISION -->
     <section id="paso3" style="display: none;">
       <div style="width: 45%; margin: auto; border-top: 1px solid;"></div>
@@ -159,122 +167,14 @@
       <?php include "../../modulos/footer/footer.php"; ?>
     </footer>
 
-    <!-- Visibilidad -->
-    <script type="text/javascript">
-
-    var paso1 = document.getElementById('boton1');
-    var paso2 = document.getElementById('boton2');
-    var paso3 = document.getElementById('boton3');
-
-    var div1 = document.getElementById('paso1');
-    var div2 = document.getElementById('paso2');
-    var div3 = document.getElementById('paso3');
-
-   paso1.onclick = function()
-     {
-        div2.style.display = "block";
-        div1.style.display = "none";
-     }
-   paso2.onclick = function()
-     {
-        div3.style.display = "block";
-        div2.style.display = "none";
-     }
-   paso3.onclick = function()
-     {
-       alert('Gracias por su colaboracion.');
-       window.location.href = "../../index_vista2.php";
-     }
-
-
-    </script>
-
-
     <!-- mapa  -->
     <script type="text/javascript" src="../../leaflet/leaflet.js"></script>
     <script type="text/javascript" src="../../leaflet/plugins/Search.js"></script>
     <script type="text/javascript" src="../../leaflet/plugins/L.Control.Locate.js"></script>
 
+    <!-- script pagina -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/mapa.js"></script>
 
-    <script type="text/javascript">
-    let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
-
-    //map
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      minZoom: 2,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
-
-      // crear localizador geografico
-      var lc = L.control.locate().addTo(map);
-
-      lc.start();
-
-      //marker (puntero custom)
-      var myIcon = L.icon({
-        iconUrl: 'leaflet/images/marker-icon.png',
-        iconSize: [68, 95],
-        iconAnchor: [22, 94],
-        popupAnchor: [-3, -76],
-        shadowUrl: 'leaflet/images/marker-shadow.png',
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-        });
-      //L.marker([40.7277831, -74.0080852], {icon: myIcon}).addTo(map);
-      L.marker([36.543880623629846, -4.6306729316711435]).addTo(map);
-
-
-      // buscador
-       var search1 = L.control.search().addTo(map);
-
-
-       //colocar marcador de empresa
-       var marker = {};
-       map.on('click', function(e){
-
-         // eliminar marcador si hay otro
-         if (marker != undefined) {
-           map.removeLayer(marker);
-         }
-
-         // colocar marcador
-         marker = L.marker(e.latlng).addTo(map);
-       //  console.log(search1._map._lastCenter);
-         console.log(e.latlng);
-         // guardar valor para usar con ajax
-         var data = {
-             lat: e.latlng.lat,
-             lng: e.latlng.lng
-         }
-       });
-
-    </script>
-    <script type="text/javascript">
-      let mapZone = L.map('mapEmpZone').setView([36.543880623629846, -4.6306729316711435], 18)
-
-      //map
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        minZoom: 2,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(mapZone);
-
-      L.marker([51.5, -0.09]).addTo(mapZone)
-    .bindPopup('Esta es la empresa elegida.')
-    .openPopup();
-
-
-    </script>
-
-    <script type="text/javascript">
-
-      $('#boton1').click(function(){
-
-        $('#span_nombre').html($('#nombre').val());
-
-        /* El resto de campos (M A N C O - S U P R E M O)*/
-
-      });
-
-    </script>
   </body>
 </html>
