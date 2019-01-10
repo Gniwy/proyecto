@@ -26,7 +26,7 @@ include ('conexion/conexion.php');
   <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
   <!-- <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css"> -->
-
+ 
 </head>
 
 <body>
