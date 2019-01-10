@@ -71,12 +71,12 @@ include ('conexion/conexion.php');
 
 
   <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
+
   <!-- mapa  -->
   <script type="text/javascript" src="leaflet/leaflet.js"></script>
   <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
-  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js">
+  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script>
 
-  </script>
   <!-- SCRIPT MAP -->
   <script type="text/javascript">
 

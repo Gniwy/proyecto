@@ -81,62 +81,15 @@
 
           <?php include "modulos/lista_empresas/lista_empresas.php";?>
 
-
-          <!-- primera fila de la busqueda -->
-          <!--
-          <div class="row mt-4">
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              1
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              2
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              3
-            </div>
-          </div>
-          <!-- segunda fila de la busqueda --
-          <div class="row mt-2">
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              4
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              5
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              6
-            </div>
-          </div>
-          <!-- tercera fila de la busqueda --
-          <div class="row mt-2">
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              7
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              8
-            </div>
-            <div class="col col-sm-4 col-md-4 item" style="border: 1px solid green;">
-              9
-            </div>
-          </div>
-        -->
-
-
-          <!-- paginacion --
-          <div class="row mt-5 mb-3">
-              <div class="col" style="border: 1px solid;">
-                  paginacion
-              </div>
-          </div>
-          -->
         </div>
       </div>
 
 
     </section>
     <footer>
+      <?php include "modulos/footer/footer.php"; ?>
     </footer>
-  
+
     <script type="text/javascript">
     var map = L.map('mapVista').setView([41.66, -4.72], 15);
 

@@ -37,6 +37,6 @@
   </div>
   <div class="col-md-12 text-center">
     ¿No encuentras la empresa que buscas?
-    <button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa" data-toggle="modal" data-target="#modal_crear_empresa">Creala</button>
+    <a href="modulos/crear_empresa/crear_empresa.php"><button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa"> Creala</button></a>
   </div>
 </form>

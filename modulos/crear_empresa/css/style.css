@@ -1,0 +1,7 @@
+.table-borderless tbody tr td {
+    padding-top: 20px;
+}
+.table-borderless tbody tr td img{
+    width: 80%;
+    height: 40%;
+}
