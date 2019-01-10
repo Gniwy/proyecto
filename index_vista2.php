@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="modulos/filtro/css/style.css">
     <link rel="stylesheet" href="css/style_vista2.css">
-
+ 
     <script src="js/jquery.js"></script>
 
     <!-- jQuery 12.1.1 necessary jqueryUI -->
