@@ -76,19 +76,19 @@
       <div class="datos" style="width: 50%; margin: auto; border-right: 1px solid; border-left: 1px solid; padding:15px; padding-left: 30px;">
         <div class="">
           <label>Nombre: </label>
-          <input type="text" name="nombre" value="" required>
+          <input type="text" name="nombre" value="" id="nombre" required>
         </div>
         <div class="">
           <label>Tipo: </label>
-          <input type="text" name="tipo" value="" required>
+          <input type="text" name="tipo" value="" id="tipo" required>
         </div>
         <div class="">
           <label>Zona: </label>
-          <input type="text" name="zona" value="">
+          <input type="text" name="zona" value="" id="zona">
         </div>
         <div class="">
           <label>CP: </label>
-          <input type="number" name="cp" value="">
+          <input type="number" name="cp" value="" id="cp">
         </div>
         <div class="">
           <button class="btn btn-primary pull-right" type="button" name="paso1" id="boton1">Siguiente</button>
@@ -129,19 +129,19 @@
           <tbody>
             <tr>
               <th>Nombre: </th>
-              <td>NULL</td>
+              <td><span id="span_nombre"></span></td>
             </tr>
             <tr>
               <th>Tipo: </th>
-              <td>NULL</td>
+              <td><span id="span_tipo"></span></td>
             </tr>
             <tr>
               <th>Zona: </th>
-              <td>NULL</td>
+              <td><span id="span_zona"></span></td>
             </tr>
             <tr>
               <th>CP: </th>
-              <td>NULL</td>
+              <td><span id="span_cp"></span></td>
             </tr>
           </tbody>
         </table>
@@ -262,6 +262,16 @@
     .bindPopup('Esta es la empresa elegida.')
     .openPopup();
 
+
+    </script>
+
+    <script type="text/javascript">
+
+      $('#boton1').click(function(){
+
+        $('#span_nombre').html($('#nombre').val());
+
+      });
 
     </script>
   </body>
