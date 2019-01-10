@@ -271,6 +271,8 @@
 
         $('#span_nombre').html($('#nombre').val());
 
+        /* El resto de campos (M A N C O - S U P R E M O)*/
+
       });
 
     </script>
