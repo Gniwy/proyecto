@@ -23,3 +23,34 @@ $('.leer_mas').click(function(){
 
   return false;
 });
+
+
+$('.btn_votar').click(function(){
+
+  var valoracion = $(this).attr('valor');
+  var id_comentario = $(this).attr('id').substr('9');
+
+  $.ajax({
+    type:'POST',
+    url:'modulos/comentarios/sql/valoracion.php',
+    data:{
+      id_comentario:id_comentario,
+      valoracion:valoracion
+    },success:function(data){
+
+      switch(valoracion){
+        case '1':
+          $('#voto_positivo_' + id_comentario).html(parseInt($('#voto_positivo_' + id_comentario).html()) + parseInt(1));
+          break;
+        case '0':
+        $('#voto_negativo_' + id_comentario).html(parseInt($('#voto_negativo_' + id_comentario).html()) + parseInt(1));
+          break;
+        default:
+
+          break;
+      }
+
+    }
+  });
+
+});

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2018 a las 20:20:01
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.10
+-- Tiempo de generación: 10-01-2019 a las 18:16:36
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -120,17 +120,40 @@ CREATE TABLE `comentario` (
   `valoracion` int(2) UNSIGNED ZEROFILL NOT NULL,
   `id_respuesta` int(10) NOT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
-  `id_empresa` int(11) NOT NULL
+  `id_empresa` int(11) NOT NULL,
+  `puntos_positivos` int(11) NOT NULL DEFAULT '0',
+  `puntos_negativos` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `comentario`
 --
 
-INSERT INTO `comentario` (`id`, `id_cliente`, `texto`, `valoracion`, `id_respuesta`, `activo`, `id_empresa`) VALUES
-(1, 7, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 00, 0, 1, 1),
-(2, 7, 'asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe .\r\naasdasd  sdfscssd asdas  dasdasd asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe ', 02, 0, 1, 1),
-(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1);
+INSERT INTO `comentario` (`id`, `id_cliente`, `texto`, `valoracion`, `id_respuesta`, `activo`, `id_empresa`, `puntos_positivos`, `puntos_negativos`) VALUES
+(1, 7, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 00, 0, 1, 1, 0, 0),
+(2, 7, 'asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe .\r\naasdasd  sdfscssd asdas  dasdasd asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe ', 02, 0, 1, 1, 0, 0),
+(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios_valoracion`
+--
+
+CREATE TABLE `comentarios_valoracion` (
+  `id_comentario` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `valoracion` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comentarios_valoracion`
+--
+
+INSERT INTO `comentarios_valoracion` (`id_comentario`, `id_cliente`, `valoracion`) VALUES
+(2, 8, 1),
+(2, 8, 0),
+(1, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -144,18 +167,20 @@ CREATE TABLE `empresa` (
   `calle` varchar(100) NOT NULL,
   `cp` int(5) NOT NULL,
   `id_categoria` varchar(255) NOT NULL,
-  `activo` tinyint(1) NOT NULL DEFAULT '1'
+  `activo` tinyint(1) NOT NULL DEFAULT '1',
+  `lat` varchar(100) NOT NULL,
+  `lng` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`) VALUES
-(1, 'lidl', 'unica', 29649, '2', 1),
-(2, 'Carrefour', 'asdf', 29649, '2', 1),
-(3, 'asdf', 'sdssd', 29649, '2', 1),
-(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1);
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`) VALUES
+(1, 'lidl', 'unica', 29649, '2', 1, '', ''),
+(2, 'Carrefour', 'asdf', 29649, '2', 1, '', ''),
+(3, 'asdf', 'sdssd', 29649, '2', 1, '', ''),
+(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1, '', '');
 
 -- --------------------------------------------------------
 
@@ -341,7 +366,8 @@ ALTER TABLE `categorias_trabajos`
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indices de la tabla `comentario`
@@ -350,6 +376,13 @@ ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_cliente` (`id_cliente`),
   ADD KEY `id_empresa` (`id_empresa`);
+
+--
+-- Indices de la tabla `comentarios_valoracion`
+--
+ALTER TABLE `comentarios_valoracion`
+  ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `id_comentario` (`id_comentario`);
 
 --
 -- Indices de la tabla `empresa`
@@ -448,6 +481,13 @@ ALTER TABLE `tipo_usuario`
 ALTER TABLE `comentario`
   ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
   ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`);
+
+--
+-- Filtros para la tabla `comentarios_valoracion`
+--
+ALTER TABLE `comentarios_valoracion`
+  ADD CONSTRAINT `comentarios_valoracion_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
+  ADD CONSTRAINT `comentarios_valoracion_ibfk_2` FOREIGN KEY (`id_comentario`) REFERENCES `comentario` (`id`);
 
 --
 -- Filtros para la tabla `localidad`
