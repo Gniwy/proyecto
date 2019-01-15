@@ -42,21 +42,22 @@ paso2.onclick = function()
 //subida de valores a la bbdd
 
   $('#boton3').click(function(){
-alert($('#nombre').val());
+
     $.ajax({
       type:"POST",
       url:"../crear_empresa/sql/datosCrearEmpresa.php",
       data:{
         nombre:$('#nombre').val(),
-        // tipo:$('#tipo').val(),
-        // zona:$('#zona').val(),
-        // cp:$('#cp').val(),
-        // lat:$('#lat').val(),
-        // lng:$('#lng').val(),
-        // comentario:$('#comentario').val()
+        tipo:$('#tipo').val(),
+        zona:$('#zona').val(),
+        cp:$('#cp').val(),
+        lat:$('#lat').val(),
+        lng:$('#lng').val(),
+        comentario:$('#comentario').val()
 
       }, success: function(data){
-window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
+        alert(data);
+          //window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
       }
     });
 

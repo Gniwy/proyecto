@@ -7,7 +7,8 @@ foreach ($_POST as $variable => $valor) {
   echo $$variable;
 }
 
-// 
+echo "Tole manco";
+//
 // echo $nombre;
 
  ?>
