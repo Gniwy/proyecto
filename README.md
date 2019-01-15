@@ -24,7 +24,7 @@
 
 # Cristian - Ver datos de la empresa (Terminado)
 
-# - Añadir comentario relevante (Terminado) - Falta poder puntuarlo
+# - Añadir comentario relevante (Terminado) - Falta poder puntuarlo.
 
 <!-- ''''''''''''''''''NEW''''''''''''''''''''' -->
 
