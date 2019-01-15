@@ -82,7 +82,7 @@
           </div>
           <div class="">
             <label>Tipo: </label>
-            <input type="text" name="tipo" value="" id="tipo" required>
+            <input type="number" name="tipo" value="" id="tipo" required>
           </div>
           <div class="">
             <label>Zona: </label>
@@ -157,10 +157,10 @@
           </table>
           <div id="mapEmpZone" style="width: auto; height: 400px;"></div>
 
-          <div class="">
+          <!-- <div class="">
             <p style="font-size:30px;">Comentario:</p>
             <textarea name="coment" id="comentario" rows="8" cols="80" placeholder="Danos tu opinión"></textarea>
-          </div>
+          </div> -->
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso3" id="boton3">Publicar</button>
           </div>

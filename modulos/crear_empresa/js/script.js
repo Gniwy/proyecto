@@ -53,10 +53,10 @@ paso2.onclick = function()
         cp:$('#cp').val(),
         lat:$('#lat').val(),
         lng:$('#lng').val(),
-        comentario:$('#comentario').val()
+        // comentario:$('#comentario').val()
 
       }, success: function(data){
-        alert(data);
+        //alert(data);
           //window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
       }
     });
