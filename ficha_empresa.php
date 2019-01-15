@@ -18,6 +18,10 @@ $calle=$ex_empresa['calle'];
 $cp=$ex_empresa['cp'];
 $valoracion=$ex_empresa['valoracion_media'];
 
+// coordenadas
+$lat = $ex_empresa['lat'];
+$lng = $ex_empresa['lng'];
+
 /*Comentario mas puntuado*/
 $sql_comentario_relevante="SELECT * FROM comentario WHERE id_empresa=".$id_empresa;
 $aux_comentario_relevante=mysqli_query($link,$sql_comentario_relevante);
@@ -67,6 +71,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     <link rel="stylesheet" href="modulos/filtro/css/style.css">
     <link rel="stylesheet" href="css/style_vista2.css">
     <link rel="stylesheet" href="css/ficha_empresa.css">
+    <!-- mapa -->
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+
     <script src="js/jquery.js"></script>
 
     <!-- jQuery 12.1.1 necessary jqueryUI -->
@@ -81,7 +88,8 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
-
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
   <body>
     <section>
@@ -111,7 +119,11 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
           </table>
         </div>
         <div class="col-md-6 text-center">
-          <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200">
+          <input type="text" name="" value="<?php echo $lat; ?>" id="lat" hidden>
+          <input type="text" name="" value="<?php echo $lng; ?>" id="lng" hidden>
+          <div id="mapFichaEmp" style="width:100%; height: 400px;">
+          </div>
+          <!-- <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200"> -->
         </div>
       </div>
       <!-- Fin datos de la empresa-->
@@ -164,7 +176,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
                   <?php
                   $valoracion=$ex_comentario_relevante_mostrar['valoracion'];
-      
+
                   for($i=0;$i<$valoracion;$i++){?>
                     <img src="image/estrella_rellenada.png" width="20px" alt="">
                   <?php } ?>
@@ -252,6 +264,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
     </div>
   </body>
+  <!-- mapa  -->
+  <script type="text/javascript" src="leaflet/leaflet.js"></script>
 </html>
 
 <script type="text/javascript" src="js/ficha_empresa.js"></script>
+<script type="text/javascript" src="js/mapaFichaEmpresa.js"></script>
