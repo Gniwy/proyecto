@@ -1,3 +1,6 @@
+
+
+
 // Busca la empresa
 
 let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
@@ -24,7 +27,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     shadowAnchor: [22, 94]
     });
   //L.marker([40.7277831, -74.0080852], {icon: myIcon}).addTo(map);
-  L.marker([36.543880623629846, -4.6306729316711435]).addTo(map);
+  //L.marker([36.543880623629846, -4.6306729316711435]).addTo(map);
 
 
   // buscador
@@ -53,20 +56,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
+
 // mapa de la ubicacion de la empresa
 
 $('#boton2').click(function(){
 
-  let mapZone = L.map('mapEmpZone').setView([36.543880623629846, -4.6306729316711435], 18)
-
-});
+  //valores de las coordenadas
+  var lat = document.getElementById('lat').value;
+  var lng = document.getElementById('lng').value;
+  
+  let map2 = L.map('mapEmpZone').setView([lat, lng], 18)
 
    //map
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
      maxZoom: 19,
      minZoom: 2,
-     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(mapZone);
+     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map2);
 
-   L.marker([51.5, -0.09]).addTo(mapZone)
+//marker
+   L.marker([lat, lng]).addTo(map2)
  .bindPopup('Esta es la empresa elegida.')
  .openPopup();
+
+
+});
