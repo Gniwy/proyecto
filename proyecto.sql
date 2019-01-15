@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-01-2019 a las 18:16:36
+-- Tiempo de generación: 15-01-2019 a las 20:00:59
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -153,7 +153,9 @@ CREATE TABLE `comentarios_valoracion` (
 INSERT INTO `comentarios_valoracion` (`id_comentario`, `id_cliente`, `valoracion`) VALUES
 (2, 8, 1),
 (2, 8, 0),
-(1, 8, 1);
+(1, 8, 1),
+(2, 8, 1),
+(4, 8, 0);
 
 -- --------------------------------------------------------
 
@@ -169,18 +171,19 @@ CREATE TABLE `empresa` (
   `id_categoria` varchar(255) NOT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `lat` varchar(100) NOT NULL,
-  `lng` varchar(100) NOT NULL
+  `lng` varchar(100) NOT NULL,
+  `valoracion_media` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`) VALUES
-(1, 'lidl', 'unica', 29649, '2', 1, '', ''),
-(2, 'Carrefour', 'asdf', 29649, '2', 1, '', ''),
-(3, 'asdf', 'sdssd', 29649, '2', 1, '', ''),
-(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1, '', '');
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`) VALUES
+(1, 'lidl', 'unica', 29649, '2', 1, '', '', 1),
+(2, 'Carrefour', 'asdf', 29649, '2', 1, '', '', 0),
+(3, 'asdf', 'sdssd', 29649, '2', 1, '', '', 0),
+(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1, '', '', 0);
 
 -- --------------------------------------------------------
 
