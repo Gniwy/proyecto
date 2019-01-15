@@ -20,15 +20,21 @@
 
 # Cristian - Estrellas comentarios personales (Terminado)
 
+# Cristian - Valorar comentarios (Que solo pueda puntuar una vez el comentario cada usuario) (Terminado)
+
+# Cristian - Ver datos de la empresa (Terminado)
+
+# - Añadir comentario relevante (Terminado) - Falta poder puntuarlo
+
 <!-- ''''''''''''''''''NEW''''''''''''''''''''' -->
 
- 
+# Cristian - Añadir restricciones comentarios (No tienen que salir los que no esten activos - usuarios)
 
 # Tole - prepadando diseño web
 
 # Tole - crear empresa en vista modal (crear) agregar mapa
 
-# Cristian - comentarios puntuacion de los comentarios, agregar comentarios, datos de la empresa y mapa, filtros(llamar a tole para el tema de filtros) ---------- (((Falta que solo pueda puntuar 1 vez el comentario))) (((Falta cargar puntuaciones de la tabla nueva: comentarios_valoracion)))
+# Cristian - agregar comentarios, filtros ----------
 
 
 # Tole - crear bbdd empresa coordenadas, administracion cliquear empresa y que salga lista de comentarios de esa empresa (ajax)

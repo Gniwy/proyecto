@@ -38,17 +38,28 @@ $('.btn_votar').click(function(){
       valoracion:valoracion
     },success:function(data){
 
-      switch(valoracion){
-        case '1':
-          $('#voto_positivo_' + id_comentario).html(parseInt($('#voto_positivo_' + id_comentario).html()) + parseInt(1));
+      switch (data) {
+        case 'insertado':
+          switch(valoracion){
+            case '1':
+              $('#voto_positivo_' + id_comentario).html(parseInt($('#voto_positivo_' + id_comentario).html()) + parseInt(1));
+              break;
+            case '0':
+            $('#voto_negativo_' + id_comentario).html(parseInt($('#voto_negativo_' + id_comentario).html()) + parseInt(1));
+              break;
+            default:
+
+              break;
+          }
+
           break;
-        case '0':
-        $('#voto_negativo_' + id_comentario).html(parseInt($('#voto_negativo_' + id_comentario).html()) + parseInt(1));
-          break;
-        default:
+        case 'repetido':
+
+          alert('Ya has puntuado este comentario.');
 
           break;
       }
+
 
     }
   });

@@ -2,12 +2,54 @@
 
 <?php
 
+error_reporting(0);
 require_once "conexion/conexion.php";
 
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 
+$sql_empresa="SELECT * FROM empresa WHERE id=".$id_empresa;
+$aux_empresa=mysqli_query($link,$sql_empresa);
+$ex_empresa=mysqli_fetch_assoc($aux_empresa);
+
+$nombre=$ex_empresa['nombre'];
+$calle=$ex_empresa['calle'];
+$cp=$ex_empresa['cp'];
+$valoracion=$ex_empresa['valoracion_media'];
+
+/*Comentario mas puntuado*/
+$sql_comentario_relevante="SELECT * FROM comentario WHERE id_empresa=".$id_empresa;
+$aux_comentario_relevante=mysqli_query($link,$sql_comentario_relevante);
+
+$array_comentarios=array();
+
+while($ex_comentario_relevante=mysqli_fetch_assoc($aux_comentario_relevante)){
+  $id_comentario=$ex_comentario_relevante['id'];
+  $sql_votos="SELECT * FROM comentarios_valoracion WHERE id_comentario=".$id_comentario;
+  $aux_votos=mysqli_query($link, $sql_votos);
+  $votos=0;
+
+  while($ex_votos=mysqli_fetch_assoc($aux_votos)){
+
+    $votos++;
+
+  }
+
+  $array=array("id" => $id_comentario,"votos" => $votos);
+  array_push($array_comentarios,$array);
+
+}
+
+$mas_votado=array();
+$mas_votos=0;
+for ($i=0;$i<sizeof($array_comentarios);$i++)
+{
+    if($array_comentarios[$i][votos]>$mas_votos){
+      $mas_votado=array('id' => $array_comentarios[$i]['id'], 'votos' => $array_comentarios[$i]['votos']);
+      $mas_votos=$array_comentarios[$i]['votos'];
+    }
+}
 
 ?>
 
@@ -56,7 +98,7 @@ foreach($_GET as $variable => $valor){
             </tr>
             <tr>
               <td class="text-right" width="50%">Nombre:</td>
-              <td> --- </td>
+              <td> <?php echo $nombre;?> </td>
             </tr>
             <tr>
               <td class="text-right">Localidad:</td>
@@ -64,7 +106,7 @@ foreach($_GET as $variable => $valor){
             </tr>
             <tr>
               <td class="text-right">CP:</td>
-              <td> --- </td>
+              <td> <?php echo $cp;?> </td>
             </tr>
           </table>
         </div>
@@ -77,11 +119,17 @@ foreach($_GET as $variable => $valor){
       <!-- Reputacion + estrellas-->
       <div class="row">
         <p style="font-size:30px;">Reputación:</p>
+
           <div style="margin-top:11px; margin-left:10px; margin-bottom:25px;">
-            <?php $i=0; while($i<5){?>
-            <i class="fas fa-star" style="font-size:20px; color:#ff8a00;"></i>&nbsp;
-            <?php $i++; } ?>
+            <?php for($i=0;$i<$valoracion;$i++){?>
+              <img src="image/estrella_rellenada.png" width="30px" alt="">
+            <?php } ?>
+
+            <?php for($i=$valoracion;$i<5;$i++){?>
+              <img src="image/estrella_vacia.png" width="30px" alt="">
+            <?php } ?>
           </div>
+
       </div>
       <!-- Fin eputacion + estrellas-->
 
@@ -91,10 +139,40 @@ foreach($_GET as $variable => $valor){
         <div class="col-md-6">
           <h3 class="redondeado" style="background:#ffec88;">Comentario relevante</h3>
           <div class="Comentario">
+            <?php
+
+
+            $sql_comentario_relevante_mostrar="SELECT * FROM comentario WHERE id=".$mas_votado['id'];
+            $aux_comentario_relevante_mostrar=mysqli_query($link, $sql_comentario_relevante_mostrar);
+            $ex_comentario_relevante_mostrar=mysqli_fetch_assoc($aux_comentario_relevante_mostrar);
+
+            $id_cliente_comentario=$ex_comentario_relevante_mostrar['id_cliente'];
+            $texto_comentario=$ex_comentario_relevante_mostrar['texto'];
+            $valoracion_comentario=$ex_comentario_relevante_mostrar['valoracion'];
+
+            $sql_cliente_relevante="SELECT * FROM cliente WHERE id=".$id_cliente_comentario;
+            $aux_cliente_relevante=mysqli_query($link,$sql_cliente_relevante);
+            $ex_cliente_relevante=mysqli_fetch_assoc($aux_cliente_relevante);
+
+            $nick_cliente_relevante=$ex_cliente_relevante['nick'];
+            ?>
 
             <div class="row">
               <div class="col-md-6">
-                <h4>Manueh</h4>
+                <h4>
+                  <?php echo $nick_cliente_relevante; ?>
+
+                  <?php
+                  $valoracion=$ex_comentario_relevante_mostrar['valoracion'];
+      
+                  for($i=0;$i<$valoracion;$i++){?>
+                    <img src="image/estrella_rellenada.png" width="20px" alt="">
+                  <?php } ?>
+
+                  <?php for($i=$valoracion;$i<5;$i++){?>
+                    <img src="image/estrella_vacia.png" width="20px" alt="">
+                  <?php } ?>
+                </h4>
               </div>
               <div class="col-md-6 text-right">
                 (Hace 1 dia) 12:38
@@ -103,11 +181,8 @@ foreach($_GET as $variable => $valor){
 
 
             <div class="">
-              !Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt orum... <a href="#">Leer más</a>
+              <?php echo $texto_comentario; ?>
+              <a href="#">Leer más</a>
             </div>
 
             <div class="text-right">
