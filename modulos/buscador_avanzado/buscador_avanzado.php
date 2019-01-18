@@ -35,8 +35,17 @@
   <div class="col-2">
     <input type="submit" name="enviar" value="Buscar" class="btn btn-primary mb-2">
   </div>
-  <div class="col-md-12 text-center">
-    ¿No encuentras la empresa que buscas?
-    <a href="modulos/crear_empresa/crear_empresa.php"><button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa"> Creala</button></a>
+  <?php if(!isset($_SESSION['id_usuario'])){ ?>
+
+    <div class="col-md-12 text-center">
+      Registrate si necesitas crear tu empresa
+    </div>
+
+  <?php }else{ ?>
+    <div class="col-md-12 text-center">
+      ¿No encuentras la empresa que buscas?
+      <a href="modulos/crear_empresa/crear_empresa.php"><button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa"> Creala</button></a>
+  <?php } ?>
+
   </div>
 </form>

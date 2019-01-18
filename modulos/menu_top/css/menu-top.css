@@ -40,11 +40,11 @@ nav.navbar {
   border-radius: 5px;
 }
 
-@media only screen and (min-width: 991px) {
+/* @media only screen and (min-width: 991px) {
   .cuenta {
     margin-top: -45px;
   }
-}
+} */
 
 /* estilo div donde se encuentra nuestro perfil */
 .contenidoPerfil{
@@ -55,6 +55,13 @@ nav.navbar {
   right: 20px;
   z-index: 9;
 }
+#navbar_sesion_login{
+  position: absolute;
+  right: 0px;
+  top: 12px;
+  width: 100%;
+}
+
 
 /* opciones de perfil */
 #perfilOpc{
@@ -66,7 +73,7 @@ nav.navbar {
 
 @media only screen and (min-width: 991px) {
   #perfilOpc {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
   }
 }

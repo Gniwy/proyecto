@@ -20,12 +20,12 @@ paso2.onclick = function()
     div3.style.display = "block";
     div2.style.display = "none";
  }
-// paso3.onclick = function()
-//  {
-//   // alert('Gracias por su colaboracion.');
-//   // window.location.href = "../../index_vista2.php";
-//   window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
-//  }
+paso3.onclick = function()
+ {
+  alert('Gracias por su colaboracion.');
+  // window.location.href = "../../index_vista2.php";
+  window.location.href = "../../index_vista2.php?lugar=&trabajo=null";
+ }
 
 
 // sacando valores
@@ -53,7 +53,8 @@ paso2.onclick = function()
         cp:$('#cp').val(),
         lat:$('#lat').val(),
         lng:$('#lng').val(),
-        // comentario:$('#comentario').val()
+        id_usuario:$('#id_usuario').val(),
+        comentario:$('#comentario').val()
 
       }, success: function(data){
         //alert(data);

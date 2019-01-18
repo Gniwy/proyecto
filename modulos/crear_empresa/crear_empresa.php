@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="../../modulos/buscador_principal/css/buscador_principal.css">
     <link rel="stylesheet" href="../../fontawesome/css/all.css">
     <link rel="stylesheet" href="../../modulos/filtro/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_vista2.css">
     <!-- mapa -->
     <link rel="stylesheet" href="../../leaflet/leaflet.css">
@@ -67,6 +69,8 @@
             </tr>
           </tbody>
         </table>
+
+        <input type="number" name="" id="id_usuario" value="<?php echo $_SESSION['id_usuario']; ?>" hidden>
 
       </section>
       <br>
@@ -157,10 +161,10 @@
           </table>
           <div id="mapEmpZone" style="width: auto; height: 400px;"></div>
 
-          <!-- <div class="">
+          <div class="">
             <p style="font-size:30px;">Comentario:</p>
             <textarea name="coment" id="comentario" rows="8" cols="80" placeholder="Danos tu opinión"></textarea>
-          </div> -->
+          </div>
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso3" id="boton3">Publicar</button>
           </div>
@@ -175,7 +179,11 @@
     <footer>
       <?php include "../../modulos/footer/footer.php"; ?>
     </footer>
+    <!-- Modal registro-->
+    <div id="div_modal_registro" class="pointer"><?php include "../../modales/modal_registro.php"; ?></div>
 
+    <!-- Modal login-->
+    <div id="div_modal_login" class="pointer"><?php include "../../modales/modal_login.php"; ?></div>
     <!-- mapa  -->
     <script type="text/javascript" src="../../leaflet/leaflet.js"></script>
     <script type="text/javascript" src="../../leaflet/plugins/Search.js"></script>

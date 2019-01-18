@@ -5,11 +5,6 @@
 
 let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
 
-//map
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  minZoom: 2,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
   // crear localizador geografico
   var lc = L.control.locate().addTo(map);
@@ -54,7 +49,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
    });
 
+   //map
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     maxZoom: 19,
+     minZoom: 2,
+     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
+     //map.remove();
+     map.invalidateSize();
 
 
 // mapa de la ubicacion de la empresa
@@ -64,8 +66,13 @@ $('#boton2').click(function(){
   //valores de las coordenadas
   var lat = document.getElementById('lat').value;
   var lng = document.getElementById('lng').value;
-  
+
   let map2 = L.map('mapEmpZone').setView([lat, lng], 18)
+
+  //marker
+  L.marker([lat, lng]).addTo(map2)
+  .bindPopup('Esta es la empresa elegida.')
+  .openPopup();
 
    //map
    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -73,10 +80,12 @@ $('#boton2').click(function(){
      minZoom: 2,
      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map2);
 
-//marker
-   L.marker([lat, lng]).addTo(map2)
- .bindPopup('Esta es la empresa elegida.')
- .openPopup();
 
+map2.invalidateSize();
 
 });
+
+
+// $("a[href='#menu1']").on('shown.bs.tab', function(e) {
+//      map.invalidateSize();
+// });
