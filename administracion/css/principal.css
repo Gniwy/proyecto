@@ -1,9 +1,34 @@
-
+/*
 nav a:nth-child(even) {background: rgb(102, 184, 135)}
-nav a:nth-child(odd) {background: rgb(205, 245, 153)}
+nav a:nth-child(odd) {background: rgb(205, 245, 153)} */
 
 
-#contenido{
-  margin:50px;
-  background: rgb(176, 176, 176);
+#contenido, #welcome{
+  width: 95%;
+  margin:auto;
+  color: rgba(255, 255, 255, 0.69);
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.welcome{
+  width: 55%;
+  margin: auto;
+  padding: 20px 0 20px 0;
+}
+
+.mensaje_welcome{
+  padding: 10px 0 10px 0;
+}
+
+nav{
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.cerrar_sesion {
+    border-radius: 0;
+    position: absolute;
+    right: 0;
 }

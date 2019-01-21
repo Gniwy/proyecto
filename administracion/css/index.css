@@ -1,23 +1,86 @@
 body{
-  background:rgb(215, 215, 215);
-  height:700px;
+  background:rgba(6, 26, 97, 0.89);
 }
 
 
+
 #div_login{
+  position: absolute;
+  width: 300px;
+  left: 42vw;
+  top: 20vh;
+  margin: auto;
+  /* position: relative; */
+  margin: auto;
+  /* top: 25%; */
 
-  position: relative;
-  top:50%;
-
-  border-radius: 10px 10px 10px 10px;
+  /* border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px solid #000000;
 
+
+  background:rgb(245, 146, 92); */
+  /* width:300px; */
+}
+
+input{
+  background-color: rgba(10, 8, 111, 0);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.47);
+  padding: 6px 0 6px 0;
+}
+
+/* icon */
+.has-feedback{
+  position: relative;
+}
+
+.form-control-feedback {
+  position: absolute;
+  right: 5px;
+  color: white;
+  padding: 10px;
+  pointer-events: none;
+  z-index: 9;
 }
 
 
-#div_login{
-  background:rgb(245, 146, 92);
-  width:300px;
+/* fin icon */
+
+
+.title_login h2{
+  text-transform: uppercase;
+  text-align: right;
+  color: white;
+}
+
+
+.contenido_login{
+  padding: 30px 15px 30px 15px;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+#nick{
+  margin-bottom: 20px;
+}
+
+#password{
+  margin-bottom: 15px;
+}
+
+#btn_login{
+  color: black;
+  background: white;
+  border-radius: 0;
+}
+
+
+/* @media query */
+
+@media (max-width:1024px) {
+  #div_login{
+    left: 35%;
+  }
 }

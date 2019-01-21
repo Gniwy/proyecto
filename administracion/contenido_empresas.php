@@ -1,4 +1,7 @@
 
+<h1 class="text-center mensaje_welcome">Bienvenido administrador</h1>
+
+
 <!-- buscador -->
 <input type="text" placeholder="Buscador" name="" value="" id="buscador_empresas"> <button type="button" name="button"> <i class="fas fa-search"></i> </button>
 
