@@ -56,7 +56,8 @@ let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435],
      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
      //map.remove();
-     map.invalidateSize();
+    setTimeout(function(){ 
+      map.invalidateSize()}, 400);
 
 
 // mapa de la ubicacion de la empresa
