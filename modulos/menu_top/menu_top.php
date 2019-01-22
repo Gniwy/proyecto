@@ -3,7 +3,7 @@
 session_start();
 
 ?>
-
+    <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
@@ -43,3 +43,11 @@ session_start();
   <?php }?>
   </nav>
 </header>
+
+<!-- Modal registro-->
+<div id="div_modal_registro"><?php include "modales/modal_registro.php"; ?></div>
+
+<!-- Modal login-->
+<div id="div_modal_login"><?php include "modales/modal_login.php"; ?></div>
+
+<script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>

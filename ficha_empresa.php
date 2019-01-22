@@ -64,7 +64,6 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     <title>Vista2</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
     <link rel="stylesheet" href="modulos/footer/css/footer.css">
     <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -84,7 +83,6 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
     <script type="text/javascript" src="js/index.js"></script>
 
-    <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
 
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
@@ -93,7 +91,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
   </head>
   <body>
     <section>
-      <?php include"modulos/menu_top/menu_top.php"; ?>
+      <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
 
     <div class="offset-md-2 col-md-8" style="border:solid 1px black;">
