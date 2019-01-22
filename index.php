@@ -15,7 +15,6 @@ include ('conexion/conexion.php');
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <!-- hoja de estilos de las paginas -->
-  <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
   <link rel="stylesheet" href="modulos/footer/css/footer.css">
   <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
   <link rel="stylesheet" href="css/style.css">
@@ -31,8 +30,7 @@ include ('conexion/conexion.php');
 
 <body>
   <!-- HEADER -->
-  <?php include "modulos/menu_top/menu_top.php"; ?>
-
+  <div id="div_menu_top"><?php include "modulos/menu_top/menu_top.php"; ?></div>
   <!-- Contenido principal -->
   <section class="container-fluid buscadorPrincipal">
     <div class="row col-10 offset-1">
