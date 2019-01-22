@@ -209,45 +209,20 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         <!-- Fin comentario relevante -->
 
         <!-- Filtro -->
-        <div class="col-md-12" style="margin-top:10px; background:#ffe1af;">
-          <div class="col-md-4">
-            <div class="col-md-12">
-              Puntuación
-            </div>
-              <div class="col-md-12">
-                <?php $i=0; while($i<5){ ?>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <input type="checkbox" name="" value="">
-                      Excelente
-                    </div>
-                    <div class="col-md-6">
-                      <div class="progressbar" style="height:10px; margin-top:5px;">
-                      </div>
-                    </div>
-                    <div class="col-md-1">
-                      56
-                    </div>
-                  </div>
-                <?php $i++; }?>
-                <!--
-              <div class="col-md-12">
-                <input type="checkbox" name="" value=""> Muy bueno
-              </div>
-              <div class="col-md-12">
-                <input type="checkbox" name="" value=""> Normal
-              </div>
-              <div class="col-md-12">
-                <input type="checkbox" name="" value=""> Malo
-              </div>
-              <div class="col-md-12">
-                <input type="checkbox" name="" value=""> Pésimo
-              </div>
-            -->
-            </div>
+        <div class="col-md-12" style="margin-top:10px; border: solid 1px black;">
 
+          <div class="col-md-12 color" style="margin-top:10px;">
+            <h4>Filtros</h4>
+          </div>
+          <hr>
+          <div class="col-md-12">
+            Valoracion del comentario
+            <br>
+            <?php for($i=0;$i<5;$i++){?>
+              <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
+            <?php } ?>
+          </div>
 
-        </div>
 
       </div>
 

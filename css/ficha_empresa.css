@@ -12,3 +12,11 @@
      color: Blue;
      background: url(images/lime-1x100.png) #cccccc repeat-x 50% 50%;
   }
+
+.color{
+  color:#A023C8;
+}
+
+.filtro_estrella{
+  cursor:pointer;
+}
