@@ -46,8 +46,13 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
       <div class="row mt-4">
     <?php }?>
 
+    <?php
+      $primera_letra = strtolower($ex_empresas['nombre']);
+     ?>
+
     <div class="col col-sm-4 col-md-4 item empresa pointer borde" id="empresa_<?php echo $ex_empresas['id'];?>">
       <?php echo $ex_empresas['nombre']; ?>
+      <!-- <img src="image/img_<?php echo $primera_letra[0]; ?>.png" alt="" width="120" height="120" class="image_empresa"> -->
     </div>
 
     <?php

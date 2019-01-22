@@ -5,3 +5,13 @@
 .borde{
   border: 1px solid green;
 }
+
+.empresa{
+  position: relative;
+  height: 120px;
+}
+
+.image_empresa{
+  position: absolute;
+  right: 0;
+}
