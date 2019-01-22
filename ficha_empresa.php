@@ -209,7 +209,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         <!-- Fin comentario relevante -->
 
         <!-- Filtro -->
-        <div class="col-md-12" style="margin-top:10px; border: solid 1px black;">
+        <div class="col-md-12" style="margin-top:10px; border: solid 1px black; padding-bottom:15px;">
 
           <div class="col-md-12 color" style="margin-top:10px;">
             <h4>Filtros</h4>

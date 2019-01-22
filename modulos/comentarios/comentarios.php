@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="modulos/comentarios/css/comentarios.css">
 <?php
 
 require_once "conexion/conexion.php";
@@ -59,7 +61,7 @@ $cont_comentarios=0;
 
       <?php } ?>
 
-        <div id="comentario_<?php echo $id_comentario;?>" class="col-md-5 comentario" style="word-break: break-all;">
+        <div id="comentario_<?php echo $id_comentario;?>" class="col-md-10 offset-md-1 comentario">
 
           <!-- Añadirle if por si elige anonimo -->
           <h5>
