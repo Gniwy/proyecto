@@ -37,4 +37,38 @@
 # Cristian - agregar comentarios, filtros ----------
 
 
-# Tole - crear bbdd empresa coordenadas, administracion cliquear empresa y que salga lista de comentarios de esa empresa (ajax)
+# Tole - administracion cliquear empresa y que salga lista de comentarios de esa empresa (ajax)
+
+# Tole - Buscador principal y el avanzado
+
+# Tole - /modulos/perfil_usuario (Crear perfil usuario y poder modificarlo)
+
+# Cristian - Bienvenido (que no salga el correo al logear, siempre el nick)
+
+
+<!-- ''''''''''''''''''Archivos cada uno''''''''''''''''''''' -->
+
+<!------------------ Cristian ------------------>
+
+# /Administracion (excepto carpeta css)
+# /conexion
+# /js
+# /modales
+# /comentarios
+# /menu_top
+# ficha_empresa.php
+
+<!------------------ Tole ------------------>
+
+# /Administracion/css
+# /css
+# /crear_empresa
+# /filtro (buscador avanzado)
+# /footer
+# /lista_empresas
+# index_vista2.php
+# index.php
+
+  <!--- Falta --->
+# /modulos/buscador_avanzado
+# /modulos/buscador_principal

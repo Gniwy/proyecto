@@ -141,7 +141,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
           </div>
 
       </div>
-      <!-- Fin eputacion + estrellas-->
+      <!-- Fin reputacion + estrellas-->
 
       <div class="row">
 
