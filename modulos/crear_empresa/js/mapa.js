@@ -1,9 +1,16 @@
-
+var map = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		osm = L.tileLayer(map, {maxZoom: 18, attribution: osmAttrib});
+	var map = L.map('mapEmpresa').setView([23.140445, -82.351644], 17).addLayer(osm);
+	L.marker([23.141165, -82.351834])
+		.addTo(map)
+		.bindPopup('La Catedral de la Habana.')
+		.openPopup();
 
 
 // Busca la empresa
 
-let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
+// let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
 
 
   // crear localizador geografico
@@ -12,15 +19,15 @@ let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435],
   lc.start();
 
   //marker (puntero custom)
-  var myIcon = L.icon({
-    iconUrl: 'leaflet/images/marker-icon.png',
-    iconSize: [68, 95],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76],
-    shadowUrl: 'leaflet/images/marker-shadow.png',
-    shadowSize: [68, 95],
-    shadowAnchor: [22, 94]
-    });
+  // var myIcon = L.icon({
+  //   iconUrl: 'leaflet/images/marker-icon.png',
+  //   iconSize: [68, 95],
+  //   iconAnchor: [22, 94],
+  //   popupAnchor: [-3, -76],
+  //   shadowUrl: 'leaflet/images/marker-shadow.png',
+  //   shadowSize: [68, 95],
+  //   shadowAnchor: [22, 94]
+  //   });
   //L.marker([40.7277831, -74.0080852], {icon: myIcon}).addTo(map);
   //L.marker([36.543880623629846, -4.6306729316711435]).addTo(map);
 
@@ -56,7 +63,7 @@ let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435],
      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
      //map.remove();
-    setTimeout(function(){ 
+    setTimeout(function(){
       map.invalidateSize()}, 400);
 
 

@@ -33,8 +33,8 @@
 
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="../../modulos/buscador_principal/js/buscador_principal.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
   </head>
   <body>
     <section>
@@ -83,10 +83,12 @@
           <div class="">
             <label>Nombre: </label>
             <input type="text" name="nombre" value="" id="nombre" required>
+            <label class="required" id="nombre_req">Campo obligatorio</label>
           </div>
           <div class="">
             <label>Tipo: </label>
             <input type="number" name="tipo" value="" id="tipo" required>
+            <label class="required" id="tipo_req">Campo obligatorio</label>
           </div>
           <div class="">
             <label>Zona: </label>
@@ -112,7 +114,7 @@
         <br>
 
         <div class="datos" style="width: 50%; margin: auto; border-right: 1px solid; border-left: 1px solid; padding:20px;">
-          <h3>Selecione la ubicacion de la empresa </h3>
+          <h3>Selecione la ubicacion de la empresa <span class="required" id="map_req"> <small>(Obligatoria ubicacion)</small> </span> </h3>
           <div id="mapEmpresa" style="width: auto; height: 400px;">
           </div>
           <div class="">
@@ -160,7 +162,14 @@
             </tbody>
           </table>
           <div id="mapEmpZone" style="width: auto; height: 400px;"></div>
-
+          <div class="col-md-12">
+            Valoracion de la empresa
+            <br>
+            <?php for($i=0;$i<5;$i++){?>
+              <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="../../image/estrella_vacia.png" width="20px" alt="">
+            <?php } ?>
+            <input type="number" name="" id="estrella" value="" hidden>
+          </div>
           <div class="">
             <p style="font-size:30px;">Comentario:</p>
             <textarea name="coment" id="comentario" rows="8" cols="80" placeholder="Danos tu opinión"></textarea>

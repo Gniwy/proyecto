@@ -13,3 +13,8 @@
 #start_1:hover, #start_2:hover, #start_3:hover, #start_4:hover, #start_5:hover{
   cursor: pointer;
 }
+
+.required{
+  color: red;
+  display: none;
+}
