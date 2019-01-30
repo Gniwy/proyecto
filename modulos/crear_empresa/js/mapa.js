@@ -1,16 +1,7 @@
-var map = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		osm = L.tileLayer(map, {maxZoom: 18, attribution: osmAttrib});
-	var map = L.map('mapEmpresa').setView([23.140445, -82.351644], 17).addLayer(osm);
-	L.marker([23.141165, -82.351834])
-		.addTo(map)
-		.bindPopup('La Catedral de la Habana.')
-		.openPopup();
-
 
 // Busca la empresa
 
-// let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
+let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
 
 
   // crear localizador geografico
