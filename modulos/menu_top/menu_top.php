@@ -34,7 +34,7 @@ session_start();
             Hola, <?php echo $_SESSION['nick_usuario'];?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Cuenta</a>
+            <a class="dropdown-item" href="modulos/perfil_usuario/perfil_usuario.php">Cuenta</a>
             <a class="dropdown-item" href="modulos/menu_top/sql/cerrar_sesion.php">Cerrar sesion</a>
           </div>
         </li>
@@ -45,9 +45,9 @@ session_start();
 </header>
 
 <!-- Modal registro-->
-<div id="div_modal_registro"><?php include "modales/modal_registro.php"; ?></div>
+<div id="div_modal_registro"><?php @include "modales/modal_registro.php"; ?></div>
 
 <!-- Modal login-->
-<div id="div_modal_login"><?php include "modales/modal_login.php"; ?></div>
+<div id="div_modal_login"><?php @include "modales/modal_login.php"; ?></div>
 
 <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>

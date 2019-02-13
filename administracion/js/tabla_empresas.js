@@ -161,7 +161,7 @@ $('.borrar_empresas').click(function(){
 
   // el tamano del nombre del id para solo sacar el id
   id_elemento = id_elemento.substring(16);
-
+alert(id_elemento);
   $.ajax({
     type:"GET",
     url:"sql/eliminar_empresas.php",
