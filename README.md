@@ -41,7 +41,7 @@
 
 # Tole - Buscador principal y el avanzado
 
-# Tole - /modulos/perfil_usuario (Crear perfil usuario y poder modificarlo)
+# Tole - /modulos/perfil_usuario (Crear perfil usuario y poder modificarlo) (FALTA required DE LOS CAMPOS USER AND PASSWORD)
 
 # Cristian - Bienvenido (que no salga el correo al logear, siempre el nick)
 
