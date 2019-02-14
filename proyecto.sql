@@ -25,70 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categoria`
---
-
-CREATE TABLE `categoria` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `categoria`
---
-
-INSERT INTO `categoria` (`id`, `nombre`) VALUES
-(1, 'reponedor'),
-(2, 'cajero');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `categorias_trabajos`
---
-
-CREATE TABLE `categorias_trabajos` (
-  `id` int(10) NOT NULL,
-  `categoria` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `categorias_trabajos`
---
-
-INSERT INTO `categorias_trabajos` (`id`, `categoria`) VALUES
-(1, 'Administración de empresas'),
-(2, 'Administración de empresas y secretariado'),
-(3, 'Agricultura, ganadería y pesca'),
-(4, 'Atención al cliente y dependientes'),
-(5, 'Banca y seguros'),
-(6, 'Belleza y deporte'),
-(7, 'Calidad, producción E I+D'),
-(8, 'Comercial y ventas'),
-(9, 'Compras, logística y almacén'),
-(10, 'Construcción e Inmobiliaria'),
-(11, 'Educación y formación'),
-(12, 'Energía y Agua'),
-(13, 'Hostelería y Turismo'),
-(14, 'Hostelería, restauración y turismo'),
-(15, 'Idiomas'),
-(16, 'Informática e Internet'),
-(17, 'Ingeniería y producción'),
-(18, 'Legal'),
-(19, 'Limpieza y mantenimiento'),
-(20, 'Marketing y comunicación'),
-(21, 'Mecánica y automoción'),
-(22, 'Medios editoriales y artes gráficas'),
-(23, 'Ocio y entretenimiento'),
-(24, 'Otras'),
-(25, 'Profesionales, artes y oficios'),
-(26, 'Recursos Humanos'),
-(27, 'Sanidad, salud y servicios sociales'),
-(28, 'Transporte');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `cliente`
 --
 
@@ -174,7 +110,6 @@ CREATE TABLE `empresa` (
   `nombre` varchar(100) NOT NULL,
   `calle` varchar(100) NOT NULL,
   `cp` int(5) NOT NULL,
-  `id_categoria` varchar(255) NOT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `lat` varchar(100) NOT NULL,
   `lng` varchar(100) NOT NULL,
@@ -186,7 +121,7 @@ CREATE TABLE `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`, `id_localidad`) VALUES
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `activo`, `lat`, `lng`, `valoracion_media`, `id_localidad`) VALUES
 (1, 'lidl', 'unica', 29649, '2', 1, '', '', 1, 1),
 (8, 'Mercadona', 'calle', 29640, '2', 1, '36.54181621182899', '-4.6250764894847105', 0, 6);
 
@@ -360,18 +295,6 @@ INSERT INTO `usuario` (`id_cliente`, `email`, `tipo_usuario`, `password`) VALUES
 --
 
 --
--- Indices de la tabla `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `categorias_trabajos`
---
-ALTER TABLE `categorias_trabajos`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
@@ -432,18 +355,6 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `categoria`
---
-ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `categorias_trabajos`
---
-ALTER TABLE `categorias_trabajos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
