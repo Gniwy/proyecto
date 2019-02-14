@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-01-2019 a las 20:00:59
--- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.3.0
+-- Tiempo de generación: 14-02-2019 a las 14:18:28
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -95,6 +95,10 @@ INSERT INTO `categorias_trabajos` (`id`, `categoria`) VALUES
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nick` varchar(20) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `ciudad` varchar(100) NOT NULL,
+  `sexo` varchar(10) NOT NULL,
+  `cp` varchar(15) NOT NULL,
   `bloqueado` tinyint(1) NOT NULL DEFAULT '0',
   `confirmado` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -103,9 +107,10 @@ CREATE TABLE `cliente` (
 -- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nick`, `bloqueado`, `confirmado`) VALUES
-(7, 'prueba3', 0, 0),
-(8, 'administrador', 0, 0);
+INSERT INTO `cliente` (`id`, `nick`, `direccion`, `ciudad`, `sexo`, `cp`, `bloqueado`, `confirmado`) VALUES
+(7, 'prueba3', '', '', '', '', 0, 0),
+(8, 'administrador', '', '', '', '', 0, 0),
+(9, 'Giwy', '', '', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -132,7 +137,8 @@ CREATE TABLE `comentario` (
 INSERT INTO `comentario` (`id`, `id_cliente`, `texto`, `valoracion`, `id_respuesta`, `activo`, `id_empresa`, `puntos_positivos`, `puntos_negativos`) VALUES
 (1, 7, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 00, 0, 1, 1, 0, 0),
 (2, 7, 'asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe .\r\naasdasd  sdfscssd asdas  dasdasd asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe ', 02, 0, 1, 1, 0, 0),
-(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1, 0, 0);
+(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1, 0, 0),
+(8, 9, 'todo muy bonito al principio', 05, 0, 1, 8, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -172,18 +178,17 @@ CREATE TABLE `empresa` (
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `lat` varchar(100) NOT NULL,
   `lng` varchar(100) NOT NULL,
-  `valoracion_media` int(11) NOT NULL DEFAULT '0'
+  `valoracion_media` int(11) NOT NULL DEFAULT '0',
+  `id_localidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`) VALUES
-(1, 'lidl', 'unica', 29649, '2', 1, '', '', 1),
-(2, 'Carrefour', 'asdf', 29649, '2', 1, '', '', 0),
-(3, 'asdf', 'sdssd', 29649, '2', 1, '', '', 0),
-(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1, '', '', 0);
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`, `id_localidad`) VALUES
+(1, 'lidl', 'unica', 29649, '2', 1, '', '', 1, 1),
+(8, 'Mercadona', 'calle', 29640, '2', 1, '36.54181621182899', '-4.6250764894847105', 0, 6);
 
 -- --------------------------------------------------------
 
@@ -347,7 +352,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_cliente`, `email`, `tipo_usuario`, `password`) VALUES
 (7, 'prueba3@asdf.com', 1, '$2y$10$XdOXQUtBcyFtqDRmthRD/eQ9wPF85lubPcop/MquwKKOZUpoUcl3O'),
-(8, 'admin@hotmail.com', 2, '$2y$10$/e3d.Ae2TIuRKhsmOm1/ve5VhF8ZoA1bEFgBdOBCXNFTirJU7YnXq');
+(8, 'admin@hotmail.com', 2, '$2y$10$u4Vl2QuNY.nQqx6.mvNNuOlpXZ82kMHU1xnveDMXkrAXJQmGKUKky'),
+(9, 'giwy@gmail.com', 1, '$2y$10$wX.g9nr56wQVSnNwG8eMOuo9GUw441gFGPnwmGQvP8/7AJLUILMmC');
 
 --
 -- Índices para tablas volcadas
@@ -392,7 +398,8 @@ ALTER TABLE `comentarios_valoracion`
 --
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_empresa` (`id`);
+  ADD UNIQUE KEY `id_empresa` (`id`),
+  ADD KEY `id_localidad` (`id_localidad`);
 
 --
 -- Indices de la tabla `localidad`
@@ -442,19 +449,19 @@ ALTER TABLE `categorias_trabajos`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
@@ -491,6 +498,12 @@ ALTER TABLE `comentario`
 ALTER TABLE `comentarios_valoracion`
   ADD CONSTRAINT `comentarios_valoracion_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
   ADD CONSTRAINT `comentarios_valoracion_ibfk_2` FOREIGN KEY (`id_comentario`) REFERENCES `comentario` (`id`);
+
+--
+-- Filtros para la tabla `empresa`
+--
+ALTER TABLE `empresa`
+  ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`id_localidad`) REFERENCES `localidad` (`id`);
 
 --
 -- Filtros para la tabla `localidad`
