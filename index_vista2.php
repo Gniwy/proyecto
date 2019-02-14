@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="modulos/filtro/css/style.css">
     <link rel="stylesheet" href="css/style_vista2.css">
- 
+
     <script src="js/jquery.js"></script>
 
     <!-- jQuery 12.1.1 necessary jqueryUI -->
@@ -71,10 +71,6 @@
           </div>
         </div>
         <!-- fin del contendido del filtro en xs -->
-
-        <!-- modal crear empresa -->
-
-        <?php include "modales/modal_crear_empresa.php"; ?>
 
         <!-- contenido de la busqueda -->
         <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">

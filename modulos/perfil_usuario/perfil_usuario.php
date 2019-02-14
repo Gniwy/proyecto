@@ -32,7 +32,7 @@
       <?php include"../../modulos/menu_top/menu_top.php" ?>
     </section>
 
-
+<input type="text" name="" id="id_user" value="<?php echo $_SESSION['id_usuario']; ?>" hidden>
 
     <div class="body_perfil_user container">
 
@@ -43,32 +43,33 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputNick">Nombre/Nick</label>
-                <input type="text" class="form-control" id="newNick" placeholder="<?php echo $_SESSION['nick_usuario']; ?>">
+                <input type="text" class="form-control" id="newNick" placeholder="<?php echo $_SESSION['nick_usuario']; ?>" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword">Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="********">
+                <input type="password" class="form-control" id="newPassword" placeholder="********" required>
               </div>
             </div>
             <div class="form-group">
               <label for="inputAddress">Direccion</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Calle azul 1B">
+              <input type="text" class="form-control" id="address" placeholder="Calle azul 1B">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">Ciudad</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="city">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputSexo">Sexo</label>
-                <select id="inputSexo" class="form-control">
-                  <option selected>Otro</option>
+                <select id="sexo" class="form-control">
+                  <option selected disabled>sexo</option>
+                  <option>Otro</option>
                   <option>Hombre</option>
                   <option>Mujer</option>
                 </select>
               </div>
               <div class="form-group col-md-2">
-                <label for="inputCP">CP</label>
+                <label for="cp">CP</label>
                 <input type="number" class="form-control" id="inputCP">
               </div>
             </div>

@@ -1,26 +1,28 @@
+// habilitar boton submit
+$("#nuevosDatos").attr('disabled','disabled');
 
-$(document).ready(function() {
-    $("#nuevosDatos").on("click", function() {
-        var condiciones = $("#aceptarTerminos").is(":checked");
-        if (!condiciones) {
-            alert("Debe aceptar las condiciones");
-            event.preventDefault();
-        }
-    });
+$("#aceptarTerminos").click(function() {
+  $("#nuevosDatos").attr("disabled", !this.checked);
 });
 
-if (acctionTerminos = true) {
+$("#nuevosDatos").click(function(){
 
   $.ajax({
 
-    type:"GET",
+    type:"POST",
     url:"sql/updateUser.php",
     data:{
-      nick:$("#aceptarTerminos").val()
+      id_user:$("#id_user").val(),
+      nick:$("#newNick").val(),
+      password:$("#newPassword").val(),
+      direccion:$("#address").val(),
+      ciudad:$("#city").val(),
+      sexo:$("#sexo").val(),
+      cp:$("#cp").val()
     }, success:function(data){
-            alert(data);
+
     }
 
   });
 
-}
+})
