@@ -32,7 +32,7 @@
 
 # Tole - prepadando diseño web
 
-# Tole - crear empresa en vista modal (crear) agregar mapa
+# Tole - crear empresa (crear) agregar mapa(LISTO FALTA ARREGLAR ALGUN ERROR DE MAPA)
 
 # Cristian - agregar comentarios, filtros ----------
 
