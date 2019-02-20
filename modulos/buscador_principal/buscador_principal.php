@@ -8,7 +8,7 @@
   <input class="col-12 col-sm-6 col-md-6 form-control ui-widget" name="lugar" id="select_lugar" placeholder="Cualquier parte">
   <div id="solucion_localidad"></div>
 
-  <select class="col-12 col-sm-6 col-md-6 form-control" name="trabajo" id="select_trabajo">
+  <select class="col-12 col-sm-6 col-md-6 form-control" name="trabajo" id="select_empresa">
   </select>
 
 </div>

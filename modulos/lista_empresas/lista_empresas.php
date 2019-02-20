@@ -5,27 +5,33 @@
 
 require_once "conexion/conexion.php";
 
+//sacamos los valores del buscador principal
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 
+//consulta principal desde van a partir las concatenaciones
 $sql_empresas="SELECT * FROM empresa WHERE 1";
 
 if($lugar!=null){
   $sql_lugar="SELECT * FROM localidad WHERE nombre LIKE '$lugar%' ";
   $aux_lugar=mysqli_query($link,$sql_lugar);
 
-  $cp_lugares="1";
-
-  while($ex_lugar=mysqli_fetch_assoc($aux_lugar)){
-    $cp_lugares.=",".$ex_lugar['cp'];
+  while ($idLocalidad = mysqli_fetch_assoc($aux_lugar)) {
+    $sql_empresas.=" AND id_localidad = '".$idLocalidad['id']."'";
   }
 
-  $sql_empresas.=" AND cp IN ($cp_lugares) ";
 }
 
-if($trabajo!="null" && $trabajo!="" && $trabajo!=null){
-  $sql_empresas.=" AND  id_categoria=$trabajo ";
+if($empresa!="null" && $empresa!="" && $empresa!=null){
+
+  $sql_nombreEmp = "SELECT * FROM empresa WHERE id = $empresa";
+  $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);
+
+  while($nombreEmp=mysqli_fetch_assoc($aux_nombreEmp)){
+    $sql_empresas.=" AND  nombre= '".$nombreEmp['nombre']."' ";
+  }
+
 }
 
 
@@ -43,16 +49,30 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
   if($cont_filas<=3){
     if($cont_elementos%3 == 0 || $cont_elementos==0){ ?>
-      <div class="row mt-4">
+      <div class="row mt-4 filaRow">
     <?php }?>
 
     <?php
-      $primera_letra = strtolower($ex_empresas['nombre']);
+      $primera_letra = strtoupper($ex_empresas['nombre']);
      ?>
 
-    <div class="col col-sm-4 col-md-4 item empresa pointer borde" id="empresa_<?php echo $ex_empresas['id'];?>">
-      <?php echo $ex_empresas['nombre']; ?>
-      <!-- <img src="image/img_<?php echo $primera_letra[0]; ?>.png" alt="" width="120" height="120" class="image_empresa"> -->
+    <div class="col-12 col-md-4 item empresa pointer" style="position: relative;" id="empresa_<?php echo $ex_empresas['id'];?>">
+      <p class="nombreEmp"><?php echo $ex_empresas['nombre']; ?></p>
+      <div class="logoEmp">
+        <p><?php echo $primera_letra[0]; ?></p>
+      </div>
+      <div class="col-8 valoracionAVG"><!-- valoracion media de las empresas -->
+        <?php
+        $valoracionAVG = $ex_empresas['valoracion_media'];
+
+        for($i=0;$i<$valoracionAVG;$i++){?>
+          <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" alt="">
+        <?php } ?>
+
+        <?php for($i=$valoracionAVG;$i<5;$i++){?>
+          <img src="image/estrella_vacia.png" class="img-responsive" width="10px" alt="">
+        <?php } ?>
+      </div>
     </div>
 
     <?php

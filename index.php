@@ -11,6 +11,7 @@ include ('conexion/conexion.php');
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="image\favicon.png" />
   <title>IReferences</title>
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
@@ -19,6 +20,8 @@ include ('conexion/conexion.php');
   <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="modulos/modulo_mapa/css/style.css">
+  <!-- font-family -->
+  <link rel="stylesheet" href="/css/font-family/Lobster.ttf">
   <!-- icon -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- mapa -->

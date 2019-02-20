@@ -41,13 +41,13 @@
     <section class="container" id="contenido_vista2" style="border: 1px solid blue;">
       <!-- contenido del filtro de busqueda -->
       <div class="row">
-        <div class="col-sm-2 col-md-2 d-none d-sm-inline" id="filtro_vista2" style="border: 1px solid;">
+        <div class="col-md-2 d-none d-md-inline" id="filtro_vista2" style="border: 1px solid;">
 
             <?php include "modulos/filtro/filtro.php"; ?>
         </div>
 
         <!-- contenido del filtro en xs -->
-        <button class="col-3 d-inline d-sm-none" type="button" name="button" data-toggle="modal" data-target="#exampleModal">
+        <button class="col-12 d-inline d-md-none" type="button" name="button" data-toggle="modal" data-target="#exampleModal">
           filtro
         </button>
         <!-- modal filtro xs -->
@@ -73,7 +73,7 @@
         <!-- fin del contendido del filtro en xs -->
 
         <!-- contenido de la busqueda -->
-        <div class="col-12 col-sm-9 col-md-9" id="busqueda_vista2" style="border: 1px solid red;">
+        <div class="col-6 col-sm-9 col-md-10 mb-3" id="busqueda_vista2">
 
           <?php include "modulos/lista_empresas/lista_empresas.php";?>
 

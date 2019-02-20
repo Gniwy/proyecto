@@ -1,5 +1,5 @@
 
-$('#select_trabajo').load('modulos/buscador_principal/sql/select_trabajo.php');
+$('#select_empresa').load('modulos/buscador_principal/sql/select_empresa.php');
 
 
 //ajax devuelta de valores
@@ -33,8 +33,8 @@ function selectCountry(val) {
 $('#btn_busqueda_principal').click(function(){
 
   var lugar = $('#select_lugar').val();
-  var trabajo = $('#select_trabajo').val();
+  var empresa = $('#select_empresa').val();
 
-  open("index_vista2.php?lugar=" + lugar + "&trabajo=" + trabajo);
+  open("index_vista2.php?lugar=" + lugar + "&empresa=" + empresa);
 
 });

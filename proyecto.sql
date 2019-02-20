@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-01-2019 a las 20:00:59
--- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.3.0
+-- Tiempo de generación: 20-02-2019 a las 14:56:01
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -132,7 +132,10 @@ CREATE TABLE `comentario` (
 INSERT INTO `comentario` (`id`, `id_cliente`, `texto`, `valoracion`, `id_respuesta`, `activo`, `id_empresa`, `puntos_positivos`, `puntos_negativos`) VALUES
 (1, 7, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 00, 0, 1, 1, 0, 0),
 (2, 7, 'asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe asdfasdf dfse sdfscsdfe .\r\naasdasd  sdfscssd asdas  dasdasd asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe  asda  sddddddd ddase sdfscsdfe ', 02, 0, 1, 1, 0, 0),
-(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1, 0, 0);
+(4, 7, 'rtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtfrtyerty dfgdfg  f ertertert frrtrtf', 00, 0, 1, 1, 0, 0),
+(5, 8, 'febbo rico', 05, 0, 1, 5, 0, 0),
+(6, 8, 'qweqweqwe', 01, 0, 1, 5, 0, 0),
+(7, 8, 'pepepe', 03, 0, 1, 6, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -168,6 +171,7 @@ CREATE TABLE `empresa` (
   `nombre` varchar(100) NOT NULL,
   `calle` varchar(100) NOT NULL,
   `cp` int(5) NOT NULL,
+  `id_localidad` int(11) NOT NULL,
   `id_categoria` varchar(255) NOT NULL,
   `activo` tinyint(1) NOT NULL DEFAULT '1',
   `lat` varchar(100) NOT NULL,
@@ -179,11 +183,13 @@ CREATE TABLE `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`) VALUES
-(1, 'lidl', 'unica', 29649, '2', 1, '', '', 1),
-(2, 'Carrefour', 'asdf', 29649, '2', 1, '', '', 0),
-(3, 'asdf', 'sdssd', 29649, '2', 1, '', '', 0),
-(4, 'hgjkghjk', 'ghjkghj', 29649, '2', 1, '', '', 0);
+INSERT INTO `empresa` (`id`, `nombre`, `calle`, `cp`, `id_localidad`, `id_categoria`, `activo`, `lat`, `lng`, `valoracion_media`) VALUES
+(1, 'lidl', 'unica', 29649, 1, '2', 1, '', '', 1),
+(2, 'Carrefour', 'asdf', 29649, 2, '2', 1, '', '', 0),
+(3, 'asdf', 'sdssd', 29649, 3, '2', 1, '', '', 0),
+(4, 'hgjkghjk', 'ghjkghj', 29649, 4, '2', 1, '', '', 0),
+(5, 'febo', 'avenida', 1255, 1, '2', 1, '52.358828590091186', '4.895391992775773', 0),
+(6, 'lidl', 'c', 22222, 6, '2', 1, '40.36328834091583', '-363.7216394823267', 0);
 
 -- --------------------------------------------------------
 
@@ -392,7 +398,8 @@ ALTER TABLE `comentarios_valoracion`
 --
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_empresa` (`id`);
+  ADD UNIQUE KEY `id_empresa` (`id`),
+  ADD KEY `id_localidad` (`id_localidad`);
 
 --
 -- Indices de la tabla `localidad`
@@ -448,13 +455,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
@@ -491,6 +498,12 @@ ALTER TABLE `comentario`
 ALTER TABLE `comentarios_valoracion`
   ADD CONSTRAINT `comentarios_valoracion_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
   ADD CONSTRAINT `comentarios_valoracion_ibfk_2` FOREIGN KEY (`id_comentario`) REFERENCES `comentario` (`id`);
+
+--
+-- Filtros para la tabla `empresa`
+--
+ALTER TABLE `empresa`
+  ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`id_localidad`) REFERENCES `localidad` (`id`);
 
 --
 -- Filtros para la tabla `localidad`
