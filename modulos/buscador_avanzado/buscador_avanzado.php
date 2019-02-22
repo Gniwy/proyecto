@@ -43,3 +43,4 @@
 
   </div>
 </form>
+<script type="text/javascript" src="modulos/buscador_avanzado/js/buscador_avanzado.js"></script>

@@ -1,6 +1,7 @@
+
 $('#select_provincia').change(function(){
 
-  var id_comunidad = $('#select_provincia').val();
+  var id_provincia = $('#select_provincia').val();
 
   $.ajax({
     type:'GET',

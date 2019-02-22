@@ -1,4 +1,4 @@
-<?php /*require_once ('../../../conexion/conexion.php'); */?>
+<?php include_once('../../../conexion/conexion.php'); ?>
 
 <?php
 
