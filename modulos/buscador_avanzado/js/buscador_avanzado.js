@@ -1,14 +1,14 @@
-$('#select_comunidad').change(function(){
+$('#select_provincia').change(function(){
 
-  var id_comunidad = $('#select_comunidad').val();
+  var id_comunidad = $('#select_provincia').val();
 
   $.ajax({
     type:'GET',
-    url:'modulos/buscador_principal/sql/consulta_provincia.php',
+    url:'modulos/buscador_avanzado/sql/buscador_localidad.php',
     data:{
-      id_comunidad:id_comunidad
+      id_provincia:id_provincia
     },success: function(data){
-      $('#select_provincia').html(data);
+      $('#select_localidad').html(data);
     }
   });
 

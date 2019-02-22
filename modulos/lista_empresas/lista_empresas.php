@@ -18,7 +18,7 @@ if($lugar!=null){
   $aux_lugar=mysqli_query($link,$sql_lugar);
 
   while ($idLocalidad = mysqli_fetch_assoc($aux_lugar)) {
-    $sql_empresas.=" AND id_localidad = '".$idLocalidad['id']."'";
+    $sql_empresas.=' AND id_localidad = "'.$idLocalidad['id'].'" ';
   }
 
 }
@@ -29,10 +29,18 @@ if($empresa!="null" && $empresa!="" && $empresa!=null){
   $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);
 
   while($nombreEmp=mysqli_fetch_assoc($aux_nombreEmp)){
-    $sql_empresas.=" AND  nombre= '".$nombreEmp['nombre']."' ";
+    $sql_empresas.=' AND  nombre= "'.$nombreEmp['nombre'].'" ';
   }
 
 }
+
+// guardo consulta
+
+$consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
+
+$sql_consulta = "UPDATE buscador SET consulta = ('$consultaFinal') WHERE 1";
+$aux_consulta = mysqli_query($link, $sql_consulta);
+
 
 
 $aux_empresas=mysqli_query($link,$sql_empresas);

@@ -39,7 +39,7 @@
 
 # Tole - administracion cliquear empresa y que salga lista de comentarios de esa empresa (ajax)
 
-# Tole - Buscador principal y el avanzado
+# Tole - Buscador principal(TERMINADO) y el avanzado
 
 # Tole - /modulos/perfil_usuario (Crear perfil usuario y poder modificarlo) (FALTA required DE LOS CAMPOS USER AND PASSWORD)
 
