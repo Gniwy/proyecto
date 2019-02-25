@@ -5,38 +5,9 @@
 
 require_once "conexion/conexion.php";
 
-//sacamos los valores del buscador principal
-foreach($_GET as $variable => $valor){
-  $$variable=$valor;
-}
+include 'sql/consulta_empresa.php';
 
-//consulta principal desde van a partir las concatenaciones
-$sql_empresas="SELECT * FROM empresa WHERE 1";
 
-if($lugar!=null){
-  $sql_lugar="SELECT * FROM localidad WHERE nombre LIKE '$lugar%' ";
-  $aux_lugar=mysqli_query($link,$sql_lugar);
-
-  while ($idLocalidad = mysqli_fetch_assoc($aux_lugar)) {
-    $sql_empresas.=' AND id_localidad = "'.$idLocalidad['id'].'" ';
-  }
-
-}
-
-if($empresa!="null" && $empresa!="" && $empresa!=null){
-
-  $sql_nombreEmp = "SELECT * FROM empresa WHERE id = $empresa";
-  $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);
-
-  while($nombreEmp=mysqli_fetch_assoc($aux_nombreEmp)){
-    $sql_empresas.=' AND  nombre= "'.$nombreEmp['nombre'].'" ';
-  }
-
-}
-
-// guardo consulta
-
-$consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
 
 $sql_consulta = "UPDATE buscador SET consulta = ('$consultaFinal') WHERE 1";
 $aux_consulta = mysqli_query($link, $sql_consulta);
@@ -47,8 +18,7 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
 
 $cont_filas=0;
 $cont_elementos=0;
-
-
+echo $consultaFinal;
 while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
   if($cont_elementos%3 == 0 && $cont_elementos!=0){ ?>
@@ -64,7 +34,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
       $primera_letra = strtoupper($ex_empresas['nombre']);
      ?>
 
-    <div class="col-12 col-md-4 item empresa pointer" style="position: relative;" id="empresa_<?php echo $ex_empresas['id'];?>">
+    <div class="col-12 col-md-4 item empresa pointer" style="position: relative;" id="empresa_<?php echo $ex_empresas['id_localidad'];?>">
       <p class="nombreEmp"><?php echo $ex_empresas['nombre']; ?></p>
       <div class="logoEmp">
         <p><?php echo $primera_letra[0]; ?></p>

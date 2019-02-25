@@ -1,6 +1,6 @@
 <?php require_once ('conexion/conexion.php'); ?>
 
-<form action="sql/consulta_buscador.php" method="post" class="form-inline col-centrada col-12">
+<section class="form-inline col-centrada col-12">
   <div class="col-12 img"></div>
   <div class="row form-group col-10 mb-2">
     <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia">
@@ -17,17 +17,20 @@
        ?>
     </select>
     <select class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="select_localidad">
-      <option id="caca">sad</option>
       <?php
 
         include "sql/buscador_localidad.php";
 
        ?>
     </select>
-    <input type="text" class="col-12 form-control" name="trabajo" id="trabajo" placeholder="Ej: Carrefour">
+    <select class="col-12 form-control" name="empresa" id="select_empresa_avanzado">
+      <?php
+        include 'sql/consulta_empresa.php';
+       ?>
+    </select>
   </div>
   <div class="col-2">
-    <input type="submit" name="enviar" value="Buscar" class="btn btn-primary mb-2">
+    <input type="submit" name="enviar" value="Buscar" id="btn_busqueda_avanzado" class="btn btn-primary mb-2">
   </div>
   <?php if(!isset($_SESSION['id_usuario'])){ ?>
 
@@ -42,5 +45,5 @@
   <?php } ?>
 
   </div>
-</form>
+</section>
 <script type="text/javascript" src="modulos/buscador_avanzado/js/buscador_avanzado.js"></script>

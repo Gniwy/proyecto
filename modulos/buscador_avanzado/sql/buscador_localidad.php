@@ -31,7 +31,7 @@ if($select_todas==0){
 
 }else{
   // si el selector esta a 1 quiere decir que a elejido que se muestren todas las provincias
-    echo '<option value="1">Todas las Localidades</option>';
+    echo '<option value="0">Todas las Localidades</option>';
     while($ex_localidad=mysqli_fetch_assoc($aux_localidad)){ ?>
 
         <option value="<?php echo $ex_localidad['id'];?>"><?php echo $ex_localidad['nombre'];?></option>

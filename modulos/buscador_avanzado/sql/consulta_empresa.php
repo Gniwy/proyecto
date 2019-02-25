@@ -1,5 +1,5 @@
 <?php
-require_once "../../../conexion/conexion.php";
+require_once ('conexion/conexion.php');
 
 
 $sql_empresa="SELECT id, nombre FROM empresa GROUP BY nombre";
