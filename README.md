@@ -45,6 +45,29 @@
 
 # Cristian - Bienvenido (que no salga el correo al logear, siempre el nick)
 
+<!-- ''''''''''' *FALTA* '''''''''' -->
+
+# menu top no carga en el index
+
+# buscador avanzado: no recoje los valores que se le manda del principal.
+# buscador avanzado: Al seleccionar una provincia se tiene que poder dejar la opcion de "Todas las localidades"
+# buscador avanzado: Al buscar hay que guardar los campos por los que ha buscado (se reinician)
+
+# vista 2: agregar informacion relevante de cada empresa: donde está, cuantos comentarios tiene
+
+# css footer, poner abajo del todo de la pantalla
+
+# footer crear modales para cada seccion (coockies, terminos legales, etc)
+
+# al crear la empresa, el tipo que es??? deberia de ser la categoria del trabajo?
+
+# al crear la empresa deberia de estar desactivada y que el administrador de el "visto bueno"
+
+# al crear la empresa la valoracion estrella no se puede clickear
+
+# filtro del buscador: agregar opcion de buscar por valoracion de la empresa (estrellas)
+
+<!-- ''''''''' *FIN FALTA* '''''''''' -->
 
 <!-- ''''''''''''''''''Archivos cada uno''''''''''''''''''''' -->
 
