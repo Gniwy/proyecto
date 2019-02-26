@@ -94,7 +94,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
 
-    <div class="offset-md-2 col-md-8" style="border:solid 1px black;">
+    <div class="offset-md-2 col-md-8" style="border:solid 1px black; margin-bottom:20px;">
       <!-- Datos de la empresa-->
       <div class="row">
         <div class="col-md-6">
@@ -236,6 +236,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
 
     </div>
+
+    <?php include "modulos/footer/footer.php";?>
+
   </body>
   <!-- mapa  -->
   <script type="text/javascript" src="leaflet/leaflet.js"></script>
