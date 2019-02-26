@@ -7,7 +7,7 @@ session_start();
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="col-12 col-sm-12 text-left navbar-brand" id="titulo" href="index.php">IReferences</a>
+    <a class="col-12 col-sm-12 text-left navbar-brand" id="titulo" href="http://localhost/proyecto/index.php">IReferences</a>
     <button class="col-1 col-sm-1 offset-10 navbar-toggler" id="botonDropdown" type="button" data-toggle="collapse" data-target="#navbar_sesion_login" aria-controls="navbar_sesion_login" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
