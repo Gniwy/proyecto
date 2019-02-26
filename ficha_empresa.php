@@ -61,7 +61,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Vista2</title>
+    <title>Ficha <?php echo $nombre;?></title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="modulos/footer/css/footer.css">
@@ -90,6 +90,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
   <body>
+
+    <input type="hidden" id="hidden_empresa" value="<?php echo $id_empresa;?>">
+
     <section>
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
@@ -208,21 +211,45 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         </div>
         <!-- Fin comentario relevante -->
 
+        <!-- Escribir comentario -->
+
+        <div class="col-md-12" style="margin-top:20px;">
+          <h2>Danos tu opinión sobre esta empresa</h2>
+          <textarea name="name" rows="3" placeholder="Escribe un comentario" style="width:100%;"></textarea>
+          <div class="text-right">
+              <button type="button" class="btn btn-primary" name="button" style="float:center;">Publicar</button>
+          </div>
+        </div>
+
+        <!-- Fin Escribir comentario -->
+
         <!-- Filtro -->
-        <div class="col-md-12" style="margin-top:10px; border: solid 1px black; padding-bottom:15px;">
+        <div class="col-md-12" style="margin-top:10px; padding-bottom:15px; box-shadow: 0px 0px 10px grey;">
 
           <div class="col-md-12 color" style="margin-top:10px;">
             <h4>Filtros</h4>
           </div>
           <hr>
           <div class="col-md-12">
-            Valoracion del comentario
-            <br>
-            <?php for($i=0;$i<5;$i++){?>
-              <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
-            <?php } ?>
-          </div>
+            <div class="col-md-4">
+              Valoracion del comentario
+              <span class="fas fa-info-circle" style="color:lightgrey;" title="Pasa el raton por encima de las estrellas para saber cuantos comentarios hay con esa valoración."></span>
+              <br>
+              <?php for($i=0;$i<5;$i++){?>
+                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
+              <?php } ?>
+            </div>
 
+            <div class="col-md-4">
+              Valoracion del comentario
+              <span class="fas fa-info-circle" style="color:lightgrey;" title="Pasa el raton por encima de las estrellas para saber cuantos comentarios hay con esa valoración."></span>
+              <br>
+              <?php for($i=0;$i<5;$i++){?>
+                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
+              <?php } ?>
+            </div>
+
+          </div>
 
       </div>
 
