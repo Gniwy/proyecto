@@ -67,6 +67,10 @@
 
 # filtro del buscador: agregar opcion de buscar por valoracion de la empresa (estrellas)
 
+# verificar el correo al registrarnos
+
+# activar el boton "enter" en los registros/busquedas/login
+
 <!-- ''''''''' *FIN FALTA* '''''''''' -->
 
 <!-- ''''''''''''''''''Archivos cada uno''''''''''''''''''''' -->
