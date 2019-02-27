@@ -58,6 +58,9 @@ $('.btn_votar').click(function(){
           alert('Ya has puntuado este comentario.');
 
           break;
+        default:
+          alert('Tienes que estar registrado para poder puntuar.');
+          break;
       }
 
 

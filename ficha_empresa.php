@@ -215,6 +215,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
         <div class="col-md-12" style="margin-top:20px;">
           <h2>Danos tu opinión sobre esta empresa</h2>
+          <?php for($i=0;$i<5;$i++){?>
+            <img id="comentario_estrella_<?php echo $i; ?>" class="comentario_estrella pointer" src="image/estrella_vacia.png" width="20px" alt="" title="<?php echo $contador;?>">
+          <?php } ?>
           <textarea name="name" rows="3" placeholder="Escribe un comentario" style="width:100%;"></textarea>
           <div class="text-right">
               <button type="button" class="btn btn-primary" name="button" style="float:center;">Publicar</button>
@@ -230,23 +233,37 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
             <h4>Filtros</h4>
           </div>
           <hr>
-          <div class="col-md-12">
+          <div class="row">
             <div class="col-md-4">
               Valoracion del comentario
               <span class="fas fa-info-circle" style="color:lightgrey;" title="Pasa el raton por encima de las estrellas para saber cuantos comentarios hay con esa valoración."></span>
               <br>
-              <?php for($i=0;$i<5;$i++){?>
-                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
+              <?php for($i=0;$i<5;$i++){
+                $valoracion=$i+1;
+                $sql_comentarios_valoracion="SELECT * FROM comentario WHERE id_empresa='$id_empresa' AND valoracion='$valoracion' ";
+                $aux_comentarios_valoracion=mysqli_query($link, $sql_comentarios_valoracion);
+
+                $contador=0;
+
+                while($ex_comentarios_valoracion=mysqli_fetch_assoc($aux_comentarios_valoracion)){
+                  $contador++;
+                }
+
+                ?>
+                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella pointer" src="image/estrella_vacia.png" width="20px" alt="" title="<?php echo $contador;?>">
               <?php } ?>
             </div>
 
             <div class="col-md-4">
-              Valoracion del comentario
-              <span class="fas fa-info-circle" style="color:lightgrey;" title="Pasa el raton por encima de las estrellas para saber cuantos comentarios hay con esa valoración."></span>
-              <br>
-              <?php for($i=0;$i<5;$i++){?>
-                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="image/estrella_vacia.png" width="20px" alt="">
-              <?php } ?>
+              <div class="pointer">
+                <span class="fas fa-bars"></span>
+                &nbsp;Ordenar por valoración
+
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <button type="button" class="btn btn-warning" name="button">Limpiar filtro</button>
             </div>
 
           </div>
