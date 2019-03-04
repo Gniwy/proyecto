@@ -18,7 +18,7 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
 
 $cont_filas=0;
 $cont_elementos=0;
-echo $consultaFinal;
+
 while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
   if($cont_elementos%3 == 0 && $cont_elementos!=0){ ?>

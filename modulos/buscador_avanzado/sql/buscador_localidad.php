@@ -1,4 +1,4 @@
-<?php include_once('../../../conexion/conexion.php'); ?>
+<?php @include_once('../../../conexion/conexion.php'); ?>
 
 <?php
 
@@ -12,7 +12,7 @@ $select_todas=0;
 $sql_localidad="SELECT * FROM localidad WHERE ";
 
 // si es nulo es que selecciona todas las localidad
-if($id_provincia!=""){
+if(!empty($id_provincia)){
   $sql_localidad.=" provincia_id='$id_provincia' ORDER BY nombre";
 }else{
   $sql_localidad.=" 1 ORDER BY nombre";

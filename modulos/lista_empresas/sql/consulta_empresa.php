@@ -31,7 +31,7 @@ if(@$lugarp!=null && $lugarp!=0){
   $sql_empresas.=" AND l.id = $lugarl";
 }
 
-if($empresa!="null" && $empresa!="" && $empresa!=null){
+if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
 
   $sql_nombreEmp = "SELECT * FROM empresa WHERE id = $empresa";
   $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);
@@ -42,7 +42,7 @@ if($empresa!="null" && $empresa!="" && $empresa!=null){
 
 }
 // guardo consulta
-$consultaFinal = $sql_empresas;
-// $consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
+// $consultaFinal = $sql_empresas;
+$consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
 
  ?>

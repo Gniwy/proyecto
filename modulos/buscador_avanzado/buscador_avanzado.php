@@ -4,17 +4,9 @@
   <div class="col-12 img"></div>
   <div class="row form-group col-10 mb-2">
     <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia">
-      <option value="">Todas las provincias</option>
-      <?php
-      // barra selectora de la provincia
-        $consulta = "SELECT * FROM `provincia` WHERE 1";
-        $sql = mysqli_query($link,$consulta);
 
-        while ($row = mysqli_fetch_assoc($sql))
-        {
-          echo '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
-        }
-       ?>
+      <?php include "sql/consulta_provincia.php"; ?>
+
     </select>
     <select class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="select_localidad">
       <?php
