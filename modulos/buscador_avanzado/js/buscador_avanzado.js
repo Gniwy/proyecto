@@ -18,9 +18,10 @@ $('#select_provincia').change(function(){
 
 $('#btn_busqueda_avanzado').click(function(){
 
-  var lugar = $('#select_localidad').val();
+  var lugar = $('#select_provincia').val();
   var empresa = $('#select_empresa_avanzado').val();
+  var localidad = $('#select_localidad').val();
 
-  location.href = "index_vista2.php?lugarl=" + lugar + "&empresa=" + empresa;
+  location.href = "index_vista2.php?lugarp=" + lugar + "&empresa=" + empresa + "&lc=" + localidad;
 
 });

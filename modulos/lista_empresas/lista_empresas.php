@@ -12,8 +12,6 @@ include 'sql/consulta_empresa.php';
 $sql_consulta = "UPDATE buscador SET consulta = ('$consultaFinal') WHERE 1";
 $aux_consulta = mysqli_query($link, $sql_consulta);
 
-
-
 $aux_empresas=mysqli_query($link,$sql_empresas);
 
 $cont_filas=0;
@@ -62,6 +60,15 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
       $cont_filas++;
     }
 
+}
+// registro vacio
+$numFila = mysqli_num_rows($aux_empresas);
+if ($numFila<=0) {
+  ?>
+
+  <span style="color:rgba(156, 9, 9, 0.84); text-align: center;">No se encontro contenido con esta busqueda</span>
+
+  <?php
 }
 ?>
 

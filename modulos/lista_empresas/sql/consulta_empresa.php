@@ -9,6 +9,7 @@ foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 
+
 //consulta principal desde van a partir las concatenaciones
 $sql_empresas="SELECT e.nombre, id_localidad, valoracion_media FROM empresa e
                                     JOIN localidad l
@@ -18,17 +19,13 @@ $sql_empresas="SELECT e.nombre, id_localidad, valoracion_media FROM empresa e
                                     WHERE 1";
 
 if(@$lugarp!=null && $lugarp!=0){
-  // $sql_lugar="SELECT * FROM provincia WHERE provincia_id = $lugarp";
-  // $aux_lugar=mysqli_query($link,$sql_lugar);
-  //
-  // while ($idProvincia = mysqli_fetch_assoc($aux_lugar)) {
-  //   $sql_empresas.=' AND l.id = "'.$idProvincia['id'].'" ';
-  // }
+
   $sql_empresas.=" AND p.id = $lugarp";
 
-}elseif (@$lugarl!=null && $lugarl!=0)
+}
+if (@$lc!=null && $lc!=0)
 {
-  $sql_empresas.=" AND l.id = $lugarl";
+  $sql_empresas.=" AND l.id = $lc";
 }
 
 if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
@@ -44,5 +41,5 @@ if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
 // guardo consulta
 // $consultaFinal = $sql_empresas;
 $consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
-
+// echo $sql_empresas;
  ?>
