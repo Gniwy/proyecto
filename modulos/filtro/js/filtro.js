@@ -10,13 +10,25 @@ var filtro4;
 $("#c1").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
-
-
+      filtro1 = "c2";
     }
     else {
-    
-
+      filtro1 = null;
     }
+
+    $.ajax({
+      type: 'GET',
+      url: 'modulos/filtro/sql/select_filtro.php',
+      data:{
+        filtro1:filtro1,
+        filtro2:filtro2,
+        filtro3:filtro3,
+        filtro4:filtro4
+      },success: function(data){
+        console.log(data);
+      }
+    });
+
   });
 
 //Código jquery para detectar cuándo se activa el checkbox
@@ -28,6 +40,20 @@ $("#c2").change(function() {
     else {
       filtro2 = null;
     }
+
+    $.ajax({
+      type: 'GET',
+      url: 'modulos/filtro/sql/select_filtro.php',
+      data:{
+        filtro1:filtro1,
+        filtro2:filtro2,
+        filtro3:filtro3,
+        filtro4:filtro4
+      },success: function(data){
+        console.log(data);
+      }
+    });
+
   });
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c3").change(function() {
@@ -38,6 +64,19 @@ $("#c3").change(function() {
     else {
       filtro3 = null;
     }
+
+    $.ajax({
+      type: 'GET',
+      url: 'modulos/filtro/sql/select_filtro.php',
+      data:{
+        filtro1:filtro1,
+        filtro2:filtro2,
+        filtro3:filtro3,
+        filtro4:filtro4
+      },success: function(data){
+        console.log(data);
+      }
+    });
   });
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c4").change(function() {
@@ -48,8 +87,23 @@ $("#c4").change(function() {
     else {
       filtro4 = null;
     }
+
+    $.ajax({
+      type: 'GET',
+      url: 'modulos/filtro/sql/select_filtro.php',
+      data:{
+        filtro1:filtro1,
+        filtro2:filtro2,
+        filtro3:filtro3,
+        filtro4:filtro4
+      },success: function(data){
+        console.log(data);
+      }
+    });
+
   });
 
+/*
 
 $.ajax({
   type: 'POST',
@@ -63,3 +117,5 @@ $.ajax({
     // alert(filtro1);
   }
 });
+
+*/
