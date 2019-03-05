@@ -1,10 +1,10 @@
 
 // setTimeout(function(){alert("codigo");},2000);
 
-var filtro1;
-var filtro2;
-var filtro3;
-var filtro4;
+var filtro1 = 0;
+var filtro2 = 0;
+var filtro3 = 0;
+var filtro4 = 0;
 
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c1").change(function() {
@@ -13,7 +13,7 @@ $("#c1").change(function() {
       filtro1 = "c2";
     }
     else {
-      filtro1 = null;
+      filtro1 = 0;
     }
 
     $.ajax({
@@ -38,7 +38,7 @@ $("#c2").change(function() {
       filtro2 = "c2";
     }
     else {
-      filtro2 = null;
+      filtro2 = 0;
     }
 
     $.ajax({
@@ -62,7 +62,7 @@ $("#c3").change(function() {
       filtro3 = "c3";
     }
     else {
-      filtro3 = null;
+      filtro3 = 0;
     }
 
     $.ajax({
@@ -85,7 +85,7 @@ $("#c4").change(function() {
       filtro4 = "c4";
     }
     else {
-      filtro4 = null;
+      filtro4 = 0;
     }
 
     $.ajax({
