@@ -11,14 +11,16 @@ $("#c1").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
       filtro1 = "c2";
+      // $("#valorC1").attr('value', 1);
     }
     else {
       filtro1 = 0;
+      // $("#valorC1").attr('value', 0);
     }
 
     $.ajax({
       type: 'GET',
-      url: 'modulos/filtro/sql/select_filtro.php',
+      url: 'modulos/lista_empresas/lista_empresas.php',
       data:{
         filtro1:filtro1,
         filtro2:filtro2,
@@ -30,15 +32,18 @@ $("#c1").change(function() {
     });
 
   });
+
 
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c2").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
       filtro2 = "c2";
+      // $("#valorC2").attr('value', 1);
     }
     else {
       filtro2 = 0;
+      // $("#valorC2").attr('value', 0);
     }
 
     $.ajax({
@@ -55,14 +60,18 @@ $("#c2").change(function() {
     });
 
   });
+
+
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c3").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
       filtro3 = "c3";
+      // $("#valorC3").attr('value', 1);
     }
     else {
       filtro3 = 0;
+      // $("#valorC3").attr('value', 0);
     }
 
     $.ajax({
@@ -78,14 +87,18 @@ $("#c3").change(function() {
       }
     });
   });
+
+
 //Código jquery para detectar cuándo se activa el checkbox
 $("#c4").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
       filtro4 = "c4";
+      // $("#valorC4").attr('value', 1);
     }
     else {
       filtro4 = 0;
+      // $("#valorC4").attr('value', 0);
     }
 
     $.ajax({
@@ -102,20 +115,3 @@ $("#c4").change(function() {
     });
 
   });
-
-/*
-
-$.ajax({
-  type: 'POST',
-  url: 'modulos/filtro/sql/select_filtro.php',
-  data:{
-    filtro1:filtro1,
-    filtro2:filtro2,
-    filtro3:filtro3,
-    filtro4:filtro4
-  },success: function(data){
-    // alert(filtro1);
-  }
-});
-
-*/
