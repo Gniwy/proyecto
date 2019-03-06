@@ -9,7 +9,7 @@ include ('conexion/conexion.php');
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="image\favicon.png" />
+  <link rel="shortcut icon" href="image/ico_logo.ico" />
   <title>IReferences</title>
 
   <!-- Bootstrap -->
