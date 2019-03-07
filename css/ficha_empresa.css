@@ -1,3 +1,4 @@
+
 .redondeado{
   border-radius: 33px 33px 33px 33px;
   -moz-border-radius: 33px 33px 33px 33px;
@@ -19,4 +20,9 @@
 
 .pointer{
   cursor:pointer;
+}
+
+
+#footerComentario>.footer{
+  position: relative!important;
 }

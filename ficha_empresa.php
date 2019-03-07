@@ -280,8 +280,11 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
 
     </div>
+    <div id="footerComentario">
 
-    <?php include "modulos/footer/footer.php";?>
+      <?php include "modulos/footer/footer.php";?>
+
+    </div>
 
   </body>
   <!-- mapa  -->

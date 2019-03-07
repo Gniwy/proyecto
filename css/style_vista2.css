@@ -1,3 +1,26 @@
+/*Pag Secundaria*/
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+}
+footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-height: 1250px) {
+  footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+  }
+}
+
 #fondoBuscador{
   background-image: url('https://media.istockphoto.com/photos/abstract-blue-background-with-light-effects-picture-id524700656?k=6&m=524700656&s=612x612&w=0&h=ByXplCdM0NVtip8DOB5gFShy3MZCCUknBYYVGDgsUns=');
 }

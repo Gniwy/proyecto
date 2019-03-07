@@ -1,5 +1,22 @@
 /* Pag Principal */
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+}
+footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
+/* body, * {padding: 0; margin: 0; }
+#main { margin: 0 auto; }
+#cuerpo { width: 65%; }
+.footer { background: #ccc; padding: 2em; } */
 
 .img{
     height: 150px;

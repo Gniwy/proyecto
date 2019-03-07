@@ -32,21 +32,22 @@ include ('conexion/conexion.php');
 </head>
 
 <body>
-  <!-- HEADER -->
-  <div id="div_menu_top"><?php include "modulos/menu_top/menu_top.php"; ?></div>
-  <!-- Contenido principal -->
-  <section class="container-fluid buscadorPrincipal">
-    <div class="row col-10 offset-1">
-      <?php include "modulos/buscador_principal/buscador_principal.php";?>
-    </div>
-    <!-- mapa -->
-    <!-- <div style="position: relative;">
-      <?php /*include"modulos/modulo_mapa/mapa.php";*/ ?>
-    </div> -->
+  <div id="main">
+
+    <!-- HEADER -->
+    <div id="div_menu_top"><?php include "modulos/menu_top/menu_top.php"; ?></div>
+    <!-- Contenido principal -->
+    <section class="container-fluid buscadorPrincipal" id="cuerpo">
+      <div class="row col-10 offset-1">
+        <?php include "modulos/buscador_principal/buscador_principal.php";?>
+      </div>
+
   </section>
 
   <!--FOOTER-->
   <?php include "modulos/footer/footer.php"; ?>
+
+  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>
@@ -129,6 +130,64 @@ include ('conexion/conexion.php');
   // buscador
    var search1 = L.control.search().addTo(map);
 
+
+  </script>
+
+  <script type="text/javascript">
+  /*
+fuente:
+http://www.drupalcoder.com/blog/cross-browser-sticky-footer-with-fluid-height-using-jquery
+*/
+// $(document).ready(function() {
+// positionFooter();
+//
+// $(window)
+//   .scroll(positionFooter)
+//   .resize(positionFooter);
+//
+// function positionFooter() {
+//   var docHeight = $(document.body).height() - $("#sticky-footer-push").height();
+//   if(docHeight < $(window).height()){
+//     var diff = $(window).height() - docHeight;
+//     if (!$("#sticky-footer-push").length > 0) {
+//       $(".footer").before('<div id="sticky-footer-push"></div>');
+//     }
+//     $("#sticky-footer-push").height(diff);
+//   }
+// }
+// });
+//
+//
+//
+// $(".footer").stickyFooter();
+//
+// // sticky footer plugin
+// (function($){
+// var footer;
+//
+// $.fn.extend({
+//   stickyFooter: function(options) {
+//     footer = this;
+//
+//     positionFooter();
+//
+//     $(window)
+//       .scroll(positionFooter)
+//       .resize(positionFooter);
+//
+//     function positionFooter() {
+//       var docHeight = $(document.body).height() - $("#sticky-footer-push").height();
+//       if(docHeight < $(window).height()){
+//         var diff = $(window).height() - docHeight;
+//         if (!$("#sticky-footer-push").length > 0) {
+//           $(footer).before('<div id="sticky-footer-push"></div>');
+//         }
+//         $("#sticky-footer-push").height(diff);
+//       }
+//     }
+//   }
+// });
+// })(jQuery);
 
   </script>
 

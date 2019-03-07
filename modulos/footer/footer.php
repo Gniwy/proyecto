@@ -2,16 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <!-- <h5><i class="fa fa-road"></i> Proyecto</h5> -->
         <div class="row">
-          <!-- <div class="col-6">
-            <ul class="list-unstyled">
-              <li><a href="">Productos</a></li>
-              <li><a href="">Benefits</a></li>
-              <li><a href="">Partners</a></li>
-              <li><a href="">Team</a></li>
-            </ul>
-          </div> -->
           <div class="col-12 legalText">
             <ul class="list-unstyled">
               <li><a href="">Avisos Legal</a></li>
@@ -21,18 +12,8 @@
             </ul>
           </div>
         </div>
-        <!-- <ul class="nav">
-          <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
-          <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-        </ul> -->
         <br>
       </div>
-      <!-- <div class="col-md-12">
-        <h5 class="text-md-right">Contactanos</h5>
-        <hr>
-      </div> -->
       <div class="col-12">
         <form>
           <div class="col-12 col-sm-6">

@@ -44,6 +44,7 @@
         <div class="col-md-2 d-none d-md-inline" id="filtro_vista2" style="border: 1px solid;">
 
             <?php include "modulos/filtro/filtro.php"; ?>
+
         </div>
 
         <!-- contenido del filtro en xs -->
