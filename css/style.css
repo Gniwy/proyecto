@@ -12,21 +12,13 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
-/* body, * {padding: 0; margin: 0; }
-#main { margin: 0 auto; }
-#cuerpo { width: 65%; }
-.footer { background: #ccc; padding: 2em; } */
-
-.img{
-    height: 150px;
-    background-image: url("http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+#cuerpo{
+  height: 90vh;
 }
+
 .col-centrada{
-      float: none;
-      margin: 30vh auto;
+  float: none;
+  margin: 30vh auto;
 }
 
 .borde{
@@ -57,4 +49,27 @@ a{
 
 .leaflet-bar{
   margin-top: 100px;
+}
+
+
+/* media query */
+@media (max-height: 1250px) {
+  footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media(min-height: 568px){
+  .buscadorPrincipal{
+    padding-bottom: 200px;
+    min-height: inherit;
+  }
+}
+@media(min-height: 812px){
+  .buscadorPrincipal{
+    padding-bottom: 350px;
+    min-height: inherit;
+  }
 }

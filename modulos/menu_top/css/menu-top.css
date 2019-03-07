@@ -5,9 +5,10 @@ nav.navbar {
 }
 /* estilo boton despliegue de perfil */
 #botonDropdown{
-  position: absolute;
+  /* position: absolute;
   right: 30px;
-  min-width: 50px;
+  min-width: 50px; */
+  display: none; /* none por si cambio de idea*/
 }
 #perfilOpc{
   border: 0px;
@@ -40,11 +41,11 @@ nav.navbar {
   border-radius: 5px;
 }
 
-/* @media only screen and (min-width: 991px) {
-  .cuenta {
-    margin-top: -45px;
-  }
-} */
+/* estilo bootstrap collapse */
+.collapse{
+  display: inline;
+}
+
 
 /* estilo div donde se encuentra nuestro perfil */
 .contenidoPerfil{
@@ -93,6 +94,13 @@ nav.navbar {
       text-align: inherit;
       margin-left: -40px;
     }
+}
+
+@media(max-width: 991px){
+  #navbar_sesion_login {
+      right: 10px!important;
+      top: 10px!important;
+  }
 }
 
 a {

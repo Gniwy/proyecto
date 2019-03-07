@@ -1,6 +1,6 @@
 
 <div class="col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
-  <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" class="img-fluid" style="min-width:200px;" alt="">
+  <img src="image/logo_ireference.png" style="min-width:100%; max-width:85%; margin-bottom: 50px;" alt="">
 </div>
 
 <div class="row form-group col-9 mx-sm-3 mb-2">

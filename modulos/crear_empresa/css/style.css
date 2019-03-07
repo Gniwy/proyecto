@@ -18,3 +18,15 @@
   color: red;
   display: none;
 }
+footer {
+  clear: both;
+  position: relative;
+  width: 100%;
+}
+@media (max-height: 1250px) {
+  footer {
+    clear: both;
+    position: absolute;
+    width: 100%;
+  }
+}
