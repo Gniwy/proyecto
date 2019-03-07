@@ -1,14 +1,6 @@
 
 
-<?php  require_once "conexion/conexion.php"; ?>
-
-<?php
-
-//sacamos los valores del buscador principal
-foreach($_GET as $variable => $valor){
-  $$variable=$valor;
-}
-
+<?php  
 
 //consulta principal desde van a partir las concatenaciones
 $sql_empresas="SELECT e.nombre, id_localidad, valoracion_media FROM empresa e

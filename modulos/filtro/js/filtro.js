@@ -5,31 +5,28 @@ var filtro1 = 0;
 var filtro2 = 0;
 var filtro3 = 0;
 var filtro4 = 0;
-
+var mas_puntuada= 0;
 //Código jquery para detectar cuándo se activa el checkbox
-$("#c1").change(function() {
+$("#c4").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
-      filtro1 = "c2";
-      // $("#valorC1").attr('value', 1);
+      mas_puntuada = $('#c4').attr('name');
+      alert(mas_puntuada);
+
     }
     else {
-      filtro1 = 0;
-      // $("#valorC1").attr('value', 0);
+      alert(mas_puntuada);
     }
-
     $.ajax({
-      type: 'GET',
-      url: 'modulos/lista_empresas/lista_empresas.php',
+      type:'GET',
+      url:'modulos/lista_empresas/lista_empresas.php',
       data:{
-        filtro1:filtro1,
-        filtro2:filtro2,
-        filtro3:filtro3,
-        filtro4:filtro4
-      },success: function(data){
-        console.log(data);
+        hola:'mas_puntuada'
+      },success:function(data){
+        $('#busqueda_vista2').load(data);
       }
     });
+
 
   });
 
@@ -90,7 +87,7 @@ $("#c3").change(function() {
 
 
 //Código jquery para detectar cuándo se activa el checkbox
-$("#c4").change(function() {
+$("#c1").change(function() {
     //Si el checkbox está seleccionado
     if($(this).is(":checked")) {
       filtro4 = "c4";

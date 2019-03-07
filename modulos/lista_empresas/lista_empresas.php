@@ -3,10 +3,39 @@
 
 <?php
 
-require_once "conexion/conexion.php";
+include_once "../../conexion/conexion.php";
+
+$filtro1=null;
+$filtro2=null;
+$filtro3=null;
+$mas_puntuada=null;
+
+//sacamos los valores
+foreach($_GET as $variable => $valor){
+  $$variable=$valor;
+}
+
+echo "***".$mas_puntuada;
+
+/************************/
+
+// $sql="SELECT * FROM empresas WHERE 1";
+//
+// if($todas_provincias!=0){
+//   $sql_consulta.=" AND provincia=$provincia";
+// }
+//
+// if($todas_localidad!=0){
+//   $sql_consulta.=" AND provincia=$provincia";
+// }
+//
+// if($mas_puntuada!=null){
+//   $sql_consulta.=" AND sdafj=$sdf";
+// }
+
+/*************************/
 
 include 'sql/consulta_empresa.php';
-
 
 
 $sql_consulta = "UPDATE buscador SET consulta = ('$consultaFinal') WHERE 1";

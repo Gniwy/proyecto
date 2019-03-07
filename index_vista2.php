@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<?php
+
+//sacamos los valores
+foreach($_GET as $variable => $valor){
+  $$variable=$valor;
+}
+
+?>
+
   <head>
     <meta charset="utf-8">
     <title>Vista2</title>
@@ -30,6 +40,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
   <body>
+
+    <!--hidden busqueda-->
+    <input type="hidden" id="hidden_provincia" name="" value="<?php echo $lugarp;?>">
+    <input type="hidden" id="hidden_empresa" name="" value="<?php echo $empresa;?>">
+
     <section>
       <?php include"modulos/menu_top/menu_top.php" ?>
     </section>
@@ -76,7 +91,7 @@
         <!-- contenido de la busqueda -->
         <div class="col-6 col-sm-9 col-md-10 mb-3" id="busqueda_vista2">
 
-          <?php include "modulos/lista_empresas/lista_empresas.php";?>
+          <?php //include "modulos/lista_empresas/lista_empresas.php";?>
 
         </div>
       </div>
@@ -88,12 +103,8 @@
     </footer>
 
     <script type="text/javascript">
-    var map = L.map('mapVista').setView([41.66, -4.72], 15);
 
-
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-    maxZoom: 18}).addTo(map);
+      $('#busqueda_vista2').load('modulos/lista_empresas/lista_empresas.php?lugarp='+$('#hidden_provincia').val()+'&empresa='+$('#hidden_empresa').val());
 
     </script>
   </body>
