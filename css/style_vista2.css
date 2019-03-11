@@ -5,6 +5,8 @@ html {
 }
 body {
   margin: 0;
+  font-family: 'Lobster';
+  font-weight: normal;
 }
 footer {
   clear: both;
@@ -33,5 +35,6 @@ footer {
 
  #contenido_vista2
 {
-  height: 75vh;
+  min-height: 75vh;
+  margin-bottom: 20px;
 }

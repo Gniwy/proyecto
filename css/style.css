@@ -3,8 +3,14 @@ html {
   min-height: 100%;
   position: relative;
 }
+*{
+  font-family: 'Lobster';
+  font-weight: normal;
+}
+
 body {
   margin: 0;
+
 }
 footer {
   clear: both;
@@ -72,4 +78,11 @@ a{
     padding-bottom: 350px;
     min-height: inherit;
   }
+}
+
+/* estylo bootstrap */
+
+.ui-widget{
+  font-family: 'Lobster';
+  font-weight: normal;
 }

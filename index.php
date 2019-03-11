@@ -15,13 +15,13 @@ include ('conexion/conexion.php');
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- font-family -->
+  <link rel="stylesheet" href="css/font-family/Lobster.ttf">
   <!-- hoja de estilos de las paginas -->
   <link rel="stylesheet" href="modulos/footer/css/footer.css">
   <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="modulos/modulo_mapa/css/style.css">
-  <!-- font-family -->
-  <link rel="stylesheet" href="/css/font-family/Lobster.ttf">
   <!-- icon -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- mapa -->

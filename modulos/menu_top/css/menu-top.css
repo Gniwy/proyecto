@@ -79,8 +79,6 @@ nav.navbar {
   }
 }
 
-
-
 /* posicionar el titulo en tamanos mas pequenos */
 @media only screen and (max-width: 400px) {
     #titulo {

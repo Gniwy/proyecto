@@ -11,6 +11,15 @@
     height: 100px;
   }
 
+
+#logoBuscadoPrincipal{
+  min-width:100%;
+  max-width:85%;
+  margin-bottom: 50px;
+}
+
+
+
 /* boton de busqueda */
 @media (max-width: 575.98px) {
   #busqueda_principal{

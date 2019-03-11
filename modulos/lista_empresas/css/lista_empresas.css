@@ -16,7 +16,6 @@
   right: 0;
 }
 p.nombreEmp {
-  font-family: inherit;
   display: inline;
 }
 .filaRow div:nth-child(2){
