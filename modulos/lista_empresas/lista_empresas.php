@@ -5,17 +5,16 @@
 
 include_once "../../conexion/conexion.php";
 
-$filtro1=null;
-$filtro2=null;
-$filtro3=null;
-$mas_puntuada=null;
+$nombre_filtro=null;
+$check_filtro=0;
 
 //sacamos los valores
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 
-echo "***".$mas_puntuada;
+echo $nombre_filtro."--".$check_filtro;
+
 
 /************************/
 
