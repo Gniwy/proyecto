@@ -71,6 +71,8 @@
 
 # activar el boton "enter" en los registros/busquedas/login
 
+# Administrador ver empresas para verificar
+
 <!-- ''''''''' *FIN FALTA* '''''''''' -->
 
 <!-- ''''''''''''''''''Archivos cada uno''''''''''''''''''''' -->
