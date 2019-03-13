@@ -71,7 +71,9 @@
 
 # activar el boton "enter" en los registros/busquedas/login
 
-# Administrador ver empresas para verificar
+# Cristian - Administrador ver empresas para verificar
+
+# Cristian - Enviar correos para activar usuario
 
 <!-- ''''''''' *FIN FALTA* '''''''''' -->
 
