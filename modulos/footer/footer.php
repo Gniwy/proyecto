@@ -22,7 +22,7 @@
           <div class="col-12 col-sm-6">
               <textarea class="form-control contentForm" id="exampleMessage" placeholder="mensaje"></textarea>
           </div>
-          <fieldset class="form-group text-xs-right">
+          <fieldset class="form-group">
             <button type="button" class="btn btn-primary btn-sm">Enviar</button>
           </fieldset>
         </form>

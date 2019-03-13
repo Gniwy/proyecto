@@ -6,7 +6,7 @@ $sql_empresa="SELECT id, nombre FROM empresa GROUP BY nombre";
 $aux_empresa=mysqli_query($link,$sql_empresa);
 
 
-?> <option value="0" selected style="color:rgb(184, 182, 181)grey;">Elige una empresa</option> <?php
+?> <option value="0" selected style="color:rgb(184, 182, 181)grey;">Empresa</option> <?php
 while ($ex_empresa=mysqli_fetch_assoc($aux_empresa)) { ?>
 
   <option value="<?php echo $ex_empresa['id'];?>"><?php echo $ex_empresa['nombre'];?></option>

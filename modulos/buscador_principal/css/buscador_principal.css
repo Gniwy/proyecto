@@ -13,12 +13,45 @@
 
 
 #logoBuscadoPrincipal{
-  min-width:100%;
-  max-width:85%;
+  width:100%;
   margin-bottom: 50px;
 }
 
+/* logo buscador */
+@media (max-width: 1024px) {
+  #logoBuscadoPrincipal{
+    width: 145%;
+    margin-left: -25%;
+  }
+}
 
+@media (max-width: 414px) {
+  #logoBuscadoPrincipal{
+    width: 350px;
+    margin-left: -81px;
+  }
+}
+
+@media (max-width: 411px) {
+  #logoBuscadoPrincipal{
+    width: 420px;
+    margin-left: -82px;
+  }
+}
+
+@media (max-width: 360px) {
+  #logoBuscadoPrincipal{
+    width: 390px;
+    margin-left: -87px;
+  }
+}
+
+@media (max-width: 320px) {
+  #logoBuscadoPrincipal{
+    width: 350px;
+    margin-left: -81px;
+  }
+}
 
 /* boton de busqueda */
 @media (max-width: 575.98px) {
