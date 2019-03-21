@@ -1,5 +1,5 @@
 <?php @include_once('../../../conexion/conexion.php'); ?>
-
+ 
 <?php
 
 foreach($_GET as $variable => $valor){

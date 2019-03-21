@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once "../../../conexion/conexion.php";
 
 $sql_provincia="SELECT id, nombre FROM provincia GROUP BY nombre";

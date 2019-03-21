@@ -1,5 +1,5 @@
 <?php require_once ('conexion/conexion.php'); ?>
-
+ 
 <section class="form-inline col-centrada col-12">
   <div class="col-12 img"></div>
   <div class="row form-group col-10 mb-2">
