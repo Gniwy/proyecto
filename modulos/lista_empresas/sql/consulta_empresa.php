@@ -12,17 +12,17 @@ $lugarp = 0;
 $lc = 0;
 $empresa = 0;
 
-if(@$lugarp!=null && $lugarp!=0){
+if($lugarp!=null && $lugarp!=0){
 
   $sql_empresas.=" AND p.id = $lugarp";
 
 }
-if (@$lc!=null && $lc!=0)
+if ($lc!=null && $lc!=0)
 {
   $sql_empresas.=" AND l.id = $lc";
 }
 
-if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
+if($empresa!="null" && @$empresa!="" && $empresa!=null){
 
   $sql_nombreEmp = "SELECT * FROM empresa WHERE id = $empresa";
   $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);
@@ -33,47 +33,47 @@ if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
 
 }
 
-// foreach ($checked as $value) {
-//   //NOTA IMPORTANTE RECORDATORIO FILTRO
-//   /*
-//     1 -> Más comentada
-//     2 -> Más extendida
-//     3 -> Más recomendada
-//     4 -> Mas puntuada
-//   */
-//   switch ($value) {
-//     case '1':
-//     $sql_empresas.=" AND (SELECT COUNT(id) from comentario GROUP BY id LIMIT 1) LIMIT 1";
-//     /*SELECT DISTINCT e.id, e.nombre, id_localidad, valoracion_media
-//       FROM empresa e
-//       JOIN localidad l
-//       ON e.id_localidad = l.id
-//       JOIN provincia p
-//       ON l.provincia_id = p.id
-//       JOIN comentario c
-//       ON e.id = c.id_empresa
-//       where (SELECT COUNT(id) from comentario GROUP BY id_empresa LIMIT 1) GROUP BY c.id
-//       */
-//     break;
-//
-//     case '2':
-//     // code...
-//     break;
-//
-//     case '3':
-//     // code...
-//     break;
-//
-//     case '4':
-//     // code...
-//     break;
-//
-//     default:
-//       // code...
-//       break;
-//   }
-//
-// }
+foreach ($checked as $value) {
+  //NOTA IMPORTANTE RECORDATORIO FILTRO
+  /*
+    1 -> Más comentada
+    2 -> Más extendida
+    3 -> Más recomendada
+    4 -> Mas puntuada
+  */
+  switch ($value) {
+    case '1':
+    $sql_empresas.=" AND (SELECT COUNT(id) from comentario GROUP BY id LIMIT 1) LIMIT 1";
+    /*SELECT DISTINCT e.id, e.nombre, id_localidad, valoracion_media
+      FROM empresa e
+      JOIN localidad l
+      ON e.id_localidad = l.id
+      JOIN provincia p
+      ON l.provincia_id = p.id
+      JOIN comentario c
+      ON e.id = c.id_empresa
+      where (SELECT COUNT(id) from comentario GROUP BY id_empresa LIMIT 1) GROUP BY c.id
+      */
+    break;
+
+    case '2':
+    // code...
+    break;
+
+    case '3':
+    // code...
+    break;
+
+    case '4':
+    // code...
+    break;
+
+    default:
+      // code...
+      break;
+  }
+
+}
 
 
 // guardo consulta

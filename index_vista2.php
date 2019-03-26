@@ -55,10 +55,10 @@ foreach($_GET as $variable => $valor){
         <?php include"modulos/buscador_avanzado/buscador_avanzado.php" ?>
       </div>
     </section>
-    <section class="container" id="contenido_vista2" style="border: 1px solid blue;">
+    <section class="container" id="contenido_vista2">
       <!-- contenido del filtro de busqueda -->
       <div class="row">
-        <div class="col-md-2 d-none d-md-inline" id="filtro_vista2" style="border: 1px solid;">
+        <div class="col-md-2 d-none d-md-inline mt-4" id="filtro_vista2">
 
             <?php include "modulos/filtro/filtro.php"; ?>
 

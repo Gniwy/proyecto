@@ -5,10 +5,10 @@
         <div class="row">
           <div class="col-12 legalText">
             <ul class="list-unstyled">
-              <li><a href="">Avisos Legal</a></li>
-              <li><a href="">Terminos y Condiciones</a></li>
-              <li><a href="">Politica de Cookie</a></li>
-              <li><a href="">Politica de privacidad</a></li>
+              <li><a href="modulos/legal_notices/esp/aviso_legal.html"  target="_black">Avisos Legal</a></li>
+              <li><a href="modulos/legal_notices/esp/terminos_y_condiciones.html"  target="_black">Terminos y Condiciones</a></li>
+              <li><a href="modulos/legal_notices/esp/cookies.html"  target="_black">Politica de Cookie</a></li>
+              <li><a href="modulos/legal_notices/esp/politicas_de_privacidad.html"  target="_black">Politica de privacidad</a></li>
             </ul>
           </div>
         </div>

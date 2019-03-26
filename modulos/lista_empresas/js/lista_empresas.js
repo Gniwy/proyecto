@@ -6,7 +6,7 @@ $('.empresa').click(function(){
 
   id_elemento = id_elemento.substring(8);
 
-  open('ficha_empresa.php?id_empresa=' + id_elemento);
+  location.href = 'ficha_empresa.php?id_empresa=' + id_elemento;
 
 
 
