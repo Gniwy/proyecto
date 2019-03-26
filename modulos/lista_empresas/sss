@@ -1,0 +1,19 @@
+
+    <div class="col-12 col-md-4 item empresa pointer" style="position: relative;" id="empresa_<?php echo $ex_empresas['id_localidad'];?>">
+      <p class="nombreEmp"><?php echo $ex_empresas['nombre']; ?></p>
+      <div class="logoEmp">
+        <p><?php echo $primera_letra[0]; ?></p>
+      </div>
+      <div class="col-8 valoracionAVG"><!-- valoracion media de las empresas -->
+        <?php
+        $valoracionAVG = $ex_empresas['valoracion_media'];
+
+        for($i=0;$i<$valoracionAVG;$i++){?>
+          <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" alt="">
+        <?php } ?>
+
+        <?php for($i=$valoracionAVG;$i<5;$i++){?>
+          <img src="image/estrella_vacia.png" class="img-responsive" width="10px" alt="">
+        <?php } ?>
+      </div>
+    </div>

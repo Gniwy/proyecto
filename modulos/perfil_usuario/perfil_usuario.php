@@ -4,6 +4,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../image/ico_logo.ico" />
     <title>Perfil Usuario</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/jquery-ui.css">
@@ -50,7 +52,7 @@
                 <input type="password" class="form-control" id="newPassword" placeholder="********" required>
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="inputAddress">Direccion</label>
               <input type="text" class="form-control" id="address" placeholder="Calle azul 1B">
             </div>
@@ -72,7 +74,7 @@
                 <label for="cp">CP</label>
                 <input type="number" class="form-control" id="inputCP">
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="aceptarTerminos">

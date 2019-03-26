@@ -1,3 +1,8 @@
+body {
+    font-weight: normal;
+    position: relative;
+    min-height: 100vh;
+}
 
 .table-borderless{
   max-width: 700px;
@@ -18,15 +23,11 @@
   color: red;
   display: none;
 }
-footer {
-  clear: both;
-  position: relative;
-  width: 100%;
+.cuerpo {
+    padding-bottom: 12rem;
 }
-@media (max-height: 1250px) {
-  footer {
-    clear: both;
+footer {
     position: absolute;
+    bottom: 0;
     width: 100%;
-  }
 }

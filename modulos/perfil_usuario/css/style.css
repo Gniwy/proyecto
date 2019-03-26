@@ -1,3 +1,9 @@
+body {
+    font-weight: normal;
+    position: relative;
+    min-height: 100vh;
+}
+
 .form{
   position: relative;
 }
@@ -27,3 +33,27 @@ button{
   position: absolute;
   right: 0;
 }
+
+
+.body_perfil_user.container {
+    padding-bottom: 10rem;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* footer {
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-height: 1650px) {
+  footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+  }
+} */

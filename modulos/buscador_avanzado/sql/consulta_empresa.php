@@ -1,5 +1,5 @@
 <?php @include_once('../../../conexion/conexion.php'); ?>
- 
+
 <?php
 
 //aparecera la opcion elegida en el buscador principal

@@ -12,7 +12,9 @@ foreach($_GET as $variable => $valor){
 
   <head>
     <meta charset="utf-8">
-    <title>Vista2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="image/ico_logo.ico" />
+    <title>IReferences</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">

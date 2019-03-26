@@ -3,6 +3,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../image/ico_logo.ico" />
     <title>Crear Empresa</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/jquery-ui.css">
@@ -86,12 +88,7 @@
             <label class="required" id="nombre_req">Campo obligatorio</label>
           </div>
           <div class="">
-            <label>Tipo: </label>
-            <input type="number" name="tipo" value="" id="tipo" required>
-            <label class="required" id="tipo_req">Campo obligatorio</label>
-          </div>
-          <div class="">
-            <label>Zona: </label>
+            <label>Direccion: </label>
             <input type="text" name="zona" value="" id="zona">
           </div>
           <div class="">

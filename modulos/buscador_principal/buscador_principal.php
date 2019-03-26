@@ -1,4 +1,4 @@
- 
+
 <div class="col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
   <img src="image/logo_ireference.png" id="logoBuscadoPrincipal" alt="">
 </div>

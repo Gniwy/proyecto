@@ -1,14 +1,16 @@
-
-
-<?php  
+<?php
 
 //consulta principal desde van a partir las concatenaciones
-$sql_empresas="SELECT e.nombre, id_localidad, valoracion_media FROM empresa e
+$sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e.cp FROM empresa e
                                     JOIN localidad l
                                     ON e.id_localidad = l.id
                                     JOIN provincia p
                                     ON l.provincia_id = p.id
                                     WHERE 1";
+
+$lugarp = 0;
+$lc = 0;
+$empresa = 0;
 
 if(@$lugarp!=null && $lugarp!=0){
 
@@ -30,6 +32,50 @@ if(@$empresa!="null" && @$empresa!="" && $empresa!=null){
   }
 
 }
+
+// foreach ($checked as $value) {
+//   //NOTA IMPORTANTE RECORDATORIO FILTRO
+//   /*
+//     1 -> Más comentada
+//     2 -> Más extendida
+//     3 -> Más recomendada
+//     4 -> Mas puntuada
+//   */
+//   switch ($value) {
+//     case '1':
+//     $sql_empresas.=" AND (SELECT COUNT(id) from comentario GROUP BY id LIMIT 1) LIMIT 1";
+//     /*SELECT DISTINCT e.id, e.nombre, id_localidad, valoracion_media
+//       FROM empresa e
+//       JOIN localidad l
+//       ON e.id_localidad = l.id
+//       JOIN provincia p
+//       ON l.provincia_id = p.id
+//       JOIN comentario c
+//       ON e.id = c.id_empresa
+//       where (SELECT COUNT(id) from comentario GROUP BY id_empresa LIMIT 1) GROUP BY c.id
+//       */
+//     break;
+//
+//     case '2':
+//     // code...
+//     break;
+//
+//     case '3':
+//     // code...
+//     break;
+//
+//     case '4':
+//     // code...
+//     break;
+//
+//     default:
+//       // code...
+//       break;
+//   }
+//
+// }
+
+
 // guardo consulta
 // $consultaFinal = $sql_empresas;
 $consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta

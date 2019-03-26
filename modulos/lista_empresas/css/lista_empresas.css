@@ -6,21 +6,29 @@
   border: 1px solid green;
 }
 
-.empresa{
+/* .empresa{
   position: relative;
   height: 120px;
-}
+} */
 
 .image_empresa{
   position: absolute;
   right: 0;
 }
 p.nombreEmp {
-  display: inline;
+  text-align: center;
 }
+p.nombreEmp span {
+    font-weight: 600;
+    font-size: 1.7em;
+}
+.card-body.boton {
+    margin: auto;
+}
+
 .filaRow div:nth-child(2){
-  border: 1px solid rgba(175, 169, 169, 0.75);
-  border-width: 0px 1px 0px 1px;
+  /* border: 1px solid rgba(175, 169, 169, 0.75);
+  border-width: 0px 1px 0px 1px; */
 }
 .logoEmp{
   border: 1px solid #afa9a9!important;

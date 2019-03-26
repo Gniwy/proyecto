@@ -61,6 +61,8 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="image/ico_logo.ico" />
     <title>Ficha <?php echo $nombre;?></title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">

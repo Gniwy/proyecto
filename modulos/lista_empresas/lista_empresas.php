@@ -5,42 +5,21 @@
 
 include_once "../../conexion/conexion.php";
 
-$nombre_filtro=null;
-$check_filtro=0;
+$checked=[];
 
 //sacamos los valores
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
 
-echo $nombre_filtro."--".$check_filtro;
-
-
-/************************/
-
-// $sql="SELECT * FROM empresas WHERE 1";
-//
-// if($todas_provincias!=0){
-//   $sql_consulta.=" AND provincia=$provincia";
-// }
-//
-// if($todas_localidad!=0){
-//   $sql_consulta.=" AND provincia=$provincia";
-// }
-//
-// if($mas_puntuada!=null){
-//   $sql_consulta.=" AND sdafj=$sdf";
-// }
-
-/*************************/
 
 include 'sql/consulta_empresa.php';
-
 
 $sql_consulta = "UPDATE buscador SET consulta = ('$consultaFinal') WHERE 1";
 $aux_consulta = mysqli_query($link, $sql_consulta);
 
 $aux_empresas=mysqli_query($link,$sql_empresas);
+
 
 $cont_filas=0;
 $cont_elementos=0;
@@ -58,26 +37,56 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
 
     <?php
       $primera_letra = strtoupper($ex_empresas['nombre']);
+      $resto_letra = substr($ex_empresas['nombre'], 1);
      ?>
 
-    <div class="col-12 col-md-4 item empresa pointer" style="position: relative;" id="empresa_<?php echo $ex_empresas['id_localidad'];?>">
-      <p class="nombreEmp"><?php echo $ex_empresas['nombre']; ?></p>
-      <div class="logoEmp">
-        <p><?php echo $primera_letra[0]; ?></p>
-      </div>
-      <div class="col-8 valoracionAVG"><!-- valoracion media de las empresas -->
-        <?php
-        $valoracionAVG = $ex_empresas['valoracion_media'];
+      <div class="col-12 col-md-4 card">
+        <!-- <img class="card-img-top" src="image/logo_ireference Original.png" alt="Card"> -->
 
-        for($i=0;$i<$valoracionAVG;$i++){?>
-          <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" alt="">
-        <?php } ?>
+        <div class="card-body">
+          <p class="nombreEmp"> <span style="color: #00B0EE;"><?php echo $primera_letra[0]; ?></span><span style="color: #F8A243;"><?php echo $resto_letra; ?></span> </p>
+        </div>
 
-        <?php for($i=$valoracionAVG;$i<5;$i++){?>
-          <img src="image/estrella_vacia.png" class="img-responsive" width="10px" alt="">
-        <?php } ?>
+        <div><!-- valoracion media de las empresas -->
+          <?php
+          $valoracionAVG = $ex_empresas['valoracion_media'];
+
+          for($i=0;$i<$valoracionAVG;$i++){?>
+            <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" alt="">
+          <?php } ?>
+
+          <?php for($i=$valoracionAVG;$i<5;$i++){?>
+            <img src="image/estrella_vacia.png" class="img-responsive" width="10px" alt="">
+          <?php } ?>
+        </div>
+
+        <ul class="list-group list-group-flush">
+
+          <?php /*datos tabla comentario*/
+          $id_emp = $ex_empresas['id'];
+
+          $sql_datoEmp = "SELECT count(c.id) total from comentario c
+          join empresa e
+          on c.id_empresa = e.id
+          where e.id = $id_emp ";
+          $aux_datoEmp = mysqli_query($link, $sql_datoEmp);
+
+          while($ex_datoEmp = mysqli_fetch_assoc($aux_datoEmp)) {
+            ?>
+
+          <li class="list-group-item">Comentario: <?php echo $ex_datoEmp['total']; ?></li>
+
+          <?php
+        }
+        ?>
+          <li class="list-group-item">Direccion: <?php echo $ex_empresas['calle'].', CP: '.$ex_empresas['cp'];?></li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="card-body boton">
+          <span class="btn btn-primary empresa" id="empresa_<?php echo $ex_empresas['id'];?>">Ver Ficha</span> 
+        </div>
       </div>
-    </div>
+
 
     <?php
     }

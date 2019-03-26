@@ -71,9 +71,7 @@
 
 # activar el boton "enter" en los registros/busquedas/login
 
-# Cristian - Administrador ver empresas para verificar
-
-# Cristian - Enviar correos para activar usuario
+# en algunas paginas(crear empresa, perfil usuario) el logo de la web no aparece (menu top)
 
 <!-- ''''''''' *FIN FALTA* '''''''''' -->
 

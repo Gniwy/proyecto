@@ -1,4 +1,4 @@
- 
+
 $('#select_empresa_principal').load('modulos/buscador_principal/sql/select_empresa.php');
 $('#select_lugar_principal').load('modulos/buscador_principal/sql/select_provincias.php');
 
@@ -24,6 +24,7 @@ $('#select_lugar_principal').load('modulos/buscador_principal/sql/select_provinc
 //    }
 //   });
 // });
+
 //To select country name
 function selectCountry(val) {
   $("#select_lugar").val(val);
