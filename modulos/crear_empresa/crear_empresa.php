@@ -45,7 +45,7 @@
 
     <div class="cuerpo">
 
-      <section style="width:50%; margin:auto;">
+      <section class="cabezaIcons">
 
         <h1>Como crear tu empresa</h1>
 
@@ -78,10 +78,10 @@
       <br>
       <!-- paso 1 DATOS -->
       <section id="paso1">
-        <div style="width: 45%; margin: auto; border-top: 1px solid;"></div>
+        <div class="borderTop" style=""></div>
         <br>
 
-        <div class="datos" style="width: 50%; margin: auto; border-right: 1px solid; border-left: 1px solid; padding:15px; padding-left: 30px;">
+        <div class="datos" style="">
           <div class="">
             <label>Nombre: </label>
             <input type="text" name="nombre" value="" id="nombre" required>
@@ -101,16 +101,16 @@
         </div>
 
         <br>
-        <div style="width: 45%; margin: auto; border-bottom: 1px solid;"></div>
+        <div class="borderBot" style=""></div>
       </section>
 
 
       <!-- paso 2 UBICACION -->
       <section id="paso2" style="display: none;">
-        <div style="width: 45%; margin: auto; border-top: 1px solid;"></div>
+        <div class="borderTop" style=""></div>
         <br>
 
-        <div class="datos" style="width: 50%; margin: auto; border-right: 1px solid; border-left: 1px solid; padding:20px;">
+        <div class="datos" style="">
           <h3>Selecione la ubicacion de la empresa <span class="required" id="map_req"> <small>(Obligatoria ubicacion)</small> </span> </h3>
           <div id="mapEmpresa" style="width: auto; height: 400px;">
           </div>
@@ -120,7 +120,7 @@
         </div>
 
         <br>
-        <div style="width: 45%; margin: auto; border-bottom: 1px solid;"></div>
+        <div class="borderBot" style=""></div>
       </section>
 
   <!-- coordenadas hidden  -->
@@ -133,10 +133,10 @@
 
       <!-- paso 3 PUBLICACION/REVISION -->
       <section id="paso3" style="display: none;">
-        <div style="width: 45%; margin: auto; border-top: 1px solid;"></div>
+        <div class="borderTop" style=""></div>
         <br>
 
-        <div class="datos" style="width: 50%; margin: auto; border-right: 1px solid; border-left: 1px solid; padding:20px;">
+        <div class="datos" style="">
           <h3>Revisa los datos antes de que sean publicados </h3>
           <table class="table-hover">
             <tbody>
@@ -177,7 +177,7 @@
         </div>
 
         <br>
-        <div style="width: 45%; margin: auto; border-bottom: 1px solid;"></div>
+        <div class="borderBot" style=""></div>
       </section>
 
     </div>

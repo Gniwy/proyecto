@@ -24,10 +24,40 @@ body {
   display: none;
 }
 .cuerpo {
-    padding-bottom: 12rem;
+    padding-bottom: 15rem;
 }
+.cabezaIcons{
+  
+}
+.datos{
+  width: 50%;
+  margin: auto;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding:20px;
+}
+.borderBot{
+  width: 45%;
+  margin: auto;
+  border-bottom: 1px solid;
+}
+.borderTop{
+  width: 45%;
+  margin: auto;
+  border-top: 1px solid;
+}
+
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+
+/* media Query */
+
+@media (max-width: 470px) {
+  .datos{
+    width: 95%;
+  }
 }
