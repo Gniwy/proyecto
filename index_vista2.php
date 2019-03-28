@@ -2,11 +2,15 @@
 <html lang="en" dir="ltr">
 
 <?php
+$lugarp = 0;
+$empresa = 0;
+$lc = 0;
 
 //sacamos los valores
 foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
+
 
 ?>
 
@@ -46,6 +50,7 @@ foreach($_GET as $variable => $valor){
     <!--hidden busqueda-->
     <input type="hidden" id="hidden_provincia" name="" value="<?php echo $lugarp;?>">
     <input type="hidden" id="hidden_empresa" name="" value="<?php echo $empresa;?>">
+    <input type="hidden" id="hidden_lc" name="" value="<?php echo $lc;?>">
 
     <section>
       <?php include"modulos/menu_top/menu_top.php" ?>
@@ -106,7 +111,7 @@ foreach($_GET as $variable => $valor){
 
     <script type="text/javascript">
 
-      $('#busqueda_vista2').load('modulos/lista_empresas/lista_empresas.php?lugarp='+$('#hidden_provincia').val()+'&empresa='+$('#hidden_empresa').val());
+      $('#busqueda_vista2').load('modulos/lista_empresas/lista_empresas.php?lugarp='+$('#hidden_provincia').val()+'&empresa='+$('#hidden_empresa').val()+'&lc='+$('#hidden_lc').val());
 
     </script>
   </body>

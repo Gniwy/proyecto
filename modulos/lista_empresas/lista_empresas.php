@@ -6,6 +6,9 @@
 include_once "../../conexion/conexion.php";
 
 $checked=[];
+$lugarp = 0;
+$lc = 0;
+$empresa = 0;
 
 //sacamos los valores
 foreach($_GET as $variable => $valor){
@@ -83,7 +86,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
           <li class="list-group-item">Vestibulum at eros</li>
         </ul>
         <div class="card-body boton">
-          <span class="btn btn-primary empresa" id="empresa_<?php echo $ex_empresas['id'];?>">Ver Ficha</span> 
+          <span class="btn btn-primary empresa" id="empresa_<?php echo $ex_empresas['id'];?>">Ver Ficha</span>
         </div>
       </div>
 

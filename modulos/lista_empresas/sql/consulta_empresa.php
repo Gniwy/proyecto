@@ -8,15 +8,12 @@ $sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e
                                     ON l.provincia_id = p.id
                                     WHERE 1";
 
-$lugarp = 0;
-$lc = 0;
-$empresa = 0;
-
 if($lugarp!=null && $lugarp!=0){
 
   $sql_empresas.=" AND p.id = $lugarp";
 
 }
+
 if ($lc!=null && $lc!=0)
 {
   $sql_empresas.=" AND l.id = $lc";
@@ -77,7 +74,7 @@ foreach ($checked as $value) {
 
 
 // guardo consulta
-// $consultaFinal = $sql_empresas;
-$consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
-// echo $sql_empresas;
+$consultaFinal = $sql_empresas;
+// $consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
+echo $sql_empresas;
  ?>
