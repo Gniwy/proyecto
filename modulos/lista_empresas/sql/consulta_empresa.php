@@ -8,18 +8,18 @@ $sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e
                                     ON l.provincia_id = p.id
                                     WHERE 1";
 
-if($lugarp!=null && $lugarp!=0){
+if($lugarp!=null && $lugarp!=0 && $lugarp!=''){
 
   $sql_empresas.=" AND p.id = $lugarp";
 
 }
 
-if ($lc!=null && $lc!=0)
+if ($lc!=null && $lc!=0 && $lc!='')
 {
   $sql_empresas.=" AND l.id = $lc";
 }
 
-if($empresa!="null" && @$empresa!="" && $empresa!=null){
+if($empresa!=null && @$empresa!='' && $empresa!=null){
 
   $sql_nombreEmp = "SELECT * FROM empresa WHERE id = $empresa";
   $aux_nombreEmp = mysqli_query($link, $sql_nombreEmp);

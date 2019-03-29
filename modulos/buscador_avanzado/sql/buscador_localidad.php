@@ -58,7 +58,6 @@ if($select_todas==0){
 
 <?php
 
-
 // barra selectora de la localiadad
 $consulta = "SELECT * FROM localiadad WHERE 1 ";
 if (!empty($_GET['lc'])) {
@@ -70,6 +69,5 @@ while ($row = mysqli_fetch_assoc($sql))
 {
   echo '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
 }
-
 
 ?>

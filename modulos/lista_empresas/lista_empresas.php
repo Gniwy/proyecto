@@ -106,7 +106,7 @@ $numFila = mysqli_num_rows($aux_empresas);
 if ($numFila<=0) {
   ?>
 
-  <span style="color:rgba(156, 9, 9, 0.84); text-align: center;">No se encontro contenido con esta busqueda</span>
+  <span class="noEncontrado">No se encontro contenido con esta busqueda</span>
 
   <?php
 }
