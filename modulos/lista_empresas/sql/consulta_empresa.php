@@ -74,7 +74,7 @@ foreach ($checked as $value) {
 
 
 // guardo consulta
-$consultaFinal = $sql_empresas;
-// $consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
-echo $sql_empresas;
+// $consultaFinal = $sql_empresas;
+$consultaFinal=password_hash($sql_empresas, PASSWORD_BCRYPT); //encrito consulta
+// echo $sql_empresas;
  ?>
