@@ -37,7 +37,6 @@ footer .form-control {
 }
 
 .footer form div {
-  display: inline-block!important;
   float: left;
   width: 45%;
 }
@@ -58,3 +57,6 @@ footer .form-control {
   border-color: inherit!important;
   box-shadow: inherit!important;
 }
+
+/* Query */
+/* @media(max-width:) */

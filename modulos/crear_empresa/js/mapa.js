@@ -1,6 +1,6 @@
 
 // Busca la empresa
-
+$('#boton1').click(function(){
 let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435], 18)
 
 
@@ -53,11 +53,10 @@ let map = L.map('mapEmpresa').setView([36.543880623629846, -4.6306729316711435],
      minZoom: 2,
      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 
-     //map.remove();
-    setTimeout(function(){
-      map.invalidateSize()}, 400);
-
-
+    //  //map.remove();
+    // setTimeout(function(){
+    //   map.invalidateSize()}, 400);
+});
 // mapa de la ubicacion de la empresa
 
 $('#boton2').click(function(){

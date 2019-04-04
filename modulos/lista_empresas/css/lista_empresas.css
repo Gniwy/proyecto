@@ -25,6 +25,13 @@ p.nombreEmp span {
 .card-body.boton {
     margin: auto;
 }
+.card{
+  margin: 0 auto!important;
+  background-color: aliceblue;
+}
+.card li {
+    background-color: aliceblue;
+}
 
 .filaRow div:nth-child(2){
   /* border: 1px solid rgba(175, 169, 169, 0.75);
@@ -52,9 +59,12 @@ p.nombreEmp span {
     bottom: 8px;
 }
 img.img-responsive {
-    width: 16%!important;
+    width: 30px!important;
 }
-
+.valoracionEmp {
+    width: 166px;
+    margin: auto;
+}
 .noEncontrado{
   color:rgba(156, 9, 9, 0.84);
   text-align: center;
@@ -65,14 +75,6 @@ img.img-responsive {
 }
 
 @media(max-width:767px){
-  .filaRow div:nth-child(2){
-    border: 1px solid rgba(175, 169, 169, 0.75);
-    border-width: 1px 0px 1px 0px;
-  }
-  .filaRow div:nth-child(3){
-    border: 1px solid rgba(175, 169, 169, 0.75);
-    border-width: 0px 0px 1px 0px;
-  }
   .valoracionAVG{
     border: 0!important;
   }

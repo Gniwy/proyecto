@@ -43,13 +43,13 @@
       <?php include"../../modulos/menu_top/menu_top.php" ?>
     </section>
 
-    <div class="cuerpo">
+    <div class="cuerpo col-12 col-sm-8 mx-auto">
 
       <section class="cabezaIcons">
 
         <h1>Como crear tu empresa</h1>
 
-        <table class="table-borderless" >
+        <table class="table-borderless">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -112,8 +112,7 @@
 
         <div class="datos" style="">
           <h3>Selecione la ubicacion de la empresa <span class="required" id="map_req"> <small>(Obligatoria ubicacion)</small> </span> </h3>
-          <div id="mapEmpresa" style="width: auto; height: 400px;">
-          </div>
+          <div id="mapEmpresa" style="width: auto; height: 400px;"></div>
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso2" id="boton2">Siguiente</button>
           </div>
@@ -145,10 +144,6 @@
                 <td><span id="span_nombre"></span></td>
               </tr>
               <tr>
-                <th>Tipo: </th>
-                <td><span id="span_tipo"></span></td>
-              </tr>
-              <tr>
                 <th>Zona: </th>
                 <td><span id="span_zona"></span></td>
               </tr>
@@ -175,7 +170,6 @@
             <button class="btn btn-primary pull-right" type="button" name="paso3" id="boton3">Publicar</button>
           </div>
         </div>
-
         <br>
         <div class="borderBot" style=""></div>
       </section>

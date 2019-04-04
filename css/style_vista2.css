@@ -36,5 +36,7 @@ footer {
  #contenido_vista2
 {
   min-height: 75vh;
+  width: 90%!important;
+  margin: auto;
   margin-bottom: 20px;
 }

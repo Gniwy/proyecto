@@ -50,7 +50,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
           <p class="nombreEmp"> <span style="color: #00B0EE;"><?php echo $primera_letra[0]; ?></span><span style="color: #F8A243;"><?php echo $resto_letra; ?></span> </p>
         </div>
 
-        <div><!-- valoracion media de las empresas -->
+        <div class="valoracionEmp"><!-- valoracion media de las empresas -->
           <?php
           $valoracionAVG = $ex_empresas['valoracion_media'];
 
