@@ -41,17 +41,7 @@ foreach ($checked as $value) {
   switch ($value) {
     case '1':
     $sql_empresas.=" AND (SELECT COUNT(id) from comentario GROUP BY id LIMIT 1) LIMIT 1";
-    /*SELECT DISTINCT e.id, e.nombre, id_localidad, valoracion_media
-      FROM empresa e
-      JOIN localidad l
-      ON e.id_localidad = l.id
-      JOIN provincia p
-      ON l.provincia_id = p.id
-      JOIN comentario c
-      ON e.id = c.id_empresa
-      where (SELECT COUNT(id) from comentario GROUP BY id_empresa LIMIT 1) GROUP BY c.id
-      */
-    break;
+      break;
 
     case '2':
     // code...

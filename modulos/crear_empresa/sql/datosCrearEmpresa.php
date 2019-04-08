@@ -7,7 +7,6 @@ foreach ($_POST as $variable => $valor) {
 }
 
 // nombre
-// tipo
 // zona
 // cp
 // lat

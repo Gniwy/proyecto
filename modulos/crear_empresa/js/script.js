@@ -62,7 +62,7 @@ paso3.onclick = function()
  {
   alert('Gracias por su colaboracion.');
   // window.location.href = "../../index_vista2.php";
-  window.location.href = "../../index_vista2.php?lugar=&trabajo=null";
+  // window.location.href = "../../index_vista2.php?lugar=&trabajo=null";
  }
 
 
@@ -113,7 +113,6 @@ paso3.onclick = function()
       url:"../crear_empresa/sql/datosCrearEmpresa.php",
       data:{
         nombre:$('#nombre').val(),
-        tipo:$('#tipo').val(),
         zona:$('#zona').val(),
         cp:$('#cp').val(),
         lat:$('#lat').val(),
@@ -123,8 +122,9 @@ paso3.onclick = function()
         valoracion:$('#estrella').val()
 
       }, success: function(data){
-        //alert(data);
-          //window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
+        alert(data);
+          // window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
+
       }
     });
 

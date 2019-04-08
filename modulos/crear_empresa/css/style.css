@@ -6,6 +6,7 @@ body {
 
 .table-borderless{
   max-width: 700px;
+  margin: auto;
 }
 
 .table-borderless tbody tr td {
@@ -24,10 +25,10 @@ body {
   display: none;
 }
 .cuerpo {
-    padding-bottom: 15rem;
+  padding-bottom: 15rem;
 }
-.cabezaIcons{
-
+.cabezaIcons>h1{
+  text-align: center;
 }
 .datos{
   width: 75%;
