@@ -1,4 +1,24 @@
 
+// selector localidad
+$('#select_provincia_crearEmp').change(function(){
+
+  var id_provincia = $('#select_provincia_crearEmp').val();
+
+  $.ajax({
+    type:'GET',
+    url:'../../modulos/buscador_avanzado/sql/buscador_localidad.php',
+    data:{
+      id_provincia:id_provincia
+    },success: function(data){
+
+      $('#select_localidad_crearEmp').html(data);
+    }
+  });
+
+});
+
+
+
 // Visibilidad
 
 
@@ -109,8 +129,8 @@ paso3.onclick = function()
   $('#boton3').click(function(){
 
     $.ajax({
-      type:"POST",
-      url:"../crear_empresa/sql/datosCrearEmpresa.php",
+      type:'POST',
+      url:'../crear_empresa/sql/datosCrearEmpresa.php',
       data:{
         nombre:$('#nombre').val(),
         zona:$('#zona').val(),
@@ -123,7 +143,7 @@ paso3.onclick = function()
 
       }, success: function(data){
         alert(data);
-          // window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
+          window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
 
       }
     });

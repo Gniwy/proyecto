@@ -14,7 +14,8 @@ foreach ($_POST as $variable => $valor) {
 // comentario
 // valoracion
 
-$sql_crear_empresa = "INSERT INTO `empresa`(`nombre`, `calle`, `cp`, `lat`, `lng`) VALUES ('$nombre', '$zona', $cp, $lat, $lng)";
+
+$sql_crear_empresa = "INSERT INTO `empresa`(`nombre`, `calle`, `cp`, `lat`, `lng`) VALUES ('$nombre', '$zona', '$cp', '$lat', '$lng')";
 mysqli_query($link, $sql_crear_empresa);
 
 
