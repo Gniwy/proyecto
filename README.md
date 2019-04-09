@@ -14,7 +14,7 @@
 
 # Tole - arreglar estilo nav (terminado)
 # Cristian - Ficha de la empresa
-
+ 
 # Tole - insertar mapa (terminado)
 # Cristian - Ficha de la empresa (filtro falta ordenar por mas puntuados positivo y negativamente, y por fecha)
 
