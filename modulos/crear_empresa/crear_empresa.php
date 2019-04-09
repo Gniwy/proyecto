@@ -87,18 +87,18 @@
             <input type="text" name="nombre" value="" id="nombre" required>
             <label class="required" id="nombre_req">Campo obligatorio</label>
           </div>
-          <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia_crearEmp">
+          <!-- <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia_crearEmp">
 
-            <?php include "sql/consulta_provincia.php"; ?>
+            <?php /*include "sql/consulta_provincia.php"; ?>
 
           </select>
           <select class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="select_localidad_crearEmp">
             <?php
 
               include "sql/buscador_localidad.php";
-
+*/
              ?>
-          </select>
+          </select> -->
           <div class="">
             <label>Direccion: </label>
             <input type="text" name="zona" value="" id="zona">

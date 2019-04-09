@@ -44,9 +44,6 @@ include ('conexion/conexion.php');
 
   </section>
 
-  <!--FOOTER-->
-  <?php include "modulos/footer/footer.php"; ?>
-
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -70,6 +67,9 @@ include ('conexion/conexion.php');
   <script type="text/javascript" src="leaflet/leaflet.js"></script>
   <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
   <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script>
+
+  <!--FOOTER-->
+  <?php include "modulos/footer/footer.php"; ?>
 
   <!-- SCRIPT MAP -->
   <script type="text/javascript">

@@ -1,3 +1,5 @@
+
+
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -23,10 +25,33 @@
               <textarea class="form-control contentForm" id="exampleMessage" placeholder="mensaje"></textarea>
           </div>
           <fieldset class="form-group">
-            <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+            <button type="button" class="btn btn-primary btn-sm btn_2" id="btn_enviar_correo">Enviar</button>
           </fieldset>
         </form>
       </div>
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+
+
+$('#btn_enviar_correo').click(function(){
+
+  var email = $('#exampleInputEmail1').val();
+  var email = $('#exampleInputEmail1').val();
+
+  $.ajax({
+    type:'POST',
+    url:'modulos/footer/php/enviar_correo.php',
+    data:{
+      asdf:'asdf'
+    }, success: function(data){
+      alert(data);
+
+    }
+  });
+
+});
+
+</script>

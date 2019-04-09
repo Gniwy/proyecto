@@ -143,7 +143,7 @@ paso3.onclick = function()
 
       }, success: function(data){
         alert(data);
-          window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
+          // window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
 
       }
     });
