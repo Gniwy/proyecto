@@ -82,7 +82,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
           <?php
         }
         ?>
-          <li class="list-group-item">Direccion: <?php echo $ex_empresas['calle'].', CP: '.$ex_empresas['cp'];?></li>
+          <li class="list-group-item address">Direccion: <?php echo $ex_empresas['calle'].', CP: '.$ex_empresas['cp'];?></li>
           <li class="list-group-item">Vestibulum at eros</li>
         </ul>
         <div class="card-body boton">

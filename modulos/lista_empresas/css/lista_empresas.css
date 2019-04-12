@@ -73,6 +73,9 @@ img.img-responsive {
   font-weight: 600;
   font-size: 17px;
 }
+li.list-group-item.address {
+    height: 74px;
+}
 
 @media(max-width:767px){
   .valoracionAVG{
