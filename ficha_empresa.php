@@ -170,6 +170,26 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
             $ex_cliente_relevante=mysqli_fetch_assoc($aux_cliente_relevante);
 
             $nick_cliente_relevante=$ex_cliente_relevante['nick'];
+
+            /*Calculo de votos*/
+            $sql_votos="SELECT * FROM comentarios_valoracion WHERE id_comentario=".$mas_votado['id'];
+            $aux_votos=mysqli_query($link, $sql_votos);
+            $votos_positivos=0;
+            $votos_negativos=0;
+
+            while($ex_votos=mysqli_fetch_assoc($aux_votos)){
+
+              switch($ex_votos['valoracion']){
+                case '0':
+                  $votos_negativos++;
+                  break;
+                case '1':
+                  $votos_positivos++;
+                  break;
+              }
+
+            }
+            /*Fin Calculo de votos*/
             ?>
 
             <div class="row">
@@ -189,23 +209,22 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
                   <?php } ?>
                 </h4>
               </div>
-              <div class="col-md-6 text-right">
-                (Hace 1 dia) 12:38
+            </div>
+
+            <div class="">
+              <?php echo $texto_comentario; ?>
+              <div>
+                <a href="#" class="relevante_leer_mas" id="relevante_<?php echo $mas_votado['id'];?>">Leer más</a>
               </div>
             </div>
 
 
-            <div class="">
-              <?php echo $texto_comentario; ?>
-              <a href="#">Leer más</a>
-            </div>
-
             <div class="text-right">
-              <i class="far fa-thumbs-up fa-2x pointer" style="color:green;"></i>
-              5 votos
+              <i class="far fa-thumbs-up fa-2x pointer btn_votar_relevante" style="color:green;" id="positivo_<?php echo $id_comentario;?>" valor="1"></i>
+              <?php echo $votos_positivos;?> votos
               &nbsp;
-              <i class="far fa-thumbs-down fa-2x pointer" style="color:red;"></i>
-              10 votos
+              <i class="far fa-thumbs-down fa-2x pointer btn_votar_relevante" style="color:red;" id="negativo_<?php echo $id_comentario;?>" valor="0"></i>
+              <?php echo $votos_negativos;?> votos
             </div>
 
           </div>
@@ -228,7 +247,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
         <!-- Fin Escribir comentario -->
 
-        <!-- Filtro -->
+        <!-- Filtro
         <div class="col-md-12" style="margin-top:10px; padding-bottom:15px; box-shadow: 0px 0px 10px grey;">
 
           <div class="col-md-12 color" style="margin-top:10px;">
@@ -240,7 +259,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               Valoracion del comentario
               <span class="fas fa-info-circle" style="color:lightgrey;" title="Pasa el raton por encima de las estrellas para saber cuantos comentarios hay con esa valoración."></span>
               <br>
-              <?php for($i=0;$i<5;$i++){
+              <?php /*for($i=0;$i<5;$i++){
                 $valoracion=$i+1;
                 $sql_comentarios_valoracion="SELECT * FROM comentario WHERE id_empresa='$id_empresa' AND valoracion='$valoracion' ";
                 $aux_comentarios_valoracion=mysqli_query($link, $sql_comentarios_valoracion);
@@ -253,7 +272,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
                 ?>
                 <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella pointer" src="image/estrella_vacia.png" width="20px" alt="" title="<?php echo $contador;?>">
-              <?php } ?>
+              <?php } */?>
             </div>
 
             <div class="col-md-4">
@@ -272,7 +291,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
       </div>
 
-      <!-- Fin filtro -->
+       Fin filtro -->
 
       <div class="col-md-12" style="margin-top:20px;">
         <h1>Comentarios</h1>

@@ -1,3 +1,0 @@
-
-
-fecha actual:  CURDATE()
