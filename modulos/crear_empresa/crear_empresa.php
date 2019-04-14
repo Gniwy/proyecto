@@ -82,34 +82,81 @@
         <br>
 
         <div class="datos" style="">
+
+          <div class="form-group">
+            <label for="inputName">Nombre: </label>
+            <input type="text" class="form-control" id="nombre" placeholder="">
+            <label class="required" id="nombre_req">Campo obligatorio</label>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Direccion: </label>
+            <input type="text" class="form-control" id="zona" placeholder="">
+            <label class="required" id="zona_req">Campo obligatorio</label>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">Provincia</label>
+              <select class="form-control" name="provincia" id="select_provincia_crearEmp">
+                <option value="">Elige...</option>
+
+                <?php include "sql/consulta_provincia.php"; ?>
+
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Localidad</label>
+              <select class="form-control" name="localidad" id="select_localidad_crearEmp">
+                <option value="0">Elige...</option>
+
+                <?php include "sql/buscador_localidad.php"; ?>
+
+              </select>
+              <label class="required" id="localidad_req">Campo obligatorio</label>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="cp">
+              <label class="required" id="cp_req">Campo obligatorio</label>
+            </div>
+          </div>
           <div class="">
+            <button type="submit" class="btn btn-primary" name="paso1" id="boton1">Siguiente</button>
+          </div>
+
+
+
+          <!-- <div class="">
             <label>Nombre: </label>
             <input type="text" name="nombre" value="" id="nombre" required>
             <label class="required" id="nombre_req">Campo obligatorio</label>
           </div>
-          <!-- <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia_crearEmp">
+          <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia_crearEmp">
 
-            <?php /*include "sql/consulta_provincia.php"; ?>
+            <?php include "sql/consulta_provincia.php"; ?>
 
           </select>
           <select class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="select_localidad_crearEmp">
-            <?php
 
-              include "sql/buscador_localidad.php";
-*/
-             ?>
-          </select> -->
+            <?php include "sql/buscador_localidad.php"; ?>
+
+          </select>
+          <label class="required" id="localidad_req">Campo obligatorio</label>
+
           <div class="">
             <label>Direccion: </label>
             <input type="text" name="zona" value="" id="zona">
+            <label class="required" id="zona_req">Campo obligatorio</label>
           </div>
+
           <div class="">
             <label>CP: </label>
             <input type="number" name="cp" value="" id="cp">
+            <label class="required" id="cp_req">Campo obligatorio</label>
           </div>
+
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso1" id="boton1">Siguiente</button>
-          </div>
+          </div>-->
         </div>
 
         <br>
@@ -165,7 +212,6 @@
               </tr>
             </tbody>
           </table>
-          <div id="mapEmpZone" style="width: auto; height: 400px;"></div>
           <div class="col-md-12">
             Valoracion de la empresa
             <br>
@@ -177,6 +223,14 @@
           <div class="">
             <p style="font-size:30px;">Comentario:</p>
             <textarea name="coment" id="comentario" rows="8" cols="80" placeholder="Danos tu opinión"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
           </div>
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso3" id="boton3">Publicar</button>

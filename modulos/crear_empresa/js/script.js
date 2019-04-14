@@ -6,7 +6,7 @@ $('#select_provincia_crearEmp').change(function(){
 
   $.ajax({
     type:'GET',
-    url:'../../modulos/buscador_avanzado/sql/buscador_localidad.php',
+    url:'sql/buscador_localidad.php',
     data:{
       id_provincia:id_provincia
     },success: function(data){
@@ -42,15 +42,31 @@ paso1.onclick = function()
      $('#nombre_req').css('display', 'none');
    }
 
-   if ($('#tipo').val() == "") {
+   if ($('#select_localidad_crearEmp').val() <= 0) {
 
-     $('#tipo_req').css('display', 'block');
+     $('#localidad_req').css('display', 'block');
 
    }else {
-     $('#tipo_req').css('display', 'none');
+     $('#localidad_req').css('display', 'none');
    }
 
-   if( $('#nombre').val() != "" && $('#tipo').val() != "" ){
+   if ($('#zona').val() == "") {
+
+     $('#zona_req').css('display', 'block');
+
+   }else {
+     $('#zona_req').css('display', 'none');
+   }
+
+   if ($('#cp').val() == "" || isNaN($('#cp').val())) {
+
+     $('#cp_req').css('display', 'block');
+
+   }else {
+     $('#cp_req').css('display', 'none');
+   }
+
+   if( $('#nombre').val() != "" && $('#select_localidad_crearEmp').val() != "" && $('#zona').val() != "" && $('#cp').val() != ""){
      div2.style.display = "block";
      div1.style.display = "none";
    }
@@ -81,7 +97,7 @@ paso2.onclick = function()
 paso3.onclick = function()
  {
   alert('Gracias por su colaboracion.');
-  // window.location.href = "../../index_vista2.php";
+  window.location.href = "../../index_vista2.php";
   // window.location.href = "../../index_vista2.php?lugar=&trabajo=null";
  }
 
@@ -132,6 +148,7 @@ paso3.onclick = function()
       type:'POST',
       url:'../crear_empresa/sql/datosCrearEmpresa.php',
       data:{
+        localidad:$('#select_localidad_crearEmp').val(),
         nombre:$('#nombre').val(),
         zona:$('#zona').val(),
         cp:$('#cp').val(),
@@ -142,9 +159,7 @@ paso3.onclick = function()
         valoracion:$('#estrella').val()
 
       }, success: function(data){
-        alert(data);
-          // window.location.href = "../crear_empresa/sql/datosCrearEmpresa.php";
-
+        // alert(data);
       }
     });
 
