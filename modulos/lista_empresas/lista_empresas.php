@@ -33,7 +33,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
     </div>
   <?php }
 
-  if($cont_filas<=3){
+  if($cont_filas>=0){//filas infinitas sin paginación
     if($cont_elementos%3 == 0 || $cont_elementos==0){ ?>
       <div class="row mt-4 filaRow">
     <?php }?>
@@ -44,7 +44,6 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
      ?>
 
       <div class="col-12 col-md-4 card">
-        <!-- <img class="card-img-top" src="image/logo_ireference Original.png" alt="Card"> -->
 
         <div class="card-body">
           <p class="nombreEmp"> <span style="color: #00B0EE;"><?php echo $primera_letra[0]; ?></span><span style="color: #F8A243;"><?php echo $resto_letra; ?></span> </p>

@@ -30,6 +30,8 @@ if($empresa!=null && @$empresa!='' && $empresa!=null){
 
 }
 
+$sql_empresas.=" ORDER BY nombre";
+
 foreach ($checked as $value) {
   //NOTA IMPORTANTE RECORDATORIO FILTRO
   /*

@@ -65,8 +65,8 @@ paso1.onclick = function()
    }else {
      $('#cp_req').css('display', 'none');
    }
-
-   if( $('#nombre').val() != "" && $('#select_localidad_crearEmp').val() != "" && $('#zona').val() != "" && $('#cp').val() != ""){
+// problema en la verificación
+   if( ($('#nombre').val() != "") && ($('#select_localidad_crearEmp').val() != "") && ($('#zona').val() != "") && ($('#cp').val() != "" || !isNaN($('#cp').val())) ){
      div2.style.display = "block";
      div1.style.display = "none";
    }
@@ -159,7 +159,7 @@ paso3.onclick = function()
         valoracion:$('#estrella').val()
 
       }, success: function(data){
-        // alert(data);
+        alert(data);
       }
     });
 

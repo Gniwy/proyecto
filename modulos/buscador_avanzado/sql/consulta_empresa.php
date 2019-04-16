@@ -28,6 +28,9 @@ $consulta = "SELECT * FROM empresa WHERE 1 ";
 if (!empty($_GET['empresa'])) {
   $consulta.= " AND  NOT id=".$_GET['empresa']."";
 }
+
+  $consulta.=" GROUP BY nombre";
+
 $sql = mysqli_query($link,$consulta);
 
 while ($row = mysqli_fetch_assoc($sql))
