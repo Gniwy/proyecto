@@ -55,6 +55,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     }
 }
 
+
 ?>
 
 
@@ -152,10 +153,11 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
         <!-- Comentario relevante -->
         <div class="col-md-6">
-          <h3 class="redondeado" style="background:#ffec88;">Comentario relevante</h3>
+          <h3 class="redondeado" style="background:#ffec88;"><b>Comentario más votado</b></h3>
           <div class="Comentario">
             <?php
 
+            $id_comentario_mas_votado=$mas_votado['id'];
 
             $sql_comentario_relevante_mostrar="SELECT * FROM comentario WHERE id=".$mas_votado['id'];
             $aux_comentario_relevante_mostrar=mysqli_query($link, $sql_comentario_relevante_mostrar);
@@ -163,6 +165,12 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
             $id_cliente_comentario=$ex_comentario_relevante_mostrar['id_cliente'];
             $texto_comentario=$ex_comentario_relevante_mostrar['texto'];
+
+            if(strlen($texto_comentario)>300){
+              $leer_mas="...";
+              $texto_comentario= substr($texto_comentario, -300);
+            }
+
             $valoracion_comentario=$ex_comentario_relevante_mostrar['valoracion'];
 
             $sql_cliente_relevante="SELECT * FROM cliente WHERE id=".$id_cliente_comentario;
@@ -211,19 +219,19 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               </div>
             </div>
 
-            <div class="">
+            <div class="" style="word-break: break-all;">
               <?php echo $texto_comentario; ?>
               <div>
-                <a href="#" class="relevante_leer_mas" id="relevante_<?php echo $mas_votado['id'];?>">Leer más</a>
+                <a href="#" class="relevante_leer_mas" id="relevante_<?php echo $id_comentario_mas_votado;?>">Leer más</a>
               </div>
             </div>
 
 
             <div class="text-right">
-              <i class="far fa-thumbs-up fa-2x pointer btn_votar_relevante" style="color:green;" id="positivo_<?php echo $id_comentario;?>" valor="1"></i>
+              <i class="far fa-thumbs-up fa-2x pointer btn_votar_relevante" style="color:green;" id="positivo_<?php echo $id_comentario_mas_votado;?>" valor="1"></i>
               <?php echo $votos_positivos;?> votos
               &nbsp;
-              <i class="far fa-thumbs-down fa-2x pointer btn_votar_relevante" style="color:red;" id="negativo_<?php echo $id_comentario;?>" valor="0"></i>
+              <i class="far fa-thumbs-down fa-2x pointer btn_votar_relevante" style="color:red;" id="negativo_<?php echo $id_comentario_mas_votado;?>" valor="0"></i>
               <?php echo $votos_negativos;?> votos
             </div>
 
