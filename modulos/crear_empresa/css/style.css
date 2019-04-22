@@ -3,7 +3,9 @@ body {
     position: relative;
     min-height: 100vh;
 }
-
+*{
+  cursor: default;
+}
 .table-borderless{
   max-width: 700px;
   margin: auto;
@@ -13,11 +15,14 @@ body {
     padding-top: 20px;
 }
 .table-borderless tbody tr td img{
-    width: 100%;
+    width: 90%;
     height: 40%;
 }
-#start_1:hover, #start_2:hover, #start_3:hover, #start_4:hover, #start_5:hover{
-  cursor: pointer;
+.filtro_estrella, .form-check-input, textarea, input, select{
+  cursor: pointer!important;
+}
+.estrellas {
+    text-align: center;
 }
 
 .required{
@@ -37,6 +42,22 @@ body {
   border-left: 1px solid;
   padding:20px;
 }
+.datos>h3 {
+    text-align: center;
+}
+.form-control{
+  border: 1px solid #21252900 !important;
+  border-bottom: 1px solid !important;
+  border-radius: 1% !important;
+}
+#comentario{
+
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 164, 0, 0.25);
+  border-bottom: 0px solid !important;
+}
+
 .borderBot{
   width: 45%;
   margin: auto;

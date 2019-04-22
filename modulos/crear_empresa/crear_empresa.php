@@ -63,7 +63,7 @@
           <tbody>
             <tr>
               <td></td>
-              <td><img src="img/data_enterprise.png" alt="" id="img1" width="100"></td>
+              <td><img src="img/data_enterpriseFocus.png" alt="" id="img1" width="100"></td>
               <td><img src="img/arrow.png" alt="" width="50" height="50"></td>
               <td><img src="img/gps_enterprise.png" alt="" id="img2" width="100"></td>
               <td><img src="img/arrow.png" alt="" width="50" height="50"></td>
@@ -196,33 +196,35 @@
 
         <div class="datos" style="">
           <h3>Revisa los datos antes de que sean publicados </h3>
-          <table class="table-hover">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Zona</th>
+                <th>CP/Zip</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <th>Nombre: </th>
                 <td><span id="span_nombre"></span></td>
-              </tr>
-              <tr>
-                <th>Zona: </th>
                 <td><span id="span_zona"></span></td>
-              </tr>
-              <tr>
-                <th>CP: </th>
                 <td><span id="span_cp"></span></td>
               </tr>
             </tbody>
           </table>
           <div class="col-md-12">
-            Valoracion de la empresa
+            <h3 class="text-center">Valoracion de la empresa</h3>
             <br>
-            <?php for($i=0;$i<5;$i++){?>
-              <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="../../image/estrella_vacia.png" width="20px" alt="">
-            <?php } ?>
+            <div class="estrellas">
+              <?php for($i=0;$i<5;$i++){?>
+                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="../../image/estrella_vacia.png" width="20px" alt="">
+              <?php } ?>
+            </div>
             <input type="number" name="" id="estrella" value="" hidden>
           </div>
           <div class="">
             <p style="font-size:30px;">Comentario:</p>
-            <textarea name="coment" id="comentario" rows="8" cols="80" placeholder="Danos tu opinión"></textarea>
+            <textarea class="form-control" name="coment" id="comentario" rows="1" cols="80" placeholder="Danos tu opinión"></textarea>
           </div>
           <div class="form-group">
             <div class="form-check">

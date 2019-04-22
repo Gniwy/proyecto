@@ -40,3 +40,8 @@ footer {
   margin: auto;
   margin-bottom: 20px;
 }
+
+.login{
+ overflow: hidden;
+ transform(translate(-50%, -50%));
+}
