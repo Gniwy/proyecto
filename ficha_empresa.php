@@ -61,11 +61,12 @@ while($ex_comentario_relevante=mysqli_fetch_assoc($aux_comentario_relevante)){
 
 }
 
+
 $mas_votado=array();
 $mas_votos=0;
 for ($i=0;$i<sizeof($array_comentarios);$i++)
 {
-    if($array_comentarios[$i][votos]>$mas_votos){
+    if($array_comentarios[$i][votos]>=$mas_votos){
       $mas_votado=array('id' => $array_comentarios[$i]['id'], 'votos' => $array_comentarios[$i]['votos']);
       $mas_votos=$array_comentarios[$i]['votos'];
     }
@@ -182,7 +183,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
             if(strlen($texto_comentario)>300){
               $leer_mas="...";
-              $texto_comentario= substr($texto_comentario, -300);
+              $texto_comentario= substr($texto_comentario, 0, 300);
             }
 
             $valoracion_comentario=$ex_comentario_relevante_mostrar['valoracion'];
@@ -217,7 +218,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
             <div class="row">
               <div class="col-md-6">
                 <h4>
-                  <?php echo $nick_cliente_relevante; ?>
+                  <?php echo ucwords($nick_cliente_relevante); ?>
 
                   <?php
                   $valoracion=$ex_comentario_relevante_mostrar['valoracion'];
