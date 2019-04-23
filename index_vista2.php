@@ -55,7 +55,7 @@ foreach($_GET as $variable => $valor){
     <section>
       <?php include"modulos/menu_top/menu_top.php" ?>
     </section>
-    <section class="container mt-5">
+    <section class="container buscador_avanzado_ancho mt-2">
       <div class="col col-sm-12 col-md-12" id="fondoBuscador">
         <?php include"modulos/buscador_avanzado/buscador_avanzado.php" ?>
       </div>

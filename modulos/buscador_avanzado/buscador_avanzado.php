@@ -26,7 +26,7 @@
   </div>
   <?php if(!isset($_SESSION['id_usuario'])){ ?>
 
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center" style="margin-bottom: 60px;">
       Registrate si necesitas crear tu empresa
     </div>
 
