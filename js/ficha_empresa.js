@@ -28,24 +28,47 @@ $('.filtro_estrella').mouseout(function(){
 
 });
 
-$('.comentario_estrella').mouseover(function(){
-  var id_estrella = $(this).attr('id');
-  id_estrella = id_estrella.substr(20);
-  console.log(id_estrella);
-  for(var i=0;i<=id_estrella;i++){
-    $('#comentario_estrella_'+i).attr('src','image/estrella_rellenada.png');
-  }
+// Estrellas del comentario
+var clickeado=false;
 
+$('.comentario_estrella').mouseover(function(){
+  if(!clickeado){
+    var id_estrella = $(this).attr('id');
+    id_estrella = id_estrella.substr(20);
+
+    for(var i=0;i<=id_estrella;i++){
+      $('#comentario_estrella_'+i).attr('src','image/estrella_rellenada.png');
+    }
+  }
 
 });
 
 $('.comentario_estrella').mouseout(function(){
+  if(!clickeado){
+    for(var i=0;i<5;i++){
+      $('#comentario_estrella_'+i).attr('src','image/estrella_vacia.png');
+    }
+  }
 
-  for(var i=0;i<5;i++){
+});
+
+$('.comentario_estrella').click(function(){
+
+  clickeado=true;
+
+  var id_estrella = $(this).attr('id');
+  id_estrella = id_estrella.substr(20);
+
+  for(var i=0;i<=id_estrella;i++){
+    $('#comentario_estrella_'+i).attr('src','image/estrella_rellenada.png');
+  }
+
+  for(var i=(parseInt(id_estrella)+parseInt(1));i<=6;i++){
     $('#comentario_estrella_'+i).attr('src','image/estrella_vacia.png');
   }
 
 });
+
 
 $('.relevante_leer_mas').click(function(){
 

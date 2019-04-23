@@ -226,7 +226,6 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               </div>
             </div>
 
-
             <div class="text-right">
               <i class="far fa-thumbs-up fa-2x pointer btn_votar_relevante" style="color:green;" id="positivo_<?php echo $id_comentario_mas_votado;?>" valor="1"></i>
               <?php echo $votos_positivos;?> votos
