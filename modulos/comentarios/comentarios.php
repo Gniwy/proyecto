@@ -47,7 +47,7 @@ $comentario_mas_votado=$mas_votado[id];
 /*Fin Comentario mas puntuado*/
 
 
-$sql_comentarios="SELECT * FROM comentario WHERE id_empresa='$id_empresa'";
+$sql_comentarios="SELECT * FROM comentario WHERE id_empresa='$id_empresa' ORDER BY id DESC";
 $aux_comentarios=mysqli_query($link, $sql_comentarios);
 
 $cont_comentarios=0;
@@ -79,6 +79,7 @@ $cont_comentarios=0;
 
 
         $texto=$ex_comentarios['texto'];
+
         $id_cliente=$ex_comentarios['id_cliente'];
 
         $sql_cliente="SELECT * FROM cliente WHERE id='$id_cliente'";
@@ -89,29 +90,26 @@ $cont_comentarios=0;
 
         if(strlen($texto)>300){
           $leer_mas="...";
-          $texto= substr($ex_comentarios['texto'], -300);
+          $texto= substr($ex_comentarios['texto'], 0, 300);
         }
 
 
-        if($cont_comentarios%2==0 || $cont_comentarios==0){?>
-
-          </div>
+      ?>
 
 
         <div class="row">
 
-        <?php } ?>
 
           <div id="comentario_<?php echo $id_comentario;?>" class="col-md-10 offset-md-1 comentario">
 
             <!-- Añadirle if por si elige anonimo -->
             <h5>
-              <?php echo $ex_cliente['nick'];?> -
+              <?php echo ucwords($ex_cliente['nick']);?> -
 
               <?php
               $valoracion=$ex_comentarios['valoracion'];
 
-              for($i=0;$i<$valoracion;$i++){?>
+              for($i=1;$i<=$valoracion;$i++){?>
                 <img src="image/estrella_rellenada.png" width="20px" alt="">
               <?php } ?>
 
@@ -127,6 +125,7 @@ $cont_comentarios=0;
             if($leer_mas!=""){?>
               <br>
               <a href="#" class="leer_mas" id="leer_mas_<?php echo $id_comentario;?>">Leer mas</a>
+            <?php } ?>
               <div class="text-right">
                 <i class="far fa-thumbs-up fa-2x pointer btn_votar" style="color:green;" id="positivo_<?php echo $id_comentario;?>" valor="1"></i>
                 <span id="voto_positivo_<?php echo $id_comentario;?>"><?php echo $votos_positivos; ?></span> votos
@@ -134,10 +133,10 @@ $cont_comentarios=0;
                 <i class="far fa-thumbs-down fa-2x pointer btn_votar" style="color:red;" id="negativo_<?php echo $id_comentario;?>" valor="0"></i>
                 <span id="voto_negativo_<?php echo $id_comentario;?>"><?php echo $votos_negativos; ?></span> votos
               </div>
-            <?php } ?>
 
           </div>
-
+          <div class="col-md-8 offset-md-2" style="border-top:solid 1px lightgrey; margin-top:10px; margin-bottom:30px;"></div>
+        </div>
       <?php $cont_comentarios++; } } ?>
 
   </div>

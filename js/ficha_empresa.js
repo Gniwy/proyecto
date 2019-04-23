@@ -29,6 +29,8 @@ $('.filtro_estrella').mouseout(function(){
 });
 
 // Estrellas del comentario
+
+//variable que permite hacer las funciones mouseover y mouseout hasta que se selecciona la valoracion
 var clickeado=false;
 
 $('.comentario_estrella').mouseover(function(){
@@ -36,7 +38,7 @@ $('.comentario_estrella').mouseover(function(){
     var id_estrella = $(this).attr('id');
     id_estrella = id_estrella.substr(20);
 
-    for(var i=0;i<=id_estrella;i++){
+    for(var i=1;i<=id_estrella;i++){
       $('#comentario_estrella_'+i).attr('src','image/estrella_rellenada.png');
     }
   }
@@ -45,7 +47,7 @@ $('.comentario_estrella').mouseover(function(){
 
 $('.comentario_estrella').mouseout(function(){
   if(!clickeado){
-    for(var i=0;i<5;i++){
+    for(var i=1;i<=5;i++){
       $('#comentario_estrella_'+i).attr('src','image/estrella_vacia.png');
     }
   }
@@ -59,6 +61,8 @@ $('.comentario_estrella').click(function(){
   var id_estrella = $(this).attr('id');
   id_estrella = id_estrella.substr(20);
 
+  $('#hidden_valoracion').val(id_estrella);
+
   for(var i=0;i<=id_estrella;i++){
     $('#comentario_estrella_'+i).attr('src','image/estrella_rellenada.png');
   }
@@ -66,6 +70,9 @@ $('.comentario_estrella').click(function(){
   for(var i=(parseInt(id_estrella)+parseInt(1));i<=6;i++){
     $('#comentario_estrella_'+i).attr('src','image/estrella_vacia.png');
   }
+
+
+  $('.comentario_estrella').css('border-bottom','');
 
 });
 
@@ -137,5 +144,36 @@ $('.btn_votar_relevante').click(function(){
 
     }
   });
+
+});
+
+$('#btn_publicar_comentario').click(function(){
+
+  var texto=$('#texto_comentario').val();
+  var id_empresa=$('#hidden_empresa').val();
+  var id_cliente=$('#hidden_cliente').val();
+  var valoracion=$('#hidden_valoracion').val();
+
+  if(id_cliente!=''){
+    if(valoracion!=0 && !isNaN(valoracion)){
+      $.ajax({
+        type:'GET',
+        url:'publicar_comentario.php',
+        data:{
+          texto:texto,
+          id_empresa:id_empresa,
+          id_cliente:id_cliente,
+          valoracion:valoracion
+        },success:function(data){
+          location.reload(true);
+        }
+      });
+    }else{
+      alert('Es necesario que puntues la empresa');
+      $('.comentario_estrella').css('border-bottom','solid 5px red');
+    }
+  }else{
+    alert('Tienes que iniciar sesion para poder publicar un comentario.');
+  }
 
 });

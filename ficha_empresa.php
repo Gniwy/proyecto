@@ -2,6 +2,7 @@
 
 <?php
 
+session_start();
 error_reporting(0);
 require_once "conexion/conexion.php";
 
@@ -17,6 +18,21 @@ $nombre=$ex_empresa['nombre'];
 $calle=$ex_empresa['calle'];
 $cp=$ex_empresa['cp'];
 $valoracion=$ex_empresa['valoracion_media'];
+
+// Calculo de valoracion media
+$sql_calculo_valoracion_media="SELECT * FROM comentario WHERE id_empresa=$id_empresa";
+$aux_calculo_valoracion_media=mysqli_query($link,$sql_calculo_valoracion_media);
+
+$contador_valoracion=0;
+$contador_comentarios=0;
+while($ex_calculo_valoracion_media=mysqli_fetch_assoc($aux_calculo_valoracion_media)){
+
+  $contador_valoracion=$contador_valoracion + $ex_calculo_valoracion_media['valoracion'];
+  $contador_comentarios++;
+}
+
+$valoracion_media=round($contador_valoracion/$contador_comentarios);
+
 
 // coordenadas
 $lat = $ex_empresa['lat'];
@@ -95,6 +111,8 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
   <body>
 
     <input type="hidden" id="hidden_empresa" value="<?php echo $id_empresa;?>">
+    <input type="hidden" id="hidden_cliente" value="<?php echo $_SESSION['id_usuario'];?>">
+    <input type="hidden" id="hidden_valoracion" value="0">
 
     <section>
       <?php include "modulos/menu_top/menu_top.php"; ?>
@@ -120,6 +138,19 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               <td class="text-right">CP:</td>
               <td> <?php echo $cp;?> </td>
             </tr>
+            <tr>
+              <td class="text-right">Reputación:</td>
+              <td>
+                <!-- Reputacion + estrellas-->
+                <?php for($i=0;$i<$valoracion_media;$i++){?>
+                  <img src="image/estrella_rellenada.png" width="30px" alt="">
+                <?php } ?>
+
+                <?php for($i=$valoracion_media;$i<5;$i++){?>
+                  <img src="image/estrella_vacia.png" width="30px" alt="">
+                <?php } ?>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="col-md-6 text-center">
@@ -131,23 +162,6 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         </div>
       </div>
       <!-- Fin datos de la empresa-->
-
-      <!-- Reputacion + estrellas-->
-      <div class="row">
-        <p style="font-size:30px;">Reputación:</p>
-
-          <div style="margin-top:11px; margin-left:10px; margin-bottom:25px;">
-            <?php for($i=0;$i<$valoracion;$i++){?>
-              <img src="image/estrella_rellenada.png" width="30px" alt="">
-            <?php } ?>
-
-            <?php for($i=$valoracion;$i<5;$i++){?>
-              <img src="image/estrella_vacia.png" width="30px" alt="">
-            <?php } ?>
-          </div>
-
-      </div>
-      <!-- Fin reputacion + estrellas-->
 
       <div class="row">
 
@@ -243,12 +257,12 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
 
         <div class="col-md-12" style="margin-top:20px;">
           <h2>Danos tu opinión sobre esta empresa</h2>
-          <?php for($i=0;$i<5;$i++){?>
+          <?php for($i=1;$i<=5;$i++){?>
             <img id="comentario_estrella_<?php echo $i; ?>" class="comentario_estrella pointer" src="image/estrella_vacia.png" width="20px" alt="" title="<?php echo $contador;?>">
           <?php } ?>
-          <textarea name="name" rows="3" placeholder="Escribe un comentario" style="width:100%;"></textarea>
+          <textarea name="name" rows="3" placeholder="Escribe un comentario" style="width:100%;" id="texto_comentario"></textarea>
           <div class="text-right">
-              <button type="button" class="btn btn-primary" name="button" style="float:center;">Publicar</button>
+              <button type="button" class="btn btn-primary" name="button" style="float:center;" id="btn_publicar_comentario">Publicar</button>
           </div>
         </div>
 
