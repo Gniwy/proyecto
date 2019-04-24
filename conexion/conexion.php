@@ -4,6 +4,7 @@ $usuario_bd="root";
 $clave_bd="";
 $datos_bd="proyecto";
 $link = mysqli_connect($servidor_bd,$usuario_bd,$clave_bd,$datos_bd);
+$link->set_charset("utf8");
 if (!$link) {
     die('No conectado : ' . mysql_error());
 };

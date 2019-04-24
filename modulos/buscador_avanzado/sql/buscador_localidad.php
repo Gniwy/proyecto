@@ -63,7 +63,6 @@ $consulta = "SELECT * FROM localidad WHERE 1 ";
 if (!empty($_GET['lc'])) {
   $consulta.= " AND  NOT id=".$_GET['lc']."";
 }
-echo "<option>".$consulta."</option>";
 $sql = mysqli_query($link,$consulta);
 
 while ($row = mysqli_fetch_assoc($sql))
