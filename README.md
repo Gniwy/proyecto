@@ -1,5 +1,5 @@
 # proyecto
-
+#a
 
 # Cristian - menu_top (terminado)
 # Cristian - (admin) tabla usuarios con funciones editar, borrar - buscador principal (terminado)
@@ -14,7 +14,7 @@
 
 # Tole - arreglar estilo nav (terminado)
 # Cristian - Ficha de la empresa
- 
+
 # Tole - insertar mapa (terminado)
 # Cristian - Ficha de la empresa (filtro falta ordenar por mas puntuados positivo y negativamente, y por fecha)
 
