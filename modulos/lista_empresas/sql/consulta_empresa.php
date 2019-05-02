@@ -32,38 +32,6 @@ if($empresa!=null && @$empresa!='' && $empresa!=null){
 
 $sql_empresas.=" ORDER BY nombre";
 
-foreach ($checked as $value) {
-  //NOTA IMPORTANTE RECORDATORIO FILTRO
-  /*
-    1 -> Más comentada
-    2 -> Más extendida
-    3 -> Más recomendada
-    4 -> Mas puntuada
-  */
-  switch ($value) {
-    case '1':
-    $sql_empresas.=" AND (SELECT COUNT(id) from comentario GROUP BY id LIMIT 1) LIMIT 1";
-      break;
-
-    case '2':
-    // code...
-    break;
-
-    case '3':
-    // code...
-    break;
-
-    case '4':
-    // code...
-    break;
-
-    default:
-      // code...
-      break;
-  }
-
-}
-
 
 // guardo consulta
 // $consultaFinal = $sql_empresas;

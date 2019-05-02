@@ -49,16 +49,16 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
           <p class="nombreEmp"> <span style="color: #00B0EE;"><?php echo $primera_letra[0]; ?></span><span style="color: #F8A243;"><?php echo $resto_letra; ?></span> </p>
         </div>
 
-        <div class="valoracionEmp"><!-- valoracion media de las empresas -->
-          <?php
-          $valoracionAVG = $ex_empresas['valoracion_media'];
+          <?php include 'sql/reputacion.php'; ?>
 
-          for($i=0;$i<$valoracionAVG;$i++){?>
-            <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" alt="">
+        <div class="valoracionEmp"><!-- valoracion media de las empresas -->
+          <!-- Reputacion -->
+          <?php for($i=0;$i<$valoracion_media;$i++){?>
+            <img src="image/estrella_rellenada.png" class="img-responsive" width="10px" title="<?php echo $i+1 ?>">
           <?php } ?>
 
-          <?php for($i=$valoracionAVG;$i<5;$i++){?>
-            <img src="image/estrella_vacia.png" class="img-responsive" width="10px" alt="">
+          <?php for($i=$valoracion_media;$i<5;$i++){?>
+            <img src="image/estrella_vacia.png" class="img-responsive" width="10px" title="<?php echo $i+1 ?>">
           <?php } ?>
         </div>
 

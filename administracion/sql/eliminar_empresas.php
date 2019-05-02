@@ -5,9 +5,14 @@ foreach ($_GET as $variable => $valor) {
   $$variable=$valor;
 }
 
-$id_coment = "SELECT id FROM comentario WHERE id_empresa='$id_empresas'";
+$sql_coment = "SELECT * FROM comentarios_valoracion WHERE id_comentario in (SELECT id FROM comentario WHERE id_empresa='$id_empresas')";
+while ($row=mysql_fetch_array($sql_coment)){
+//Borrar archivo asociado
+unlink($row['id_comentario']);
+}
 
-$delete_valoracion = "DELETE FROM comentarios_valoracion WHERE id_comentario='$id_coment'";
+
+$delete_valoracion = "DELETE FROM comentarios_valoracion WHERE id_comentario in (SELECT id FROM comentario WHERE id_empresa='$id_empresas')";
 mysqli_query($link, $delete_valoracion);
 
 $delete_coment = "DELETE FROM comentario WHERE id_empresa='$id_empresas'";

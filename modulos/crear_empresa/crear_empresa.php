@@ -97,7 +97,7 @@
             <div class="form-group col-md-6">
               <label for="inputCity">Provincia</label>
               <select class="form-control" name="provincia" id="select_provincia_crearEmp">
-                <option value="">Elige...</option>
+                <option value="">Todos</option>
 
                 <?php include "sql/consulta_provincia.php"; ?>
 
@@ -106,7 +106,7 @@
             <div class="form-group col-md-4">
               <label for="inputState">Localidad</label>
               <select class="form-control" name="localidad" id="select_localidad_crearEmp">
-                <option value="0">Elige...</option>
+                <option value="" selected disabled>Elige...</option>
 
                 <?php include "sql/buscador_localidad.php"; ?>
 
@@ -115,7 +115,7 @@
             </div>
             <div class="form-group col-md-2">
               <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="cp">
+              <input type="number" class="form-control" id="cp">
               <label class="required" id="cp_req">Campo obligatorio</label>
             </div>
           </div>
@@ -123,40 +123,6 @@
             <button type="submit" class="btn btn-primary" name="paso1" id="boton1">Siguiente</button>
           </div>
 
-
-
-          <!-- <div class="">
-            <label>Nombre: </label>
-            <input type="text" name="nombre" value="" id="nombre" required>
-            <label class="required" id="nombre_req">Campo obligatorio</label>
-          </div>
-          <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia_crearEmp">
-
-            <?php include "sql/consulta_provincia.php"; ?>
-
-          </select>
-          <select class="col-6 col-sm-6 col-md-6 form-control" name="localidad" id="select_localidad_crearEmp">
-
-            <?php include "sql/buscador_localidad.php"; ?>
-
-          </select>
-          <label class="required" id="localidad_req">Campo obligatorio</label>
-
-          <div class="">
-            <label>Direccion: </label>
-            <input type="text" name="zona" value="" id="zona">
-            <label class="required" id="zona_req">Campo obligatorio</label>
-          </div>
-
-          <div class="">
-            <label>CP: </label>
-            <input type="number" name="cp" value="" id="cp">
-            <label class="required" id="cp_req">Campo obligatorio</label>
-          </div>
-
-          <div class="">
-            <button class="btn btn-primary pull-right" type="button" name="paso1" id="boton1">Siguiente</button>
-          </div>-->
         </div>
 
         <br>
@@ -185,6 +151,7 @@
 
   <input type="text" name="lat" id="lat" value="" hidden>
   <input type="text" name="lng" id="lng" value="" hidden>
+  <input type="hidden" id="estrella" value="0">
 
 
   <!-- fin coordenadas hidden -->
@@ -216,11 +183,10 @@
             <h3 class="text-center">Valoracion de la empresa</h3>
             <br>
             <div class="estrellas">
-              <?php for($i=0;$i<5;$i++){?>
-                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="../../image/estrella_vacia.png" width="20px" alt="">
+              <?php for($i=1;$i<=5;$i++){?>
+                <img id="filtro_estrella_<?php echo $i; ?>" class="filtro_estrella" src="../../image/estrella_vacia.png" width="20px" alt="" title="<?php echo $i; ?>">
               <?php } ?>
             </div>
-            <input type="number" name="" id="estrella" value="" hidden>
           </div>
           <div class="">
             <p style="font-size:30px;">Comentario:</p>

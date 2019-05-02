@@ -30,6 +30,6 @@ $id_empresa=$ex_id_empresa['id'];
 $sql_primer_user = "INSERT INTO `comentario`(`id_cliente`, `texto`, `valoracion`, `id_empresa`) VALUES ($id_usuario, '$comentario', $valoracion, $id_empresa)";
 mysqli_query($link, $sql_primer_user);
 
-echo $sql_primer_user;
+echo $sql_primer_user ."--datosCrearEmpresa.php--";
 
  ?>
