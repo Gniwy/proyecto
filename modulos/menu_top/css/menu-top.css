@@ -23,12 +23,15 @@ nav.navbar {
 #navbarDropdown{
   padding-bottom: 3px;
   border: 0px solid;
-  border-radius: 0;
+  border-radius: 3px;
   border-bottom: 0px solid;
-  transition: border .3s;
+  transition: background 1s;
+  font-weight: 600;
 }
 #navbarDropdown:hover{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.79);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.79); */
+  background: white;
+  border-radius: 3px;
 }
 .dropdown-toggle::after{
   display: none!important;
@@ -36,9 +39,9 @@ nav.navbar {
 
 /* estilo <a> cuenta */
 .cuenta{
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(212, 212, 212);
-  border-radius: 5px;
+  background: #ff9600;
+  border-color: #ffc107;
+  border-radius: 3px;
 }
 
 /* estilo bootstrap collapse */

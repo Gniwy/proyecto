@@ -72,6 +72,7 @@ img.img-responsive {
   margin-top: 5em;
   font-weight: 600;
   font-size: 17px;
+  background: #ffc107;;
 }
 li.list-group-item.address {
     height: 74px;

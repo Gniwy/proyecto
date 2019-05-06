@@ -22,6 +22,7 @@ foreach($_GET as $variable => $valor){
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
+    <link rel="stylesheet" href="modulos/buscador_avanzado/css/style.css">
     <link rel="stylesheet" href="modulos/footer/css/footer.css">
     <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -45,7 +46,7 @@ foreach($_GET as $variable => $valor){
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
-  <body>
+  <body style="background: #3399ff;">
 
     <!--hidden busqueda-->
     <input type="hidden" id="hidden_provincia" name="" value="<?php echo $lugarp;?>">
@@ -72,6 +73,14 @@ foreach($_GET as $variable => $valor){
 
 
     </section>
+    <!-- Fondo menu principal -->
+    <div class='ripple-background'>
+      <div class='circle xxlarge shadow1'></div>
+      <div class='circle xlarge shadow2'></div>
+      <div class='circle large shadow3'></div>
+      <div class='circle medium shadow4'></div>
+      <div class='circle small shadow5'></div>
+    </div> <!-- Fin de ripple -->
     <footer>
       <?php include "modulos/footer/footer.php"; ?>
     </footer>

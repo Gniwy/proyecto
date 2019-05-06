@@ -18,6 +18,18 @@ $nombre=$ex_empresa['nombre'];
 $calle=$ex_empresa['calle'];
 $cp=$ex_empresa['cp'];
 $valoracion=$ex_empresa['valoracion_media'];
+$id_localidad = $ex_empresa['id_localidad'];
+
+
+
+// Localidad
+$sql_datos_localidad = "SELECT * FROM localidad where id = $id_localidad";
+$aux_datos_localidad = mysqli_query($link, $sql_datos_localidad);
+$ex_datos_localidad = mysqli_fetch_assoc($aux_datos_localidad);
+
+$nombre_localidad = $ex_datos_localidad['nombre'];
+
+
 
 // Calculo de valoracion media
 $sql_calculo_valoracion_media="SELECT * FROM comentario WHERE id_empresa=$id_empresa";
@@ -109,7 +121,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
   </head>
-  <body>
+  <body style="background: #3399ff;">
 
     <input type="hidden" id="hidden_empresa" value="<?php echo $id_empresa;?>">
     <input type="hidden" id="hidden_cliente" value="<?php echo $_SESSION['id_usuario'];?>">
@@ -119,36 +131,36 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
 
-    <div class="offset-md-2 col-md-8" style="border:solid 1px black; margin-bottom:20px;">
+    <div class="offset-md-2 col-md-8" style="margin-bottom:20px; background: white;">
       <!-- Datos de la empresa-->
       <div class="row">
         <div class="col-md-6">
+          <div class="nombrEmpresa mt-3 ml-2">
+            <h3 style="font-weight: 600;">Datos de <?php echo $nombre;?></h3>
+          </div>
           <table class="table table-stripped">
-            <tr>
-              <th style="font-size:30px;">Datos de -Empresa-</th>
-            </tr>
             <tr>
               <td class="text-right" width="50%">Nombre:</td>
               <td> <?php echo $nombre;?> </td>
             </tr>
             <tr>
               <td class="text-right">Localidad:</td>
-              <td> --- </td>
+              <td> <?php echo $nombre_localidad; ?> </td>
             </tr>
             <tr>
               <td class="text-right">CP:</td>
               <td> <?php echo $cp;?> </td>
             </tr>
             <tr>
-              <td class="text-right">Reputación:</td>
-              <td>
+              <td class="text-right repu">Reputación:</td>
+              <td class="estrella">
                 <!-- Reputacion + estrellas-->
                 <?php for($i=0;$i<$valoracion_media;$i++){?>
-                  <img src="image/estrella_rellenada.png" width="30px" alt="">
+                  <img src="image/estrella_rellenada.png" width="22px" alt="">
                 <?php } ?>
 
                 <?php for($i=$valoracion_media;$i<5;$i++){?>
-                  <img src="image/estrella_vacia.png" width="30px" alt="">
+                  <img src="image/estrella_vacia.png" width="22px" alt="">
                 <?php } ?>
               </td>
             </tr>
@@ -321,8 +333,17 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         <?php include "modulos/comentarios/comentarios.php";?>
       </div>
 
-
     </div>
+
+    <!-- Fondo menu principal -->
+    <div class='ripple-background'>
+      <div class='circle xxlarge shadow1'></div>
+      <div class='circle xlarge shadow2'></div>
+      <div class='circle large shadow3'></div>
+      <div class='circle medium shadow4'></div>
+      <div class='circle small shadow5'></div>
+    </div> <!-- Fin de ripple -->
+
     <div id="footerComentario">
 
       <?php include "modulos/footer/footer.php";?>

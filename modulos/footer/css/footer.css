@@ -2,9 +2,11 @@
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #292c2f17;
+  /* background-color: #292c2f17; */
+  background-color: rgba(255, 255, 255, 0);
   color: #505050;
 }
+
 .col-12.legalText {
     text-align: center;
 }

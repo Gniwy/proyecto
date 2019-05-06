@@ -1,8 +1,8 @@
 <?php require_once ('conexion/conexion.php'); ?>
 
-<section class="form-inline col-centrada col-12">
+<section class="form-inline justify-content-center col-12">
   <div class="col-12 img"></div>
-  <div class="row form-group col-10 mb-2">
+  <div class="row form-group col-8 offset-0 offset-sm-1 mb-2">
     <select class="col-6 col-sm-6 col-md-6 form-control" name="provincia" id="select_provincia">
 
       <?php include "sql/consulta_provincia.php"; ?>
