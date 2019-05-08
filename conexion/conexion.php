@@ -1,8 +1,8 @@
 <?php
 $servidor_bd="localhost";
-$usuario_bd="root";
-$clave_bd="";
-$datos_bd="proyecto";
+$usuario_bd="lzazxosj";
+$clave_bd="C8*syHRh-jV694";
+$datos_bd="lzazxosj_proyecto";
 $link = mysqli_connect($servidor_bd,$usuario_bd,$clave_bd,$datos_bd);
 $link->set_charset("utf8");
 if (!$link) {

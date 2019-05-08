@@ -1,0 +1,5 @@
+##DirectoryIndex SourceFolder/index.php
+
+##RewriteEngine On
+
+##RewriteRule !^SourceFolder/SourceFolder%{REQUEST_URI} [L,NC]
