@@ -24,7 +24,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus {
-  color: #383838;
+  color: black;
   text-decoration:none;
   /* border-bottom:1px dotted #999; */
 }

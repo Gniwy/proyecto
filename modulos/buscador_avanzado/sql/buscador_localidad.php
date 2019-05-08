@@ -30,7 +30,7 @@ if(!empty($id_provincia)){
   echo '<option value="0">Todas las Localidades</option>';
   $sql_localidad.=" provincia_id='$id_provincia' ORDER BY nombre";
 }else{
-  $sql_localidad.=" 1 ORDER BY nombre";
+  $sql_localidad.=" 1 GROUP BY nombre";
   $select_todas=1;
 }
 
