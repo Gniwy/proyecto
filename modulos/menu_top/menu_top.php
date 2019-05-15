@@ -15,7 +15,7 @@ session_start();
     <div class="collapse navbar-collapse contenidoPerfil" id="navbar_sesion_login">
       <ul class="navbar-nav que">
         <li class="nav-item d-none d-md-block quEs">
-          <a class="nav-link" href="#">Que es IR</a>
+          <a class="nav-link" href="modulos/informacionWeb/queEs.php" target="_blank">Que es IR</a>
         </li>
 
       </ul>

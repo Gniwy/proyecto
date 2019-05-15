@@ -7,6 +7,7 @@
         <div class="row">
           <div class="col-12 legalText">
             <ul class="list-unstyled">
+              <li> <a href="modulos/informacionWeb/queEs.php" target="_black">Que es IR</a> </li>
               <li><a href="modulos/legal_notices/esp/aviso_legal.html"  target="_black">Avisos Legal</a></li>
               <li><a href="modulos/legal_notices/esp/terminos_y_condiciones.html"  target="_black">Terminos y Condiciones</a></li>
               <li><a href="modulos/legal_notices/esp/cookies.html"  target="_black">Politica de Cookie</a></li>

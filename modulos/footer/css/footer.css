@@ -56,7 +56,6 @@ footer .form-control {
   border-bottom: 1px solid #919191!important;
 }
 .contentForm:focus{
-  color: inherit!important;
   border-color: inherit!important;
   box-shadow: inherit!important;
 }
