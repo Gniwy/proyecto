@@ -59,15 +59,15 @@ if($select_todas==0){
 <?php
 
 // barra selectora de la localiadad
-$consulta = "SELECT * FROM localidad WHERE 1 ";
-if (!empty($_GET['lc'])) {
-  $consulta.= " AND  NOT id=".$_GET['lc']."";
-}
-$sql = mysqli_query($link,$consulta);
-
-while ($row = mysqli_fetch_assoc($sql))
-{
-  echo '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
-}
+// $consulta = "SELECT * FROM localidad WHERE 1 ";
+// if (!empty($_GET['lc'])) {
+//   $consulta.= " AND  NOT id=".$_GET['lc']."";
+// }
+// $sql = mysqli_query($link,$consulta);
+//
+// while ($row = mysqli_fetch_assoc($sql))
+// {
+//   echo '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
+// }
 
 ?>
