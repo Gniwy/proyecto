@@ -28,8 +28,19 @@ ul.navbar-nav.que {
 }
 .boxLogin{
   position: absolute;
-  right: 10;
+  right: 10px;
   top: 3px;
+}
+a#ir {
+  color: #ff9600;
+  background: white;
+  border-radius: 3px;
+  transition: background 1.5s;
+}
+
+a#ir:hover{
+  background: #ff9600;
+  color: white;
 }
 
 /* estilo buton login*/
