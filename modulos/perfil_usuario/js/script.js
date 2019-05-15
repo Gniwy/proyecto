@@ -1,9 +1,9 @@
 // habilitar boton submit
-$("#nuevosDatos").attr('disabled','disabled');
-
-$("#aceptarTerminos").click(function() {
-  $("#nuevosDatos").attr("disabled", !this.checked);
-});
+// $("#nuevosDatos").attr('disabled','disabled');
+//
+// $("#aceptarTerminos").click(function() {
+//   $("#nuevosDatos").attr("disabled", !this.checked);
+// });
 
 $("#nuevosDatos").click(function(){
 
@@ -15,10 +15,6 @@ $("#nuevosDatos").click(function(){
       id_user:$("#id_user").val(),
       nick:$("#newNick").val(),
       password:$("#newPassword").val(),
-      direccion:$("#address").val(),
-      ciudad:$("#city").val(),
-      sexo:$("#sexo").val(),
-      cp:$("#cp").val()
     }, success:function(data){
 
     }

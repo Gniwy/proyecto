@@ -156,11 +156,11 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               <td class="estrella">
                 <!-- Reputacion + estrellas-->
                 <?php for($i=0;$i<$valoracion_media;$i++){?>
-                  <img src="image/estrella_rellenada.png" width="22px" alt="">
+                  <img src="image/estrella_rellenada.png" width="21px" alt="">
                 <?php } ?>
 
                 <?php for($i=$valoracion_media;$i<5;$i++){?>
-                  <img src="image/estrella_vacia.png" width="22px" alt="">
+                  <img src="image/estrella_vacia.png" width="21px" alt="">
                 <?php } ?>
               </td>
             </tr>
@@ -169,9 +169,10 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         <div class="col-md-6 text-center">
           <input type="text" name="" value="<?php echo $lat; ?>" id="lat" hidden>
           <input type="text" name="" value="<?php echo $lng; ?>" id="lng" hidden>
-          <div id="mapFichaEmp" style="width:100%; height: 400px;">
+          <!-- mapa Ubicacion de la empresa -->
+          <div id="mapFichaEmp">
+
           </div>
-          <!-- <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200"> -->
         </div>
       </div>
       <!-- Fin datos de la empresa-->
@@ -231,7 +232,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               <div class="col-md-6">
                 <h4>
                   <?php echo ucwords($nick_cliente_relevante); ?>
-
+                  
                   <?php
                   $valoracion=$ex_comentario_relevante_mostrar['valoracion'];
 
@@ -336,7 +337,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     </div>
 
     <!-- Fondo menu principal -->
-    <div class='ripple-background'>
+    <div class='ripple-background d-none d-sm-inline'>
       <div class='circle xxlarge shadow1'></div>
       <div class='circle xlarge shadow2'></div>
       <div class='circle large shadow3'></div>

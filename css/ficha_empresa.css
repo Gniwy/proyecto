@@ -5,10 +5,6 @@
   -webkit-border-radius: 33px 33px 33px 33px;
 }
 
-.pointer{
-  cursor:pointer;
-}
-
 .ui-progressbar.ui-widget-header {
      color: Blue;
      background: url(images/lime-1x100.png) #cccccc repeat-x 50% 50%;
@@ -22,14 +18,21 @@
   cursor:pointer;
 }
 
-
 #footerComentario>.footer{
   position: relative!important;
 }
 
-.repu{
-
+#mapFichaEmp{
+  width:100%;
+  height: 400px;
+  margin-top: 22px;
 }
-.estrella{
-  
+@media(max-width: 575px){
+  #mapFichaEmp{
+    width: 95%;
+    height: 325px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }

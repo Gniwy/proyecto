@@ -3,6 +3,10 @@ html {
   min-height: 100%;
   position: relative;
 }
+header {
+    background: #2783e066;
+    height: 70px;
+}
 body {
   margin: 0;
   font-family: 'Lobster';
@@ -101,6 +105,80 @@ footer {
     clear: both;
     position: relative;
     width: 100%;
+  }
+}
+
+@media(max-width: 575px){
+  .small{
+    width: 180px;
+    height: 180px;
+    left: -45px;
+    bottom: -240px;
+  }
+
+  .medium{
+    width: 250px;
+    height: 250px;
+    left: -59px;
+    bottom: -253px;
+  }
+
+  .large{
+    width: 350px;
+    height: 350px;
+    left: -85px;
+    bottom: -289px;
+  }
+
+  .xlarge{
+    width: 450px;
+    height: 450px;
+    left: -111px;
+    bottom: -315px;
+  }
+
+  .xxlarge{
+    width: 550px;
+    height: 550px;
+    left: -150px;
+    bottom: -350px;
+  }
+}
+
+@media(max-width: 414px){
+  .small{
+    width: 120px;
+    height: 120px;
+    left: -38px;
+    bottom: -226px;
+  }
+
+  .medium{
+    width: 150px;
+    height: 150px;
+    left: -33px;
+    bottom: -224px;
+  }
+
+  .large{
+    width: 200px;
+    height: 200px;
+    left: -46px;
+    bottom: -238px;
+  }
+
+  .xlarge{
+    width: 300px;
+    height: 300px;
+    left: -101px;
+    bottom: -293px;
+  }
+
+  .xxlarge{
+    width: 400px;
+    height: 400px;
+    left: -150px;
+    bottom: -350px;
   }
 }
 

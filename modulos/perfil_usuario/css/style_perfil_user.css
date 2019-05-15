@@ -1,11 +1,8 @@
-body {
-    font-weight: normal;
-    position: relative;
-    min-height: 100vh;
-}
 
 .form{
   position: relative;
+  display: grid;
+  padding: 35px;
 }
 
 .card{
@@ -31,9 +28,15 @@ body {
 
 button{
   position: absolute;
-  right: 0;
+  right: 10px;
+  bottom: 8px;
 }
 
+button#nuevosDatos {
+    grid-area: none;
+    margin-right: 25px;
+    margin-bottom: -10px;
+}
 
 .body_perfil_user.container {
     padding-bottom: 10rem;

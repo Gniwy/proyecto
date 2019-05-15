@@ -1,6 +1,10 @@
 # proyecto
 
-#w
+# pasar carpeta adminstrador y bbdd on delete cascade al host
+# {perfil usuario -> css, js}
+# mapaFichaEmpresa.js
+
+
 # Cristian - menu_top (terminado)
 # Cristian - (admin) tabla usuarios con funciones editar, borrar - buscador principal (terminado)
 

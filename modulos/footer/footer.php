@@ -22,7 +22,7 @@
               <input type="email" class="form-control contentForm" id="exampleInputEmail1" placeholder="Correo">
           </div>
           <div class="col-12 col-sm-6">
-              <textarea class="form-control contentForm" id="exampleMessage" placeholder="mensaje"></textarea>
+              <input type="text" class="form-control contentForm" id="exampleMessage" placeholder="mensaje">
           </div>
           <fieldset class="form-group">
             <button type="button" class="btn btn-primary btn-sm btn_2" id="btn_enviar_correo">Enviar</button>

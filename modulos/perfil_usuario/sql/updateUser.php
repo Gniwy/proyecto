@@ -13,7 +13,7 @@ foreach ($_POST as $variable => $valor) {
 // ciudad
 // sexo
 // cp
-  $sql_update_cliente = "UPDATE `cliente` SET `nick`='$nick',`direccion`='$direccion',`ciudad`='$ciudad',`sexo`='$sexo',`cp`='$cp' WHERE id = $id_user";
+  $sql_update_cliente = "UPDATE `cliente` SET `nick`='$nick' WHERE id = $id_user";
   mysqli_query($link, $sql_update_cliente);
 
 

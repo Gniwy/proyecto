@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/style_vista2.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_perfil_user.css">
     <script src="../../js/jquery.js"></script>
 
     <!-- jQuery 12.1.1 necessary jqueryUI -->
@@ -33,6 +33,7 @@
     <section>
       <?php include"../../modulos/menu_top/menu_top.php" ?>
     </section>
+
 
 <input type="text" name="" id="id_user" value="<?php echo $_SESSION['id_usuario']; ?>" hidden>
 
@@ -52,29 +53,6 @@
                 <input type="password" class="form-control" id="newPassword" placeholder="********" required>
               </div>
             </div>
-            <!-- <div class="form-group">
-              <label for="inputAddress">Direccion</label>
-              <input type="text" class="form-control" id="address" placeholder="Calle azul 1B">
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">Ciudad</label>
-                <input type="text" class="form-control" id="city">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputSexo">Sexo</label>
-                <select id="sexo" class="form-control">
-                  <option selected disabled>sexo</option>
-                  <option>Otro</option>
-                  <option>Hombre</option>
-                  <option>Mujer</option>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="cp">CP</label>
-                <input type="number" class="form-control" id="inputCP">
-              </div>
-            </div> -->
             <div class="form-group">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="aceptarTerminos">
@@ -83,13 +61,23 @@
             </div>
             <button type="submit" class="btn btn-primary" id="nuevosDatos">Enviar</button>
           </div>
-          </div>
-
         </div>
 
       </section>
-
+  
     </div>
+
+
+          <!-- Fondo menu principal -->
+          <div class='ripple-background'>
+            <div class='circle xxlarge shadow1'></div>
+            <div class='circle xlarge shadow2'></div>
+            <div class='circle large shadow3'></div>
+            <div class='circle medium shadow4'></div>
+            <div class='circle small shadow5'></div>
+          </div> <!-- Fin de ripple -->
+
+
 
     <footer>
       <?php include "../../modulos/footer/footer.php"; ?>
