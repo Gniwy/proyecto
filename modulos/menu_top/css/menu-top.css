@@ -11,8 +11,8 @@ nav.navbar {
   display: none; /* none por si cambio de idea*/
 }
 #perfilOpc{
-  border: 0px;
-  top: -14px!important;
+  /* border: 0px;
+  top: -14px!important; */
 }
 #perfilOpc a{
   text-align: left;
@@ -30,6 +30,9 @@ ul.navbar-nav.que {
   position: absolute;
   right: 10px;
   top: 3px;
+}
+li.nav-item.d-none.d-md-block.quEs {
+    text-align: center;
 }
 a#ir {
   color: #ff9600;
@@ -61,6 +64,7 @@ a#ir:hover{
 }
 .dropdown-toggle::after{
   display: none!important;
+  width: max
 }
 
 /* estilo <a> cuenta */
@@ -95,16 +99,16 @@ a#ir:hover{
 
 /* opciones de perfil */
 #perfilOpc{
-  position: static;
+  /* position: static;
   text-align: right;
   width: 100px;
-  margin-left: -30px;
+  margin-left: -30px; */
 }
 
 @media only screen and (min-width: 991px) {
   #perfilOpc {
     /* position: absolute; */
-    top: 0;
+    /* top: 0; */
   }
 }
 

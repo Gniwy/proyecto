@@ -3150,11 +3150,11 @@ tbody.collapse.show {
 .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-
+/* Modificado */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: absolute!important;/*position: absolute;*/
+  top: 130%;/*top:100%;*/
+  right: 0;/*left:0;*/
   z-index: 1000;
   display: none;
   float: left;

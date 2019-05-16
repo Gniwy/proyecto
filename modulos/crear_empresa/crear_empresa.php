@@ -97,7 +97,7 @@
             <div class="form-group col-md-6">
               <label for="inputCity">Provincia</label>
               <select class="form-control" name="provincia" id="select_provincia_crearEmp">
-                <option value="">Todos</option>
+                <option value="0">Todos</option>
 
                 <?php include "sql/consulta_provincia.php"; ?>
 
@@ -106,7 +106,7 @@
             <div class="form-group col-md-4">
               <label for="inputState">Localidad</label>
               <select class="form-control" name="localidad" id="select_localidad_crearEmp">
-                <option value="" selected disabled>Elige...</option>
+                <option selected disabled>Elige...</option>
 
                 <?php include "sql/buscador_localidad.php"; ?>
 
@@ -192,14 +192,7 @@
             <p style="font-size:30px;">Comentario:</p>
             <textarea class="form-control" name="coment" id="comentario" rows="1" cols="80" placeholder="Danos tu opinión"></textarea>
           </div>
-          <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
-          </div>
+
           <div class="">
             <button class="btn btn-primary pull-right" type="button" name="paso3" id="boton3">Publicar</button>
           </div>
@@ -209,6 +202,17 @@
       </section>
 
     </div>
+
+    <!-- Fondo menu principal -->
+    <div class='ripple-background'>
+      <div class='circle xxlarge shadow1'></div>
+      <div class='circle xlarge shadow2'></div>
+      <div class='circle large shadow3'></div>
+      <div class='circle medium shadow4'></div>
+      <div class='circle small shadow5'></div>
+    </div> <!-- Fin de ripple -->
+
+    <input type="hidden" id="bandPaso1" name="" value="0">
 
     <footer>
       <?php include "../../modulos/footer/footer.php"; ?>
