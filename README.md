@@ -51,11 +51,13 @@
 
 <!-- ''''''''''' *FALTA* '''''''''' -->
 
+# CUALQUIER USUARIO PUEDE ENTRAR EN /administracion/
+
 # menu top no carga en el index
 
-# buscador avanzado: no recoje los valores que se le manda del principal.
-# buscador avanzado: Al seleccionar una provincia se tiene que poder dejar la opcion de "Todas las localidades"
-# buscador avanzado: Al buscar hay que guardar los campos por los que ha buscado (se reinician)
+# buscador avanzado: no recoje los valores que se le manda del principal.(arreglado)
+# buscador avanzado: Al seleccionar una provincia se tiene que poder dejar la opcion de "Todas las localidades"(arreglado)
+# buscador avanzado: Al buscar hay que guardar los campos por los que ha buscado (se reinician)-(arreglado)
 
 # vista 2: agregar informacion relevante de cada empresa: donde está, cuantos comentarios tiene
 

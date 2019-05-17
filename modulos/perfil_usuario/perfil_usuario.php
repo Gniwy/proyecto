@@ -46,11 +46,13 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputNick">Nombre/Nick</label>
-                <input type="text" class="form-control" id="newNick" placeholder="<?php echo $_SESSION['nick_usuario']; ?>" required>
+                <input type="text" class="form-control" id="newNick" value="<?php echo $_SESSION['nick_usuario']; ?>">
+                <label class="required" id="nick_req">Campo obligatorio</label>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword">Contraseña</label>
-                <input type="password" class="form-control" id="newPassword" placeholder="********" required>
+                <input type="password" class="form-control" id="newPassword" placeholder="********">
+                <label class="required" id="pwd_req">Campo obligatorio</label>
               </div>
             </div>
             <div class="form-group">
@@ -64,7 +66,7 @@
         </div>
 
       </section>
-  
+
     </div>
 
 
@@ -78,7 +80,7 @@
           </div> <!-- Fin de ripple -->
 
 
-
+<input type="hidden" id="band_perfil_user" name="" value="0">
     <footer>
       <?php include "../../modulos/footer/footer.php"; ?>
     </footer>

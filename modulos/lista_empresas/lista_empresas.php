@@ -82,7 +82,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
         }
         ?>
           <li class="list-group-item address">Direccion: <?php echo $ex_empresas['calle'].', CP: '.$ex_empresas['cp'];?></li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item">Provincia: <?php echo $ex_empresas['nombre_provincia'].'<br> Localidad: '.$ex_empresas['nombre_localidad']; ?></li>
         </ul>
         <div class="card-body boton">
           <span class="btn btn-primary empresa" id="empresa_<?php echo $ex_empresas['id'];?>">Ver Ficha</span>

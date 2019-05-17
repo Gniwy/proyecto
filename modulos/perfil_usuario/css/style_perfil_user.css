@@ -4,7 +4,10 @@
   display: grid;
   padding: 35px;
 }
-
+.required{
+  color: red;
+  display: none;
+}
 .card{
   margin: 100px auto 100px auto;
   border: 0;
