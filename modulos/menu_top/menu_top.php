@@ -17,7 +17,6 @@ session_start();
         <li class="nav-item d-none d-md-block quEs">
           <a class="nav-link" href="modulos/informacionWeb/queEs.php" id="ir" target="_blank">Que es IR</a>
         </li>
-
       </ul>
       <ul class="navbar-nav ml-auto boxLogin">
         <li class="nav-item dropdown">
@@ -35,6 +34,11 @@ session_start();
   <?php }else{?>
 
     <div class="col-5 col-md-3 offset-md-8 collapse navbar-collapse contenidoPerfil" id="navbar_sesion_login">
+      <ul class="navbar-nav que">
+        <li class="nav-item d-none d-md-block quEs">
+          <a class="nav-link" href="modulos/informacionWeb/queEs.php" id="ir" target="_blank">Que es IR</a>
+        </li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

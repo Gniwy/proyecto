@@ -131,7 +131,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
 
-    <div class="offset-md-2 col-md-8" style="margin-bottom:20px; background: white;">
+    <div class="offset-md-2 col-md-8 mt-4" style="margin-bottom:20px; background: white;">
       <!-- Datos de la empresa-->
       <div class="row">
         <div class="col-md-6">
@@ -180,8 +180,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <div class="row">
 
         <!-- Comentario relevante -->
-        <div class="col-md-6">
-          <h3 class="redondeado" style="background:#ffec88;"><b>Comentario más votado</b></h3>
+        <div class="col-12">
+          <hr>
+          <h3 class="redondeado col-md-6" style="background:#ffec88;"><b>Comentario más votado</b></h3>
           <div class="Comentario">
             <?php
 
@@ -229,10 +230,10 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
             ?>
 
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-12">
                 <h4>
                   <?php echo ucwords($nick_cliente_relevante); ?>
-                  
+
                   <?php
                   $valoracion=$ex_comentario_relevante_mostrar['valoracion'];
 
