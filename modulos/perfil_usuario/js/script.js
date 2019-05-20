@@ -3,64 +3,66 @@
 $("#nuevosDatos").attr('disabled','disabled');
 
 
+$("#aceptarTerminos").click(function() {
+
+  $("#nuevosDatos").attr("disabled", !this.checked);
+
+});
 
 
-  $("#aceptarTerminos").click(function() {
 
-      $("#nuevosDatos").attr("disabled", !this.checked);
-  });
+var bandNick = 0;
+var bandPwd = 0;
 
+$('#newNick').keyup(function(){
 
-var band = 0;
+  $('#nick_req').css('display', 'none');
+
+});
+$('#newPassword').keyup(function(){
+
+  $('#pwd_req').css('display', 'none');
+
+});
 
 
 $("#nuevosDatos").click(function(){
 
-  if ($('#newNick').val() == "") {
+  if ($('#newNick').val() == "" || ( $('#newNick').val().length >= 15 && $('#newNick').val().length<5) ) {
 
     $('#nick_req').css('display', 'block');
+    bandNick=0;
 
   }else {
-    band+=5;
-    $('#nombre_req').css('display', 'none');
+    bandNick=5;
   }
 
-  // if ($('#newNick').val()!=null || $('#newNick').val()!="") {
-  //   band=0;
-  //   $('#nick_req').css('display', 'none');
-  //
-  // }else {
-  //   $('#nick_req').css('display', 'block');
-  // }
-
-  if ($('#newPassword').val()!=null || $('#newPassword').val()!="") {
+  if ($('#newPassword').val() == "") {
 
     $('#pwd_req').css('display', 'block');
+    bandPwd=0;
 
   }else {
-    band+=5;
-    $('#pwd_req').css('display', 'none');
+    bandPwd=5;
+
   }
-  $('#band_perfil_user').val(band);
 
-  if (band==10) {
+  if (bandPwd==10) {
+alert('entro --- ');
+    // $.ajax({
+    //
+    //   type:"POST",
+    //   url:"sql/updateUser.php",
+    //   data:{
+    //     id_user:$("#id_user").val(),
+    //     nick:$("#newNick").val(),
+    //     password:$("#newPassword").val(),
+    //   }, success:function(data){
+    //
+    //   }
+    //
+    // });
 
-    $.ajax({
-
-      type:"POST",
-      url:"sql/updateUser.php",
-      data:{
-        id_user:$("#id_user").val(),
-        nick:$("#newNick").val(),
-        password:$("#newPassword").val(),
-      }, success:function(data){
-
-      }
-
-    });
-
-  }else {
-    alert('complete los campos');
   }
 
 })
