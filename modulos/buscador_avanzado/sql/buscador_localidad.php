@@ -17,7 +17,6 @@ if (!empty($_GET['lc'])) {
 
   ?>
 
-  <option value="<?php echo $ex_opt_localidad['id']; ?>"><?php echo $ex_opt_localidad['nombre']; ?></option>
 
   <?php
 }
@@ -38,9 +37,15 @@ $aux_localidad=mysqli_query($link,$sql_localidad);
 
 // si el selector esta a 0 quiere decir que a elejido una provincia
 if($select_todas==0){
-  while($ex_localidad=mysqli_fetch_assoc($aux_localidad)){ ?>
+  while($ex_localidad=mysqli_fetch_assoc($aux_localidad)){
 
-      <option value="<?php echo $ex_localidad['id'];?>"><?php echo $ex_localidad['nombre'];?></option>
+      $activo="";
+
+      if($ex_localidad['id'] == $id_localidad){
+        $activo="selected";
+      }
+
+      ?> <option value="<?php echo $ex_localidad['id'];?>" <?php echo $activo;?>><?php echo $ex_localidad['nombre'];?></option>
 
   <?php }
 

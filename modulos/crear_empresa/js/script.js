@@ -65,7 +65,7 @@ paso1.onclick = function()
      $('#cp_req').css('display', 'none');
    }
 // problema en la verificación
-   if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && (($('#cp').val() != "") || (!isNaN($('#cp').val()))) ){
+   if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && (($('#cp').val() != "") && (!isNaN($('#cp').val()))) ){
      div2.style.display = "block";
      div1.style.display = "none";
      $("#img1").attr("src","img/data_enterprise.png");
