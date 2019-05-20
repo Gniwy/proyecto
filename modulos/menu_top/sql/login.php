@@ -56,10 +56,9 @@ if($id_cliente==null){
 
 }
 
-if($correcto=='si'){+
+if($correcto=='si'){
   $_SESSION['id_usuario']=$id_cliente;
   $_SESSION['nick_usuario']=$nick_usuario;
 }
-
 
 ?>
