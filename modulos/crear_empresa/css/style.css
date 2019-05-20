@@ -41,6 +41,8 @@ body {
   border-right: 1px solid;
   border-left: 1px solid;
   padding:20px;
+  background: white;
+  border-radius: 14px;
 }
 .datos>h3 {
     text-align: center;

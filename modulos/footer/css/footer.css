@@ -1,9 +1,10 @@
 /* Footer */
 .footer {
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  /* background-color: #292c2f17; */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #292c2f17;
+  /* background-color: rgba(255, 255, 255, 0); */
   color: #505050;
 }
 
@@ -24,7 +25,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus {
-  color: #383838;
+  color: black;
   text-decoration:none;
   /* border-bottom:1px dotted #999; */
 }
@@ -55,9 +56,20 @@ footer .form-control {
   border-bottom: 1px solid #919191!important;
 }
 .contentForm:focus{
-  color: inherit!important;
   border-color: inherit!important;
   box-shadow: inherit!important;
+}
+
+input[type="email"]::placeholder, input[type="text"]::placeholder { /* Firefox, Chrome, Opera */
+  color: #000000;
+}
+
+input[type="email"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000000;
+}
+
+input[type="email"]::-ms-input-placeholder, input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
+  color: #000000;
 }
 
 /* Query */

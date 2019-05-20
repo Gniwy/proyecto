@@ -1,7 +1,7 @@
 <?php
 
 //consulta principal desde van a partir las concatenaciones
-$sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e.cp FROM empresa e
+$sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e.cp, l.nombre as nombre_localidad, p.nombre as nombre_provincia FROM empresa e
                                     JOIN localidad l
                                     ON e.id_localidad = l.id
                                     JOIN provincia p

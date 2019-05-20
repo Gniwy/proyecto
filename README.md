@@ -1,6 +1,10 @@
 # proyecto
 
-#w
+# pasar carpeta adminstrador y bbdd on delete cascade al host
+# {perfil usuario -> css, js}
+# mapaFichaEmpresa.js
+
+
 # Cristian - menu_top (terminado)
 # Cristian - (admin) tabla usuarios con funciones editar, borrar - buscador principal (terminado)
 
@@ -47,11 +51,16 @@
 
 <!-- ''''''''''' *FALTA* '''''''''' -->
 
-# menu top no carga en el index
+# CUALQUIER USUARIO PUEDE ENTRAR EN /administracion/
 
-# buscador avanzado: no recoje los valores que se le manda del principal.
-# buscador avanzado: Al seleccionar una provincia se tiene que poder dejar la opcion de "Todas las localidades"
-# buscador avanzado: Al buscar hay que guardar los campos por los que ha buscado (se reinician)
+# menu top no carga en el index
+# menu top cuando estoy en cuenta de un usuario y le doy a cuenta te manda a otra pagina no vinculada
+#menu top logo perfil usuario
+# login si cierras sesion en perfil_usuario te manda a cuanta no vinculada
+
+# buscador avanzado: no recoje los valores que se le manda del principal.(arreglado)
+# buscador avanzado: Al seleccionar una provincia se tiene que poder dejar la opcion de "Todas las localidades"(arreglado)
+# buscador avanzado: Al buscar hay que guardar los campos por los que ha buscado (se reinician)-(arreglado)
 
 # vista 2: agregar informacion relevante de cada empresa: donde está, cuantos comentarios tiene
 

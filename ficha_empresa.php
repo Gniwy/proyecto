@@ -131,7 +131,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
 
-    <div class="offset-md-2 col-md-8" style="margin-bottom:20px; background: white;">
+    <div class="offset-md-2 col-md-8 mt-4" style="margin-bottom:20px; background: white;">
       <!-- Datos de la empresa-->
       <div class="row">
         <div class="col-md-6">
@@ -156,11 +156,11 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
               <td class="estrella">
                 <!-- Reputacion + estrellas-->
                 <?php for($i=0;$i<$valoracion_media;$i++){?>
-                  <img src="image/estrella_rellenada.png" width="22px" alt="">
+                  <img src="image/estrella_rellenada.png" width="21px" alt="">
                 <?php } ?>
 
                 <?php for($i=$valoracion_media;$i<5;$i++){?>
-                  <img src="image/estrella_vacia.png" width="22px" alt="">
+                  <img src="image/estrella_vacia.png" width="21px" alt="">
                 <?php } ?>
               </td>
             </tr>
@@ -169,9 +169,10 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
         <div class="col-md-6 text-center">
           <input type="text" name="" value="<?php echo $lat; ?>" id="lat" hidden>
           <input type="text" name="" value="<?php echo $lng; ?>" id="lng" hidden>
-          <div id="mapFichaEmp" style="width:100%; height: 400px;">
+          <!-- mapa Ubicacion de la empresa -->
+          <div id="mapFichaEmp">
+
           </div>
-          <!-- <img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200"> -->
         </div>
       </div>
       <!-- Fin datos de la empresa-->
@@ -179,8 +180,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       <div class="row">
 
         <!-- Comentario relevante -->
-        <div class="col-md-6">
-          <h3 class="redondeado" style="background:#ffec88;"><b>Comentario más votado</b></h3>
+        <div class="col-12">
+          <hr>
+          <h3 class="redondeado col-md-6" style="background:#ffec88;"><b>Comentario más votado</b></h3>
           <div class="Comentario">
             <?php
 
@@ -228,7 +230,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
             ?>
 
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-12">
                 <h4>
                   <?php echo ucwords($nick_cliente_relevante); ?>
 
@@ -336,7 +338,7 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
     </div>
 
     <!-- Fondo menu principal -->
-    <div class='ripple-background'>
+    <div class='ripple-background d-none d-sm-inline'>
       <div class='circle xxlarge shadow1'></div>
       <div class='circle xlarge shadow2'></div>
       <div class='circle large shadow3'></div>

@@ -31,7 +31,6 @@ var div2 = document.getElementById('paso2');
 var div3 = document.getElementById('paso3');
 
 
-
 paso1.onclick = function()
  {
    if ($('#nombre').val() == "") {
@@ -66,11 +65,12 @@ paso1.onclick = function()
      $('#cp_req').css('display', 'none');
    }
 // problema en la verificación
-   if( ($('#nombre').val() != "") && ($('#select_localidad_crearEmp').val() != "") && ($('#zona').val() != "") && (($('#cp').val() != "") || (!isNaN($('#cp').val()))) ){
+   if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && (($('#cp').val() != "") || (!isNaN($('#cp').val()))) ){
      div2.style.display = "block";
      div1.style.display = "none";
      $("#img1").attr("src","img/data_enterprise.png");
      $("#img2").attr("src","img/gps_enterpriseFocus.png");
+     $('#bandPaso1').val(1);
    }
  }
 

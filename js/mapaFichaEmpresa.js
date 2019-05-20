@@ -1,7 +1,7 @@
 var lat = document.getElementById('lat').value;
 var lng = document.getElementById('lng').value;
 
-if (lat != "") {
+if (lat != "" || lng != "") {
 
 let map = L.map('mapFichaEmp').setView([lat, lng], 18)
 
@@ -18,5 +18,5 @@ let map = L.map('mapFichaEmp').setView([lat, lng], 18)
 
 
 }else {
-  $('#mapFichaEmp').html('<img src="http://www.igad.edu.ec/img/titulo-matriculas-abiertas.png" alt="" width="300" height="200">');
+  $('#mapFichaEmp').html('<img src="image/loader.gif" alt="" width="200" height="200"><br><span style="text-aling: center;">Not Found Map</span>');
 }
