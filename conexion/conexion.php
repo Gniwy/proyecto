@@ -14,8 +14,7 @@
 //     die ('No se puede usar : ' . mysql_error());
 // }
 
-?>
-<?php
+
 $servidor_bd="localhost";
 $usuario_bd="root";
 $clave_bd="";
