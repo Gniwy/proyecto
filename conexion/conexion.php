@@ -15,8 +15,6 @@
 // }
 
 ?>
-
-
 <?php
 $servidor_bd="localhost";
 $usuario_bd="root";
