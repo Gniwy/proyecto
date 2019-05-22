@@ -38,7 +38,7 @@ if($ex_comprobar_email['email']!=null){
 /* Fin comprobar email repetido*/
 
 if($fallo==0){
-  $sql_registro="INSERT INTO cliente(nick) VALUES('$nick')";
+  $sql_registro="INSERT INTO cliente(nick,bloqueado) VALUES('$nick','1')";
   mysqli_query($link,$sql_registro);
 }
 
@@ -53,11 +53,10 @@ $id_usuario=$ex_id_usuario['id'];
 $password_encriptada=password_hash($password, PASSWORD_BCRYPT);
 
 if($fallo==0){
+  echo '<idcliente>'.$id_usuario.'</idcliente>';
   $sql_usuario="INSERT INTO usuario(id_cliente,email,password) VALUES ($id_usuario,'$email','$password_encriptada')";
   mysqli_query($link,$sql_usuario);
 
-  $_SESSION['id_usuario']=$id_usuario;
-  $_SESSION['nick_usuario']=$nick;
 }
 
 

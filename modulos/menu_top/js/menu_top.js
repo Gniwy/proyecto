@@ -89,6 +89,7 @@ $( "#btn_registro" ).click(function(){
 
         var nick_usado = $(data).filter('cliente').html();
         var email_usado = $(data).filter('email').html();
+        var idcliente = $(data).filter('idcliente').html();
 
         //si existe el nick, se muestra el mensaje de error
         if(nick_usado=='existe'){
@@ -102,7 +103,16 @@ $( "#btn_registro" ).click(function(){
         }
 
         if(fallo==0){
-          location.reload(true);
+
+          $.ajax({
+            type:"GET",
+            url:"modulos/menu_top/sql/enviar_correo_verificacion.php",
+            data:{
+              idcliente:idcliente
+            }
+          });
+
+          alert('Te hemos mandado un correo de verificacion.');
         }
 
       }
@@ -146,8 +156,11 @@ $('#btn_iniciar_sesion').click(function(){
 
       if(data=="correcto"){
         location.reload(true);
+      }else if(data=="bloqueado"){
+        alert('Tu cuenta no esta verificada, comprueba tu correo. En cualquier otro caso, contacta con nosotros.');
       }else{
-        $('#error_login').show();
+
+        alert(data);
       }
 
     }

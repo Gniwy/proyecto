@@ -29,13 +29,34 @@ include ('conexion/conexion.php');
   <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
   <!-- <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css"> -->
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.js"></script>
+
+  <!-- jQuery 12.1.1 necessary jqueryUI -->
+  <script src="js/jquery-ui.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+
+  <script type="text/javascript" src="js/index.js"></script>
+
+
+  <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
+
+  <!-- mapa  -->
+  <script type="text/javascript" src="leaflet/leaflet.js"></script>
+  <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
+  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script>
+
 </head>
 
   <body style="background: #3399ff;">
     <div id="main">
 
       <!-- HEADER -->
-      <div id="div_menu_top"><?php include "modulos/menu_top/menu_top.php"; ?></div>
+      <section>
+        <?php include "modulos/menu_top/menu_top.php"; ?>
+      </section>
       <!-- Contenido principal -->
       <section class="container-fluid buscadorPrincipal" id="cuerpo">
         <div class="row col-10">
@@ -54,29 +75,6 @@ include ('conexion/conexion.php');
       </div> <!-- Fin de ripple -->
 
     </div>
-
-
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery.js"></script>
-
-      <!-- jQuery 12.1.1 necessary jqueryUI -->
-      <script src="js/jquery-ui.js"></script>
-
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.js"></script>
-
-      <script type="text/javascript" src="js/index.js"></script>
-
-      <!-- jQuery autocomplete (accion select_lugar) -->
-      <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
-
-
-      <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
-
-      <!-- mapa  -->
-      <script type="text/javascript" src="leaflet/leaflet.js"></script>
-      <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
-      <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script>
 
       <!--FOOTER-->
       <?php include "modulos/footer/footer.php"; ?>

@@ -1,13 +1,21 @@
 <?php
 
+require_once "../../../conexion/conexion.php";
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require '../../../vendor/autoload.php';
 
-foreach($_POST as $variable => $valor){
+foreach($_GET as $variable => $valor){
   $$variable=$valor;
 }
+
+$sql_usuario="SELECT * FROM usuario WHERE id_cliente=".$idcliente;
+$aux_usuario=mysqli_query($link,$sql_usuario);
+$ex_usuario=mysqli_fetch_assoc($aux_usuario);
+$id_usuario=$ex_usuario['id_cliente'];
+$correo_cliente=$ex_usuario['email'];
 
 $mail = new PHPMailer();
 
@@ -24,12 +32,12 @@ $mail = new PHPMailer();
 
     //Recipients
     $mail->setFrom('cristian_castro112@hotmail.com', 'Mailer');
-    $mail->addAddress('cristiancastroalarcon@gmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress($correo_cliente, 'Ireferences.es');     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Mensaje de '.$correo_cliente;
-    $mail->Body    = $mensaje_cliente;
+    $mail->Subject = 'Verifica tu correo';
+    $mail->Body    = 'Link de verificacion:<br><br><a href="http://ireferences.es/verificar_usuario.php?id='.$id_usuario.'">Link</a>';
 
     if (!$mail->send()) {
         echo "Ha ocurrido un error al enviar el correo.";

@@ -53,7 +53,6 @@
 
 # CUALQUIER USUARIO PUEDE ENTRAR EN /administracion/
 
-# menu top no carga en el index
 # menu top cuando estoy en cuenta de un usuario y le doy a cuenta te manda a otra pagina no vinculada
 # menu top logo perfil usuario
 # login si cierras sesion en perfil_usuario te manda a cuanta no vinculada

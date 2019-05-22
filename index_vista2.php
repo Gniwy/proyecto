@@ -21,7 +21,6 @@ foreach($_GET as $variable => $valor){
     <title>IReferences</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="modulos/menu_top/css/menu-top.css">
     <link rel="stylesheet" href="modulos/buscador_avanzado/css/style.css">
     <link rel="stylesheet" href="modulos/footer/css/footer.css">
     <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
@@ -39,8 +38,6 @@ foreach($_GET as $variable => $valor){
 
     <script type="text/javascript" src="js/index.js"></script>
 
-    <script type="text/javascript" src="modulos/menu_top/js/menu_top.js"></script>
-
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
@@ -54,19 +51,17 @@ foreach($_GET as $variable => $valor){
     <input type="hidden" id="hidden_lc" name="" value="<?php echo $lc;?>">
 
     <section>
-      <?php include"modulos/menu_top/menu_top.php" ?>
+      <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
     <section class="container buscador_avanzado_ancho mt-2">
       <div class="col col-sm-12 col-md-12" id="fondoBuscador">
-        <?php include"modulos/buscador_avanzado/buscador_avanzado.php" ?>
+        <?php include"modulos/buscador_avanzado/buscador_avanzado.php"; ?>
       </div>
     </section>
     <section class="" id="contenido_vista2">
 
         <!-- contenido de la busqueda -->
         <div class="col-10 col-sm-9 col-md-10 mb-3" id="busqueda_vista2">
-
-          <?php //include "modulos/lista_empresas/lista_empresas.php";?>
 
         </div>
       </div>

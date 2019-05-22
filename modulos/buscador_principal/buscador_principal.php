@@ -15,3 +15,4 @@
 
 </div>
 <input type="submit" name="enviar" value="Buscar" id="btn_busqueda_principal" class="btn btn-primary col mb-2">
+<script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>

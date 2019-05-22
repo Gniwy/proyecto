@@ -10,7 +10,7 @@ foreach($_GET as $variable => $valor){
 
 
 
-$sql_comprobar_login="SELECT * FROM cliente WHERE nick='$nick'";
+$sql_comprobar_login="SELECT * FROM cliente WHERE nick='$nick' AND bloqueado=0";
 $aux_comprobar_login=mysqli_query($link,$sql_comprobar_login);
 $ex_comprobar_login=mysqli_fetch_assoc($aux_comprobar_login);
 
@@ -28,13 +28,22 @@ if($id_cliente==null){
 
   $password_consulta=$ex_comprobar_login_2['password'];
 
+  $sql_comprobar_bloqueado="SELECT * FROM cliente WHERE id=$id_cliente AND bloqueado=0";
+  $aux_comprobar_bloqueado=mysqli_query($link,$sql_comprobar_bloqueado);
+  $ex_comprobar_bloqueado=mysqli_fetch_assoc($aux_comprobar_bloqueado);
 
-  if($ex_comprobar_login_2['id_cliente']!=null && password_verify($password, $password_consulta)){
-    $correcto="si";
-    echo "correcto";
+  if($ex_comprobar_bloqueado['id']!=null){
+
+    if($ex_comprobar_login_2['id_cliente']!=null && password_verify($password, $password_consulta)){
+      $correcto="si";
+      echo "correcto";
+    }else{
+      $correcto="no";
+      echo "incorrecto";
+    }
   }else{
     $correcto="no";
-    echo "incorrecto";
+    echo "bloqueado";
   }
 }else{
 

@@ -7,10 +7,10 @@
       <div class="col-12">
         <form>
           <div class="col-12 col-sm-6">
-              <input type="email" class="form-control contentForm" id="exampleInputEmail1" placeholder="Correo">
+              <input type="email" class="form-control contentForm" id="correo_cliente" placeholder="Correo">
           </div>
           <div class="col-12 col-sm-6">
-              <input type="text" class="form-control contentForm" id="exampleMessage" placeholder="mensaje">
+              <input type="text" class="form-control contentForm" id="mensaje_cliente" placeholder="mensaje">
           </div>
           <fieldset class="form-group">
             <button type="button" class="btn btn-primary btn-sm btn_2" id="btn_enviar_correo">Enviar</button>
@@ -40,16 +40,17 @@
 
 $('#btn_enviar_correo').click(function(){
 
-  var email = $('#exampleInputEmail1').val();
-  var email = $('#exampleInputEmail1').val();
+  var correo_cliente = $('#correo_cliente').val();
+  var mensaje_cliente = $('#mensaje_cliente').val();
 
   $.ajax({
     type:'POST',
     url:'modulos/footer/php/enviar_correo.php',
     data:{
-      asdf:'asdf'
+      correo_cliente:correo_cliente,
+      mensaje_cliente:mensaje_cliente
     }, success: function(data){
-      alert(data);
+      console.log(data);
 
     }
   });
