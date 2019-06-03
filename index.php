@@ -18,15 +18,16 @@ include ('conexion/conexion.php');
   <!-- font-family -->
   <link rel="stylesheet" href="css/font-family/Lobster.ttf">
   <!-- hoja de estilos de las paginas -->
-  <link rel="stylesheet" href="modulos/footer/css/footer.css">
-  <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
+
+  <!-- <link rel="stylesheet" href="modulos/footer/css/footer.css">
+  <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css"> -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="modulos/modulo_mapa/css/style.css">
+  <!-- <link rel="stylesheet" href="modulos/modulo_mapa/css/style.css"> -->
   <!-- icon -->
   <link rel="stylesheet" href="fontawesome/css/all.css">
   <!-- mapa -->
   <link rel="stylesheet" href="leaflet/leaflet.css">
-  <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css">
+  <!-- <link rel="stylesheet" href="leaflet/plugins/L.Control.MousePosition.css"> -->
   <!-- <link rel="stylesheet" href="leaflet/plugins/L.Control.Locate.css"> -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -44,9 +45,9 @@ include ('conexion/conexion.php');
   <!-- <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script> -->
 
   <!-- mapa  -->
-  <script type="text/javascript" src="leaflet/leaflet.js"></script>
+  <!-- <script type="text/javascript" src="leaflet/leaflet.js"></script>
   <script type="text/javascript" src="leaflet/plugins/Search.js"></script>
-  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script>
+  <script type="text/javascript" src="leaflet/plugins/L.Control.Locate.js"></script> -->
 
 </head>
 
@@ -78,68 +79,6 @@ include ('conexion/conexion.php');
 
       <!--FOOTER-->
       <?php include "modulos/footer/footer.php"; ?>
-
-      <!-- SCRIPT MAP -->
-      <script type="text/javascript">
-
-      let map = L.map('map').setView([36.543880623629846, -4.6306729316711435], 18)
-
-      //map
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        minZoom: 2,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
-
-        //mapa geografico
-        // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        // attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        // }).addTo(map);
-
-      //colocar marcador de empresa
-      var marker = {};
-      map.on('click', function(e){
-
-        // eliminar marcador si hay otro
-        if (marker != undefined) {
-          map.removeLayer(marker);
-        }
-
-        // colocar marcador
-        marker = L.marker(e.latlng).addTo(map);
-      //  console.log(search1._map._lastCenter);
-        console.log(e.latlng);
-        // guardar valor para usar con ajax
-        var data = {
-            lat: e.latlng.lat,
-            lng: e.latlng.lng
-        }
-      });
-
-      // crear localizador geografico
-      var lc = L.control.locate().addTo(map);
-
-      lc.start();
-
-
-      //marker (puntero custom)
-      var myIcon = L.icon({
-        iconUrl: 'leaflet/images/marker-icon.png',
-        iconSize: [68, 95],
-        iconAnchor: [22, 94],
-        popupAnchor: [-3, -76],
-        shadowUrl: 'leaflet/images/marker-shadow.png',
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-        });
-      //L.marker([40.7277831, -74.0080852], {icon: myIcon}).addTo(map);
-      L.marker([36.543880623629846, -4.6306729316711435]).addTo(map);
-
-
-      // buscador
-       var search1 = L.control.search().addTo(map);
-
-
-      </script>
 
   </body>
 </html>

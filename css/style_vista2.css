@@ -209,7 +209,20 @@ footer {
   margin-bottom: 20px;
 }
 
+/* boton */
+.btn-primary{
+  background-color: #ff9600;
+  border-color: #ffc107;
+  color: black;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #f58306d4;
+  border-color: #f58306;
+}
+
 /* ---------------MODAL LOGIN----------------- */
+
 /* INICIO BUCLE ANIMACION */
 .login {
   overflow: hidden;

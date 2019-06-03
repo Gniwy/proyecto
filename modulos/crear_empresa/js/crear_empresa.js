@@ -6,7 +6,7 @@ $('#select_provincia_crearEmp').change(function(){
 
   $.ajax({
     type:'GET',
-    url:'sql/buscador_localidad.php',
+    url:'modulos/crear_empresa/sql/buscador_localidad.php',
     data:{
       id_provincia:id_provincia
     },success: function(data){
@@ -68,8 +68,8 @@ paso1.onclick = function()
    if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && (($('#cp').val() != "") && (!isNaN($('#cp').val()))) ){
      div2.style.display = "block";
      div1.style.display = "none";
-     $("#img1").attr("src","img/data_enterprise.png");
-     $("#img2").attr("src","img/gps_enterpriseFocus.png");
+     $("#img1").attr("src","modulos/crear_empresa/img/data_enterprise.png");
+     $("#img2").attr("src","modulos/crear_empresa/img/gps_enterpriseFocus.png");
      $('#bandPaso1').val(1);
    }
  }
@@ -94,8 +94,8 @@ paso2.onclick = function()
    if( $('#lat').val() != "" && $('#lng').val() != "" ){
      div3.style.display = "block";
      div2.style.display = "none";
-     $("#img2").attr("src","img/gps_enterprise.png");
-     $("#img3").attr("src","img/upload_enterpriseFocus.png");
+     $("#img2").attr("src","modulos/crear_empresa/img/gps_enterprise.png");
+     $("#img3").attr("src","modulos/crear_empresa/img/upload_enterpriseFocus.png");
    }
  }
 paso3.onclick = function()
@@ -105,7 +105,7 @@ paso3.onclick = function()
 
    if (puntuacion!=0 && !isNaN(puntuacion)) {
     alert('Gracias por su colaboracion.');
-    window.location.href = "../../index_vista2.php";
+    window.location.href = "index_vista2.php";
     // window.location.href = "../../index_vista2.php?lugar=&trabajo=null";
     }
  }
@@ -122,33 +122,6 @@ paso3.onclick = function()
 
   });
 
-  // $('.filtro_estrella').mouseover(function(){
-  //   var id_estrella = $(this).attr('id');
-  //   id_estrella = id_estrella.substr(16);
-  //
-  //   for(var i=0;i<=id_estrella;i++){
-  //     $('#filtro_estrella_'+i).attr('src','../../image/estrella_rellenada.png');
-  //   }
-  //
-  // });
-  // $('.filtro_estrella').mouseout(function(){
-  //
-  //   for(var i=0;i<5;i++){
-  //     $('#filtro_estrella_'+i).attr('src','../../image/estrella_vacia.png');
-  //   }
-  //
-  // });
-  // $('.filtro_estrella').click(function(){
-  //   var id_estrella = $(this).attr('id');
-  //   id_estrella = id_estrella.substr(16);
-  //   $('#filtro_estrella_'+id_estrella).attr('src','../../image/estrella_rellenada.png');
-  //
-  //   var valor = parseInt(id_estrella)+1;
-  //
-  //   $('#estrella').attr('value', valor);
-  //
-  //
-  // })
 
   // Estrellas del comentario
 
@@ -161,7 +134,7 @@ paso3.onclick = function()
       id_estrella = id_estrella.substr(16);
 
       for(var i=1;i<=id_estrella;i++){
-        $('#filtro_estrella_'+i).attr('src','../../image/estrella_rellenada.png');
+        $('#filtro_estrella_'+i).attr('src','image/estrella_rellenada.png');
       }
     }
 
@@ -170,7 +143,7 @@ paso3.onclick = function()
   $('.filtro_estrella').mouseout(function(){
     if(!clickeado){
       for(var i=1;i<=5;i++){
-        $('#filtro_estrella_'+i).attr('src','../../image/estrella_vacia.png');
+        $('#filtro_estrella_'+i).attr('src','image/estrella_vacia.png');
       }
     }
 
@@ -186,11 +159,11 @@ paso3.onclick = function()
     $('#estrella').val(id_estrella);
 
     for(var i=0;i<=id_estrella;i++){
-      $('#filtro_estrella_'+i).attr('src','../../image/estrella_rellenada.png');
+      $('#filtro_estrella_'+i).attr('src','image/estrella_rellenada.png');
     }
 
     for(var i=(parseInt(id_estrella)+parseInt(1));i<=6;i++){
-      $('#filtro_estrella_'+i).attr('src','../../image/estrella_vacia.png');
+      $('#filtro_estrella_'+i).attr('src','image/estrella_vacia.png');
     }
 
 
@@ -210,7 +183,7 @@ $('#boton3').click(function(){
 
     $.ajax({
       type:'POST',
-      url:'../crear_empresa/sql/datosCrearEmpresa.php',
+      url:'modulos/crear_empresa/sql/datosCrearEmpresa.php',
       data:{
         localidad:$('#select_localidad_crearEmp').val(),
         nombre:$('#nombre').val(),

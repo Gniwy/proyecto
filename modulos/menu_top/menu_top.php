@@ -45,7 +45,7 @@ session_start();
             Hola, <?php echo $_SESSION['nick_usuario'];?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="modulos/perfil_usuario/perfil_usuario.php">Cuenta</a>
+            <a class="dropdown-item" href="perfil_usuario.php">Cuenta</a>
             <a class="dropdown-item" href="modulos/menu_top/sql/cerrar_sesion.php">Cerrar sesion</a>
           </div>
         </li>

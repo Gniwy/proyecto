@@ -21,11 +21,10 @@ foreach($_GET as $variable => $valor){
     <title>IReferences</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="modulos/buscador_avanzado/css/style.css">
-    <link rel="stylesheet" href="modulos/footer/css/footer.css">
-    <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css">
+    <!-- <link rel="stylesheet" href="modulos/buscador_avanzado/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="modulos/footer/css/footer.css"> -->
+    <!-- <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css"> -->
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="modulos/filtro/css/style.css">
     <link rel="stylesheet" href="css/style_vista2.css">
 
     <script src="js/jquery.js"></script>
