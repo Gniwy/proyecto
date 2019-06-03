@@ -56,11 +56,10 @@
 # menu top actualizar el usuario cuando se cambie en perfil_usuario o en administracion
 
 # menu top cuando estoy en cuenta de un usuario y le doy a cuenta te manda a otra pagina no vinculada(arreglado "Cambiar a https en el host")
-# menu top logo perfil usuario
-# login si cierras sesion en perfil_usuario te manda a cuanta no vinculada
-# mal - administracion guarda al darle a la x
-# footer - cambiar url a http
 
+# mal - administracion guarda al darle a la x
+# footer - cambiar url a https
+# boton para subir arriba
 
 
 
