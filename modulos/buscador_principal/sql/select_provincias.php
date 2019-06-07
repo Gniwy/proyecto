@@ -5,7 +5,7 @@ $sql_provincia="SELECT id, nombre FROM provincia GROUP BY nombre";
 $aux_provincia=mysqli_query($link,$sql_provincia);
 
 
-?> <option value="0" selected style="color:rgb(184, 182, 181)grey;">Provincia</option> <?php
+?> <option value="0" selected>Provincia</option> <?php
 while ($ex_provincia=mysqli_fetch_assoc($aux_provincia)) { ?>
 
   <option value="<?php echo $ex_provincia['id'];?>"><?php echo $ex_provincia['nombre'];?></option>
