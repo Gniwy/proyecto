@@ -46,7 +46,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre">Sobre IR</a></li>
-          <li><a href="#login">Login/Registro</a></li>
+          <li><a href="#registro">Login/Registro</a></li>
           <li><a href="#pricing">Comentar empresa</a></li>
           <li><a href="#team">Crear Empresa</a></li>
           <li><a href="#gallery">Gallery</a></li>
@@ -137,7 +137,7 @@
     ============================-->
     <section id="features">
 
-      <div id="login">
+      <div id="registro">
 
         <div class="container">
 
