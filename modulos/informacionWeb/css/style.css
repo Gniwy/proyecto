@@ -676,7 +676,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 346px;
   /* max-width: 100%; */
   float: right;
-  padding: 0 0 30px 30px;
+  padding: 0 0 30px 0px;
 }
 
 #advanced-features .advanced-feature-img-left {

@@ -373,19 +373,19 @@
                     </ol> -->
                     <div class="carousel-inner advanced-feature-img-right wow fadeInRight">
                       <div class="carousel-item active">
-                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="First slide">
+                        <img class="d-block img-fluid" src="img/eligempresa.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>1º Elegir empresa</h5>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="Second slide">
+                        <img class="d-block" src="img/comentar_empresa.png" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>2º Danos tu comentario</h5>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="Third slide">
+                        <img class="d-block" src="img/valorar_empresa.png" alt="Third slide">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>3º Valoración de la empresa</h5>
                         </div>
