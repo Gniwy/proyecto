@@ -129,3 +129,8 @@ jQuery(document).ready(function($) {
   // custom code
 
 });
+
+  // interval carousel
+  $('.carousel').carousel({
+    interval: 2500
+  })

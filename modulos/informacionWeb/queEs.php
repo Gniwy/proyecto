@@ -333,11 +333,27 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-1.jpg" alt="">
+                  <img class="advanced-feature-img-right wow fadeInRight" src="img/intro_comentar.png" alt="">
+                  <div class="wow fadeInLeft">
+                    <h2>Es obligatorio tener una cuenta para poder realizar un comentario.</h2>
+                    <h3>Queremos recomendar no usar nombre real, no nos hacemos cargo de cualquier represalia.</h3>
+                    <p>Una vez hayas verificado su correo y este su cuenta activada, tendra acceso a cualquier acción permitida.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="features-row section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-left" src="img/advanced-feature-3.jpg" alt="">
                   <div class="wow fadeInLeft">
                     <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
                     <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <i class="ion-ios-albums-outline"></i>
                     <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   </div>
                 </div>
@@ -349,32 +365,50 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt="">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <!-- <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol> -->
+                    <div class="carousel-inner advanced-feature-img-right wow fadeInRight">
+                      <div class="carousel-item active">
+                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>1º Elegir empresa</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>2º Danos tu comentario</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block" src="img/advanced-feature-2.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>3º Valoración de la empresa</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a> -->
+                  </div>
+                  <!-- <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt=""> -->
                   <div class="wow fadeInRight">
-                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                    <h2>1º Comentar una empresa</h2>
                     <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-duration="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a 'ver ficha' </p>
                     <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
                     <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                     <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
                     <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="features-row section-bg">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-3.jpg" alt="">
-                  <div class="wow fadeInLeft">
-                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                    <i class="ion-ios-albums-outline"></i>
-                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   </div>
                 </div>
               </div>
