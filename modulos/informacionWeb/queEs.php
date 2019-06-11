@@ -47,8 +47,8 @@
           <li class="menu-active"><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre">Sobre IR</a></li>
           <li><a href="#registro">Login/Registro</a></li>
-          <li><a href="#pricing">Comentar empresa</a></li>
-          <li><a href="#team">Crear Empresa</a></li>
+          <li><a href="#comentar">Comentar empresa</a></li>
+          <li><a href="#crear">Crear Empresa</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
@@ -148,7 +148,7 @@
                 <h3 class="section-title">Registro</h3>
                 <span class="section-divider"></span>
                 <p class="section-description">
-                  Esta web puede moverte libremente sin necesidad de registro,<br>
+                  En esta web puedes moverte libremente sin necesidad de registro,<br>
                   pero claro el registrarse tiene sus ventajas. Como pueden ser:
                 </p>
               </div>
@@ -314,102 +314,74 @@
       </div>
     </section><!-- #more-features -->
 
-    <!--==========================
-      Clients
-    ============================-->
-    <section id="clients">
-      <div class="container">
-
-        <div class="row wow fadeInUp">
-
-          <div class="col-md-2">
-            <img src="img/clients/client-1.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-2.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-3.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-4.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-5.png" alt="">
-          </div>
-
-          <div class="col-md-2">
-            <img src="img/clients/client-6.png" alt="">
-          </div>
-
-        </div>
-      </div>
-    </section><!-- #more-features -->
 
     <!--==========================
       Pricing Section
     ============================-->
-    <section id="pricing" class="section-bg">
-      <div class="container">
+    <section id="advanced-features" class="section-bg">
+      <div id="comentar">
 
-        <div class="section-header">
-          <h3 class="section-title">Pricing</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
+        <div class="container">
 
-        <div class="row">
+          <div class="section-header">
+            <h3 class="section-title">Como comentar una empresa</h3>
+            <span class="section-divider"></span>
+            <p class="section-description">Ahora te explicamos el proceso para poder comentar en las empresas de nuestra base de datos.</p>
+          </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="box wow fadeInLeft">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> month</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="get-started-btn">Get Started</a>
+          <div class="features-row section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-1.jpg" alt="">
+                  <div class="wow fadeInLeft">
+                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="box featured wow fadeInUp">
-              <h3>Business</h3>
-              <h4><sup>$</sup>29<span> month</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="get-started-btn">Get Started</a>
+          <div class="features-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt="">
+                  <div class="wow fadeInRight">
+                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                    <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                    <p class="wow fadeInRight" data-wow-duration="0.5s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                    <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                    <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="box wow fadeInRight">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>49<span> month</span></h4>
-              <ul>
-                <li><i class="ion-android-checkmark-circle"></i> Quam adipiscing vitae proin</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nec feugiat nisl pretium</li>
-                <li><i class="ion-android-checkmark-circle"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="ion-android-checkmark-circle"></i> Pharetra massa massa ultricies</li>
-                <li><i class="ion-android-checkmark-circle"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="get-started-btn">Get Started</a>
+          <div class="features-row section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-right wow fadeInRight" src="img/advanced-feature-3.jpg" alt="">
+                  <div class="wow fadeInLeft">
+                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
+                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <i class="ion-ios-albums-outline"></i>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-        </div>
+
       </div>
     </section><!-- #pricing -->
 
@@ -490,68 +462,72 @@
       Our Team Section
     ============================-->
     <section id="team" class="section-bg">
-      <div class="container">
-        <div class="section-header">
-          <h3 class="section-title">Our Team</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-        <div class="row wow fadeInUp">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-1.jpg" alt=""></div>
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
+      <div id="crear">
+
+        <div class="container">
+          <div class="section-header">
+            <h3 class="section-title">Our Team</h3>
+            <span class="section-divider"></span>
+            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          </div>
+          <div class="row wow fadeInUp">
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
+                <div class="pic"><img src="img/team/team-1.jpg" alt=""></div>
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
+                <div class="pic"><img src="img/team/team-2.jpg" alt=""></div>
+                <h4>Sarah Jhinson</h4>
+                <span>Product Manager</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
+                <div class="pic"><img src="img/team/team-3.jpg" alt=""></div>
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
+                <div class="pic"><img src="img/team/team-4.jpg" alt=""></div>
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-2.jpg" alt=""></div>
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-3.jpg" alt=""></div>
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team/team-4.jpg" alt=""></div>
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
