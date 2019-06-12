@@ -389,11 +389,11 @@
                   <div class="wow fadeInRight">
                     <h2>Comentar una empresa</h2>
                     <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a <b>'Ver Ficha'</b> </p>
+                    <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier empresa, solo debemos de elegir una e ir a <b>'Ver Ficha'</b> </p>
                     <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Una vez dentro, podemos dejar nuestra experiencia en el apartado <b>'Danos tu opinión sobre esta empresa'</b></p>
                     <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">ure dolor in reprehenderit in voluptate velit esse cillum.</p>
                   </div>
                 </div>
               </div>
