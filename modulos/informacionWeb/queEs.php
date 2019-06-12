@@ -487,9 +487,9 @@
         <div class="container">
 
           <div class="section-header">
-            <h3 class="section-title">Como comentar una empresa</h3>
+            <h3 class="section-title">Como crear una empresa</h3>
             <span class="section-divider"></span>
-            <p class="section-description">Ahora te explicamos el proceso para poder comentar en las empresas de nuestra base de datos.</p>
+            <p class="section-description">Ahora te explicamos el proceso para poder crear una empresa.</p>
           </div>
 
           <div class="features-row section-bg">
@@ -498,26 +498,9 @@
                 <div class="col-12">
                   <img class="advanced-feature-img-right wow fadeInRight" src="img/intro_comentar.png" alt="">
                   <div class="wow fadeInLeft">
-                    <h2>Es obligatorio tener una cuenta para poder realizar un comentario.</h2>
-                    <h3>Queremos recomendar no usar nombre real, no nos hacemos cargo de cualquier represalia.</h3>
-                    <p>Una vez hayas verificado su correo y este su cuenta activada, tendra acceso a cualquier acción permitida.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="features-row section-bg">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <img class="advanced-feature-img-left" src="img/advanced-feature-3.jpg" alt="">
-                  <div class="wow fadeInLeft">
-                    <h2>Ver comentarios</h2>
-                    <h3>Ver la experiencia de otros usuarios en empresas donde han trabajado o estan trabajando.</h3>
-                    <p>Podemos valorar una empresa atraves de los comentarios de trabajadores. Y ver la reputacion de ese empleado.</p>
-                    <i class="ion-ios-paper-outline"></i>
-                    <p>Tenemos la responsabilidad de valorar no solo la empresa, si no tambien el comentario de otros usuarios con respecto a las empresas. <br>Si no estas de acuerdo con ese comentario o valoración.</p>
+                    <h2>Es obligatorio tener una cuenta para poder crear una empresa.</h2>
+                    <h3>La empresa creada tiene que ser real, la cual pasara por una confirmación de nuestro servicio técnico.</h3>
+                    <p>Una vez que la empresa esté verificada por nuestra parte aparecerá en la web y podrá ser vista por cualquier usuario.</p>
                   </div>
                 </div>
               </div>
@@ -552,13 +535,13 @@
                     </div>
                     <!-- <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt=""> -->
                     <div class="wow fadeInRight">
-                      <h2>Comentar una empresa</h2>
+                      <h2>Crear una empresa</h2>
                       <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                      <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a <b>'Ver Ficha'</b> </p>
+                      <p class="wow fadeInRight" data-wow-duration="0.5s">Para ello deberas ir al listado de empresas, y justo debajo del buscador avanzado aparecera un boton <b>'Crear'</b>, una vez iniciado sesión.</p>
                       <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
-                      <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                      <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Una vez dentro, debera de seguir los pasos y rellenar todos los campos correspondientes.</p>
                       <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                      <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                      <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Cuando termines, apareceran todos los campos para que puedas comprobarlo, al publicarla se mandara a nuestro equipo, para verificar que este todo correcto.</p>
                     </div>
                   </div>
                 </div>
