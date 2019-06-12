@@ -393,7 +393,7 @@
                     <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
                     <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Una vez dentro, podemos dejar nuestra experiencia en el apartado <b>'Danos tu opinión sobre esta empresa'</b></p>
                     <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">ure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">A su vez debemos dejar una valoración obligatoria, de 1 a 5, de dicha experiencia.</p>
                   </div>
                 </div>
               </div>
