@@ -799,6 +799,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Pricing Section
 --------------------------------*/
+/* carousel */
+.modify{
+  bottom: 38px!important;
+}
+
 #pricing {
   padding: 60px 0 60px 0;
   overflow: hidden;

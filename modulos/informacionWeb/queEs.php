@@ -49,8 +49,6 @@
           <li><a href="#registro">Login/Registro</a></li>
           <li><a href="#comentar">Comentar empresa</a></li>
           <li><a href="#crear">Crear Empresa</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -350,11 +348,11 @@
                 <div class="col-12">
                   <img class="advanced-feature-img-left" src="img/advanced-feature-3.jpg" alt="">
                   <div class="wow fadeInLeft">
-                    <h2>Duis aute irure dolor in reprehenderit in voluptate velit esse</h2>
-                    <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                    <i class="ion-ios-albums-outline"></i>
-                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>Ver comentarios</h2>
+                    <h3>Ver la experiencia de otros usuarios en empresas donde han trabajado o estan trabajando.</h3>
+                    <p>Podemos valorar una empresa atraves de los comentarios de trabajadores. Y ver la reputacion de ese empleado.</p>
+                    <i class="ion-ios-paper-outline"></i>
+                    <p>Tenemos la responsabilidad de valorar no solo la empresa, si no tambien el comentario de otros usuarios con respecto a las empresas. <br>Si no estas de acuerdo con ese comentario o valoración.</p>
                   </div>
                 </div>
               </div>
@@ -366,11 +364,6 @@
               <div class="row">
                 <div class="col-12">
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <!-- <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol> -->
                     <div class="carousel-inner advanced-feature-img-right wow fadeInRight">
                       <div class="carousel-item active">
                         <img class="d-block img-fluid" src="img/eligempresa.jpg" alt="First slide">
@@ -380,34 +373,26 @@
                       </div>
                       <div class="carousel-item">
                         <img class="d-block" src="img/comentar_empresa.png" alt="Second slide">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>2º Danos tu comentario</h5>
+                        <div class="carousel-caption d-none d-md-block modify">
+                          <h5 style="color:black;">2º Danos tu comentario</h5>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <img class="d-block" src="img/valorar_empresa.png" alt="Third slide">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>3º Valoración de la empresa</h5>
+                        <div class="carousel-caption d-none d-md-block modify">
+                          <h5 style="color:black;">3º Valoración de la empresa</h5>
                         </div>
                       </div>
                     </div>
-                    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a> -->
                   </div>
                   <!-- <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt=""> -->
                   <div class="wow fadeInRight">
-                    <h2>1º Comentar una empresa</h2>
+                    <h2>Comentar una empresa</h2>
                     <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
-                    <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a 'ver ficha' </p>
-                    <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                    <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a <b>'Ver Ficha'</b> </p>
+                    <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
                     <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                    <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                    <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
                     <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                   </div>
                 </div>
@@ -423,7 +408,7 @@
     <!--==========================
       Frequently Asked Questions Section
     ============================-->
-    <section id="faq">
+    <!-- <section id="faq">
       <div class="container">
 
         <div class="section-header">
@@ -490,77 +475,95 @@
         </ul>
 
       </div>
-    </section><!-- #faq -->
+    </section>-->
+    <!-- #faq -->
 
     <!--==========================
       Our Team Section
     ============================-->
-    <section id="team" class="section-bg">
+    <section id="advanced-features" class="section-bg">
       <div id="crear">
 
         <div class="container">
+
           <div class="section-header">
-            <h3 class="section-title">Our Team</h3>
+            <h3 class="section-title">Como comentar una empresa</h3>
             <span class="section-divider"></span>
-            <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <p class="section-description">Ahora te explicamos el proceso para poder comentar en las empresas de nuestra base de datos.</p>
           </div>
-          <div class="row wow fadeInUp">
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic"><img src="img/team/team-1.jpg" alt=""></div>
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic"><img src="img/team/team-2.jpg" alt=""></div>
-                <h4>Sarah Jhinson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic"><img src="img/team/team-3.jpg" alt=""></div>
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="member">
-                <div class="pic"><img src="img/team/team-4.jpg" alt=""></div>
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+          <div class="features-row section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-right wow fadeInRight" src="img/intro_comentar.png" alt="">
+                  <div class="wow fadeInLeft">
+                    <h2>Es obligatorio tener una cuenta para poder realizar un comentario.</h2>
+                    <h3>Queremos recomendar no usar nombre real, no nos hacemos cargo de cualquier represalia.</h3>
+                    <p>Una vez hayas verificado su correo y este su cuenta activada, tendra acceso a cualquier acción permitida.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="features-row section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <img class="advanced-feature-img-left" src="img/advanced-feature-3.jpg" alt="">
+                  <div class="wow fadeInLeft">
+                    <h2>Ver comentarios</h2>
+                    <h3>Ver la experiencia de otros usuarios en empresas donde han trabajado o estan trabajando.</h3>
+                    <p>Podemos valorar una empresa atraves de los comentarios de trabajadores. Y ver la reputacion de ese empleado.</p>
+                    <i class="ion-ios-paper-outline"></i>
+                    <p>Tenemos la responsabilidad de valorar no solo la empresa, si no tambien el comentario de otros usuarios con respecto a las empresas. <br>Si no estas de acuerdo con ese comentario o valoración.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="features-row">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner advanced-feature-img-right wow fadeInRight">
+                        <div class="carousel-item active">
+                          <img class="d-block img-fluid" src="img/eligempresa.jpg" alt="First slide">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>1º Elegir empresa</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block" src="img/comentar_empresa.png" alt="Second slide">
+                          <div class="carousel-caption d-none d-md-block modify">
+                            <h5 style="color:black;">2º Danos tu comentario</h5>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block" src="img/valorar_empresa.png" alt="Third slide">
+                          <div class="carousel-caption d-none d-md-block modify">
+                            <h5 style="color:black;">3º Valoración de la empresa</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <img class="advanced-feature-img-left" src="img/advanced-feature-2.jpg" alt=""> -->
+                    <div class="wow fadeInRight">
+                      <h2>Comentar una empresa</h2>
+                      <i class="ion-ios-paper-outline" class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                      <p class="wow fadeInRight" data-wow-duration="0.5s">Podemos comentar cualquier solo debemos de elegir una e ir a <b>'Ver Ficha'</b> </p>
+                      <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                      <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                      <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                      <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
         </div>
 
@@ -636,7 +639,7 @@
     <!--==========================
       Contact Section
     ============================-->
-    <section id="contact">
+    <!-- <section id="contact">
       <div class="container">
         <div class="row wow fadeInUp">
 
@@ -705,28 +708,29 @@
         </div>
 
       </div>
-    </section><!-- #contact -->
+    </section> -->
+    <!-- #contact -->
 
   </main>
 
   <!--==========================
     Footer
   ============================-->
-  <footer id="footer">
+  <!-- <footer id="footer">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
             &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
           </div>
-          <div class="credits">
+          <div class="credits"> -->
             <!--
               All the links in the footer should remain intact.
               You can delete the links only if you purchased the pro version.
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
             -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -739,7 +743,8 @@
         </div>
       </div>
     </div>
-  </footer><!-- #footer -->
+  </footer> -->
+  <!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
