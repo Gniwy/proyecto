@@ -36,7 +36,7 @@ session_start();
 
     <div class="col-5 col-md-3 offset-md-8 collapse navbar-collapse contenidoPerfil" id="navbar_sesion_login">
       <ul class="navbar-nav que">
-        <li class="nav-item d-none d-md-block quEs">
+        <li class="nav-item quEs">
           <a class="nav-link" href="../informacionWeb/queEs.php" id="ir" target="_blank">Que es IR</a>
         </li>
       </ul>
