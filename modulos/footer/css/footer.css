@@ -73,4 +73,8 @@ input[type="email"]::-ms-input-placeholder, input[type="text"]::-ms-input-placeh
 }
 
 /* Query */
-/* @media(max-width:) */
+@media(max-width: 411px){
+  .footer {
+    width: 105vw;
+  }
+}

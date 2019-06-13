@@ -38,7 +38,9 @@ a#ir {
   color: #ff9600;
   background: white;
   border-radius: 3px;
+  padding: 6px;
   transition: background 1.5s;
+  text-align: center;
 }
 
 a#ir:hover{
@@ -50,7 +52,7 @@ a#ir:hover{
 #navbarDropdown{
   display: inline-block;
   max-width: fit-content;
-  padding-bottom: 3px;
+  padding: 6px;
   border: 0px solid;
   border-radius: 3px;
   border-bottom: 0px solid;
@@ -117,6 +119,11 @@ a#ir:hover{
     #titulo {
       text-align: inherit;
       margin-left: -20px;
+    }
+    ul.navbar-nav.que {
+      position: absolute;
+      right: 119px;
+      top: 3px;
     }
 }
 

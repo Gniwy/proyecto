@@ -252,6 +252,12 @@ a{
     bottom: -350px;
   }
 }
+
+@media(max-width: 411px){
+  header{
+    width: 105vw;
+  }
+}
 /* style bootstrap */
 
 .ui-widget{
