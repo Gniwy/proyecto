@@ -82,12 +82,13 @@ $aux_empresas=mysqli_query($link,$sql_empresas);
         <td> <button id="desbloquear_empresas_<?php echo $id_empresa;?>" class="fas fa-lock button_icons desbloquear_empresas" style="cursor:pointer; color:#f96800;" title="Bloqueado"></button></td>
       <?php }?>
 
-      <td> <button id="borrar_empresas_<?php echo $id_empresa;?>" class="fas fa-trash-alt button_icons borrar_empresas" style="cursor:pointer; color:red;" title="Eliminar empresas"></button> </td>
+      <td> <button id="modal_borrar_empresa_<?php echo $id_empresa;?>" class="fas fa-trash-alt button_icons btn_modal_confirmar_eliminar" data-target="#modal_confirmar_eliminar" style="cursor:pointer; color:red;" title="Eliminar empresas"></button> </td>
     </tr>
 
   <?php } ?>
 
 </table>
 
+<div id="div_modal_confirmar_eliminar"></div>
 
 <script type="text/javascript" src="js/tabla_empresas.js"></script>

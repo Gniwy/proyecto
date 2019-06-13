@@ -3,8 +3,20 @@
 
   <?php
 
+  error_reporting(0);
+
+  include_once "../conexion/conexion.php";
+
   session_start();
 
+  if($_SESSION['id_usuario']!=null){
+    $id_usuario=$_SESSION['id_usuario'];
+
+    $sql_tipo_usuario='SELECT * FROM usuario WHERE id_cliente='.$id_usuario;
+    $aux_tipo_usuario=mysqli_query($link,$sql_tipo_usuario);
+    $ex_tipo_usuario=mysqli_fetch_assoc($aux_tipo_usuario);
+    $tipo_usuario=$ex_tipo_usuario['tipo_usuario'];
+  }
   ?>
 
   <head>
@@ -30,7 +42,7 @@
   <body>
 
     <?php
-    if(!isset($_SESSION['id_usuario'])){
+    if((!isset($_SESSION['id_usuario']) || $tipo_usuario==1)){
       include ("login.php");
     }else{
       include ("principal.php");

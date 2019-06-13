@@ -54,16 +54,14 @@
 
 <!-- ''''''''''' *FALTA* '''''''''' -->
 
-# CUALQUIER USUARIO PUEDE ENTRAR EN /administracion/
-
-# menu top actualizar el usuario cuando se cambie en perfil_usuario o en administracion
+# alert al enviar mensaje (footer), maximo de nick (15)
 
 # menu top cuando estoy en cuenta de un usuario y le doy a cuenta te manda a otra pagina no vinculada(arreglado "Cambiar a https en el host")
 
-# mal - administracion guarda al darle a la x
 # footer - cambiar url a https
 # boton para subir arriba
 
+# cuenta, al cambiar el nombre de usuario, sigue mostrando el antiguo
 
 
 

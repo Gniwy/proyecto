@@ -2,6 +2,21 @@
 $(".confirmar_edicion").hide();
 $(".cancelar_edicion").hide();
 
+$('.btn_modal_confirmar_eliminar').click(function(){
+
+  // sacamos el id de la empresa
+  var id_elemento = $(this).attr('id');
+
+  // el tamano del nombre del id para solo sacar el id
+  id_elemento = id_elemento.substring(21);
+
+  $('#div_modal_confirmar_eliminar').load('modal_confirmar_eliminar.php?id_empresa='+id_elemento);
+
+  setTimeout(function(){
+    $('#modal_confirmar_eliminar').modal('toggle');
+  }, 300);
+
+});
 
 //editar empresas
 $('.editar_empresas').click(function(){
@@ -146,29 +161,6 @@ $('.desbloquear_empresas').click(function(){
       id_empresas:id_elemento
     },success:function(data){
       // Se vuelve a cargar la tabla de empresas
-      $('#contenido').load('contenido_empresas.php');
-    }
-  });
-});
-
-
-// elimina la empresa de la bbdd
-
-$('.borrar_empresas').click(function(){
-
-  // sacamos el id de la empresa
-  var id_elemento = $(this).attr('id');
-
-  // el tamano del nombre del id para solo sacar el id
-  id_elemento = id_elemento.substring(16);
-alert(id_elemento);
-  $.ajax({
-    type:"GET",
-    url:"sql/eliminar_empresas.php",
-    data:{
-      id_empresas:id_elemento
-    },success:function(data){
-      // se vuelve a cargar la tabla de empresas
       $('#contenido').load('contenido_empresas.php');
     }
   });

@@ -28,22 +28,28 @@ if($id_cliente==null || $id_cliente==''){
 
   $password_consulta=$ex_comprobar_login_2['password'];
 
+  if($id_cliente!=null){
+
   $sql_comprobar_bloqueado="SELECT * FROM cliente WHERE id=$id_cliente AND bloqueado=0";
   $aux_comprobar_bloqueado=mysqli_query($link,$sql_comprobar_bloqueado);
   $ex_comprobar_bloqueado=mysqli_fetch_assoc($aux_comprobar_bloqueado);
 
-  if($ex_comprobar_bloqueado['id']!=null){
+    if($ex_comprobar_bloqueado['id']!=null){
 
-    if($ex_comprobar_login_2['id_cliente']!=null && password_verify($password, $password_consulta)){
-      $correcto="si";
-      echo "correcto";
+      if($ex_comprobar_login_2['id_cliente']!=null && password_verify($password, $password_consulta)){
+        $correcto="si";
+        echo "correcto";
+      }else{
+        $correcto="no";
+        echo "incorrecto";
+      }
     }else{
       $correcto="no";
-      echo "incorrecto";
+      echo "bloqueado";
     }
   }else{
     $correcto="no";
-    echo "bloqueado";
+    echo "incorrecto";
   }
 }else{
 
@@ -67,7 +73,6 @@ if($id_cliente==null || $id_cliente==''){
 
 if($correcto=='si'){
   $_SESSION['id_usuario']=$id_cliente;
-  $_SESSION['nick_usuario']=$nick_usuario;
 }
 
 ?>

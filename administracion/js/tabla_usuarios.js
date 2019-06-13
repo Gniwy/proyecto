@@ -2,7 +2,6 @@
 $(".confirmar_edicion").hide();
 $(".cancelar_edicion").hide();
 
-
 //editar usuario
 $('.editar_usuario').click(function(){
 
@@ -22,6 +21,7 @@ $('.editar_usuario').click(function(){
   $('#nick_' + id_elemento).css('background', '#fbe3a3');
   $('#email_' + id_elemento).attr('contenteditable', true);
   $('#email_' + id_elemento).css('background', '#fbe3a3');
+
 
   //mostramos los botones de confirmar la edicion y de cancelar de dicha fila
   $("#confirmar_edicion_" + id_elemento).show();
@@ -72,30 +72,7 @@ $(".confirmar_edicion").click(function(){
 //cancelar edicion
 $(".cancelar_edicion").click(function(){
 
-  //sacamos el id del usuario
-  var id_elemento= $(this).attr('id');
-
-  id_elemento = id_elemento.substring(17);
-
-  //ocultamos los elementos confirmar y cancelar de dicha fila
-  $("#confirmar_edicion_" + id_elemento).hide();
-  $("#cancelar_edicion_" + id_elemento).hide();
-
-  //mostramos los botones de editar, borrar y bloquear de dicha fila nuevamente
-  $("#editar_usuario_" + id_elemento).show();
-  $("#borrar_usuario_" + id_elemento).show();
-  $("#bloquear_usuario_" + id_elemento).show();
-  $("#desbloquear_usuario_" + id_elemento).show();
-
-  //actualizamos las propiedades de las filas
-  $('.fila_usuario button').removeAttr('disabled');
-  $('.fila_usuario').css('opacity',1);
-
-  $('#nick_' + id_elemento).attr('contenteditable', false);
-  $('#email_' + id_elemento).attr('contenteditable', false);
-
-  $('#nick_' + id_elemento).css('background', 'none');
-  $('#email_' + id_elemento).css('background', 'none');
+  $('#tabla_usuarios').load('tabla_usuarios.php');
 
 });
 
