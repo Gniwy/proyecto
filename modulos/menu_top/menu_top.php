@@ -1,5 +1,7 @@
 <?php
 
+include_once "conexion/conexion.php";
+
 session_start();
 
 ?>
@@ -43,7 +45,21 @@ session_start();
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Hola, <?php echo $_SESSION['nick_usuario'];?>
+            Hola,
+            <?php
+            $usuario=$_SESSION['nick_usuario'];
+            $sql_nombre_usuario="SELECT * FROM usuario WHERE email='$usuario'";
+            $aux_nombre_usuario=mysqli_query($link, $sql_nombre_usuario);
+            $ex_nombre_usuario=mysqli_fetch_assoc($aux_nombre_usuario);
+            if($ex_nombre_usuario['id_cliente']!=null){
+              $id_usuario=$_SESSION['id_usuario'];
+              $sql_nombre_cliente="SELECT * FROM cliente WHERE id=$id_usuario";
+              $aux_nombre_cliente=mysqli_query($link, $sql_nombre_cliente);
+              $ex_nombre_cliente=mysqli_fetch_assoc($aux_nombre_cliente);
+              $usuario=$ex_nombre_cliente['nick'];
+            }
+            echo $usuario;
+            ?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="perfil_usuario.php">Cuenta</a>

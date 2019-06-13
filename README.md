@@ -49,6 +49,9 @@
 
 # Cristian - Bienvenido (que no salga el correo al logear, siempre el nick)
 
+
+
+
 <!-- ''''''''''' *FALTA* '''''''''' -->
 
 # CUALQUIER USUARIO PUEDE ENTRAR EN /administracion/

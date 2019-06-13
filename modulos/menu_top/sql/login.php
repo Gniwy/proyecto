@@ -18,7 +18,7 @@ $id_cliente=$ex_comprobar_login['id'];
 
 
 //si a insertado el nick, procedemos a comprobarlo con el correo
-if($id_cliente==null){
+if($id_cliente==null || $id_cliente==''){
   $sql_comprobar_login_2="SELECT * FROM usuario WHERE email='$nick'";
   $aux_comprobar_login_2=mysqli_query($link,$sql_comprobar_login_2);
   $ex_comprobar_login_2=mysqli_fetch_assoc($aux_comprobar_login_2);

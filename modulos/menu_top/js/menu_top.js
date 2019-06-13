@@ -153,7 +153,7 @@ $('#btn_iniciar_sesion').click(function(){
       nick:$('#nick_email_login').val(),
       password:$('#password_login').val()
     }, success:function(data){
-
+      alert(data);
       if(data=="correcto"){
         location.reload(true);
       }else if(data=="bloqueado"){
