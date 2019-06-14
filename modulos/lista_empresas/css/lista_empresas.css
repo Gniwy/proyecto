@@ -85,5 +85,8 @@ li.list-group-item.address {
   .mt-4{
     margin-top: 0 !important;
   }
+  .card_espacio_top{
+    margin-top: 15px!important;
+  }
 
 }

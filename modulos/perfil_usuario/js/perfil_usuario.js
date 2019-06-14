@@ -2,12 +2,12 @@
 // habilitar boton submit
 $("#nuevosDatos").attr('disabled','disabled');
 
-
-
+// crearmos unas variable para comprobar que estan todos los campos rellenado correctamente
 var bandNick = 0;
 var bandPwd = 0;
-var band = 0;
+var bandPwd2 = 0;
 var terminos = 0;
+var band = 0;
 
 // check aceptarTerminos
 $("#aceptarTerminos").click(function() {
@@ -30,31 +30,51 @@ $('#newPassword').keyup(function(){
   $('#pwd_req').css('display', 'none');
 
 });
+$('#comprobarPassword').keyup(function(){
+
+  $('#pwd_req2').css('display', 'none');
+
+});
 
 
+// el nick debe ser superior a 5 e inferior a 15
 $("#nuevosDatos").click(function(){
+  // sacamos variable para manejarla mas facil (nick)
+  var nombreUser = $('#newNick').val();
 
-  if ($('#newNick').val() == "" || ( $('#newNick').val().length >= 15 && $('#newNick').val().length<5) ) {
+  if (nombreUser != '' && ( nombreUser.length < 16 || nombreUser.length >= 5) ) {
 
+    bandNick=5;
+
+  }else {
     $('#nick_req').css('display', 'block');
     bandNick=0;
-
-  }else {
-    bandNick=5;
   }
 
-  if ($('#newPassword').val() == "") {
 
+  // sacamos variables para manejarlas mas facil (pwd)
+  var contrasena       = $("#newPassword").val();
+  var confirContrasena = $("#comprobarPassword").val();
+
+  // el pwd debe ser superior a 6 caracteres
+  if ( (contrasena !='' && contrasena.length >= 6) && (confirContrasena != '')) {
+
+    if (contrasena === confirContrasena) {
+
+      bandPwd=5;
+
+    }else {
+      $('#pwd_req2').css('display', 'block');
+      bandPwd2=0;
+    }
+  }else {
     $('#pwd_req').css('display', 'block');
     bandPwd=0;
-
-  }else {
-    bandPwd=5;
-
   }
+
+
   // comprobacion parametros completados
   band = bandNick+bandPwd+terminos;
-
 
   if (band==11) {
 

@@ -40,15 +40,31 @@
         <div class="card">
           <div class="form">
             <div class="form-row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-12">
                 <label for="inputNick">Nombre/Nick</label>
-                <input type="text" class="form-control" id="newNick" value="<?php echo $_SESSION['nick_usuario']; ?>">
+
+                <?php
+
+                $id_usuario=$_SESSION['id_usuario'];
+                $sql_nombre_cliente="SELECT * FROM cliente WHERE id=$id_usuario";
+                $aux_nombre_cliente=mysqli_query($link, $sql_nombre_cliente);
+                $ex_nombre_cliente=mysqli_fetch_assoc($aux_nombre_cliente);
+                $usuario=$ex_nombre_cliente['nick'];
+
+                 ?>
+
+                <input type="text" class="form-control" id="newNick" value="<?php echo $usuario; ?>">
                 <label class="required" id="nick_req">Campo obligatorio</label>
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-12">
                 <label for="inputPassword">Contraseña</label>
                 <input type="password" class="form-control" id="newPassword" placeholder="********">
                 <label class="required" id="pwd_req">Campo obligatorio</label>
+              </div>
+              <div class="form-group col-12">
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" class="form-control" id="comprobarPassword" placeholder="********">
+                <label class="required" id="pwd_req2">Los campos no coinciden</label>
               </div>
             </div>
             <div class="form-group">

@@ -43,7 +43,7 @@ while($ex_empresas=mysqli_fetch_assoc($aux_empresas)){
       $resto_letra = substr($ex_empresas['nombre'], 1);
      ?>
 
-      <div class="col-12 col-md-4 card">
+      <div class="col-12 col-md-4 card card_espacio_top">
 
         <div class="card-body">
           <p class="nombreEmp"> <span style="color: #00B0EE;"><?php echo $primera_letra[0]; ?></span><span style="color: #F8A243;"><?php echo $resto_letra; ?></span> </p>

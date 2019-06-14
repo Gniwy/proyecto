@@ -28,3 +28,11 @@ nav{
     position: absolute;
     right: 0;
 }
+/* modal confirmacion eliminar empresa */
+.titulo_eliminacion{
+  display: block;
+  text-align: center;
+}
+.botones_eliminacion{
+  text-align: center;
+}

@@ -19,9 +19,10 @@ $('.editar_usuario').click(function(){
   $('#usuario_' + id_elemento).css('opacity',1);
   $('#nick_' + id_elemento).attr('contenteditable', true);
   $('#nick_' + id_elemento).css('background', '#fbe3a3');
+  $('#nick_' + id_elemento).css('color', 'black');
   $('#email_' + id_elemento).attr('contenteditable', true);
   $('#email_' + id_elemento).css('background', '#fbe3a3');
-
+  $('#email_' + id_elemento).css('color', 'black');
 
   //mostramos los botones de confirmar la edicion y de cancelar de dicha fila
   $("#confirmar_edicion_" + id_elemento).show();

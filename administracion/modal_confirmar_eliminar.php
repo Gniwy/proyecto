@@ -18,10 +18,10 @@ $nombre_empresa=$ex_empresa['nombre'];
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" style="color:black;">¿Estas seguro de eliminar <b><?php echo $nombre_empresa;?></b>?</h4>
+      <div class="modal-header titulo_eliminacion">
+        <h4 class="modal-title" style="color:black; text-align: center;">¿Estas seguro de eliminar <b><?php echo $nombre_empresa;?></b>?</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body botones_eliminacion">
         <button type="button" class="btn btn-danger borrar_empresa" name="button" id="borrar_empresas_<?php echo $id_empresa;?>">SI</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" name="button">NO</button>
       </div>

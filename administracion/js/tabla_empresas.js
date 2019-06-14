@@ -35,10 +35,13 @@ $('.editar_empresas').click(function(){
   $('#empresas_' + id_elemento).css('opacity',1);
   $('#nombre_' + id_elemento).attr('contenteditable', true);
   $('#nombre_' + id_elemento).css('background', '#fbe3a3');
+  $('#nombre_' + id_elemento).css('color', 'black');
   $('#calle_' + id_elemento).attr('contenteditable', true);
   $('#calle_' + id_elemento).css('background', '#fbe3a3');
+  $('#calle_' + id_elemento).css('color', 'black');
   $('#cp_' + id_elemento).attr('contenteditable', true);
   $('#cp_' + id_elemento).css('background', '#fbe3a3');
+  $('#cp_' + id_elemento).css('color', 'black');
 
   //mostramos los botones de confirmar la edicion y de cancelar de dicha fila
   $("#confirmar_edicion_" + id_elemento).show();
@@ -89,34 +92,8 @@ $(".confirmar_edicion").click(function(){
 //cancelar edicion
 $(".cancelar_edicion").click(function(){
 
-  //sacamos el id de la empresa
-  var id_elemento= $(this).attr('id');
-
-  // el tamaño del nombre del id para solo sacar su id
-  id_elemento = id_elemento.substring(17);
-
-  //ocultamos los elementos confirmar y cancelar de dicha fila
-  $("#confirmar_edicion_" + id_elemento).hide();
-  $("#cancelar_edicion_" + id_elemento).hide();
-
-  //mostramos los botones de editar, borrar y bloquear de dicha fila nuevamente
-  $("#editar_empresas_" + id_elemento).show();
-  $("#borrar_empresas_" + id_elemento).show();
-  $("#bloquear_empresas_" + id_elemento).show();
-  $("#desbloquear_empresas_" + id_elemento).show();
-
-  //actualizamos las propiedades de las filas
-  $('.fila_empresas button').removeAttr('disabled');
-  $('.fila_empresas').css('opacity',1);
-
-  $('#nombre_' + id_elemento).attr('contenteditable', false);
-  $('#calle_' + id_elemento).attr('contenteditable', false);
-  $('#cp_' + id_elemento).attr('contenteditable', false);
-
-
-  $('#nombre_' + id_elemento).css('background', 'none');
-  $('#calle_' + id_elemento).css('background', 'none');
-  $('#cp_' + id_elemento).css('background', 'none');
+  //refrescar tabla empresa
+  $('#tabla_empresas').load('tabla_empresas.php');
 
 });
 

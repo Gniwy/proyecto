@@ -467,7 +467,7 @@
             <a data-toggle="collapse" href="#faq2" class="collapsed">¿No puedo cambiar mi correo electronico? <i class="ion-android-remove"></i></a>
             <div id="faq2" class="collapse" data-parent="#faq-list">
               <p>
-                Esa opción aun no la hemos barajado, pero trabajaremos en ella.
+                Esa opción aun no la hemos barajado, pero trabajaremos en ella. De momento la unica manera que en la que puedes cambiar tu correo electronico es <a href="mailto:joe@example.com?subject=feedback" style="display:inline;font-size: 15px;">Contactenos</a>.
               </p>
             </div>
           </li>

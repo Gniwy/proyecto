@@ -21,8 +21,8 @@
 
   <head>
     <meta charset="utf-8">
-    <title></title>
-
+    <link rel="shortcut icon" href="../image/ico_logo.ico" />
+    <title>Administracion</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
