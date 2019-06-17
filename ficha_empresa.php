@@ -336,6 +336,9 @@ for ($i=0;$i<sizeof($array_comentarios);$i++)
       </div>
 
     </div>
+    
+    <!-- boton subir pagina -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Fondo menu principal -->
     <div class='ripple-background d-none d-sm-inline'>

@@ -75,6 +75,17 @@ input[type="email"]::-ms-input-placeholder, input[type="text"]::-ms-input-placeh
 /* Query */
 @media(max-width: 411px){
   .footer {
-    width: 105vw;
+    width: 100vw;
+  }
+  .footer-correo{
+    text-align: center;
+  }
+  fieldset.form-group {
+    display: contents;
+  }
+  button#btn_enviar_correo {
+    width: 89%!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

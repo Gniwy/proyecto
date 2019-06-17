@@ -24,8 +24,10 @@ foreach($_GET as $variable => $valor){
     <!-- <link rel="stylesheet" href="modulos/buscador_avanzado/css/style.css"> -->
     <!-- <link rel="stylesheet" href="modulos/footer/css/footer.css"> -->
     <!-- <link rel="stylesheet" href="modulos/buscador_principal/css/buscador_principal.css"> -->
+    <link rel="stylesheet" href="modulos/lista_empresas/css/lista_empresas.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/style_vista2.css">
+
 
     <script src="js/jquery.js"></script>
 
@@ -36,6 +38,8 @@ foreach($_GET as $variable => $valor){
     <script src="js/bootstrap.js"></script>
 
     <script type="text/javascript" src="js/index.js"></script>
+
+
 
     <!-- jQuery autocomplete (accion select_lugar) -->
     <script type="text/javascript" src="modulos/buscador_principal/js/buscador_principal.js"></script>
@@ -48,7 +52,7 @@ foreach($_GET as $variable => $valor){
     <input type="hidden" id="hidden_provincia" name="" value="<?php echo $lugarp;?>">
     <input type="hidden" id="hidden_empresa" name="" value="<?php echo $empresa;?>">
     <input type="hidden" id="hidden_lc" name="" value="<?php echo $lc;?>">
-
+    <div id="inicio_web"></div>
     <section>
       <?php include "modulos/menu_top/menu_top.php"; ?>
     </section>
@@ -67,6 +71,10 @@ foreach($_GET as $variable => $valor){
 
 
     </section>
+
+    <!-- boton subir pagina -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
     <!-- Fondo menu principal -->
     <div class='ripple-background'>
       <div class='circle xxlarge shadow1'></div>
@@ -84,5 +92,6 @@ foreach($_GET as $variable => $valor){
       $('#busqueda_vista2').load('modulos/lista_empresas/lista_empresas.php?lugarp='+$('#hidden_provincia').val()+'&empresa='+$('#hidden_empresa').val()+'&lc='+$('#hidden_lc').val());
 
     </script>
+
   </body>
 </html>

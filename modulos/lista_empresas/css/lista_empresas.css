@@ -6,11 +6,6 @@
   border: 1px solid green;
 }
 
-/* .empresa{
-  position: relative;
-  height: 120px;
-} */
-
 .image_empresa{
   position: absolute;
   right: 0;
@@ -33,10 +28,6 @@ p.nombreEmp span {
     background-color: aliceblue;
 }
 
-.filaRow div:nth-child(2){
-  /* border: 1px solid rgba(175, 169, 169, 0.75);
-  border-width: 0px 1px 0px 1px; */
-}
 .logoEmp{
   border: 1px solid #afa9a9!important;
   border-width: 0px 1px 2px 1px!important;

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <!-- newsPaper -->
-      <div class="col-12">
+      <div class="col-12 footer-correo">
         <form>
           <div class="col-12 col-sm-6">
               <input type="email" class="form-control contentForm" id="correo_cliente" placeholder="Correo">
