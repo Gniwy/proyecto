@@ -63,7 +63,7 @@ paso1.onclick = function()
      $('#zona_req').css('display', 'none');
    }
 
-   if (($('#cp').val() !='' && $('#cp').val().length >= 5) ) {
+   if (($('#cp').val() !='' && $('#cp').val().length ==5 ) ) {
 
      $('#cp_req').css('display', 'none');
      $('#comprobacion').val(0);
@@ -74,7 +74,7 @@ paso1.onclick = function()
    }
 // problema en la verificación
 
-   if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && ($('#cp').val() !='' && $('#cp').val().length >= 5) ){
+   if( ($('#nombre').val() != "") && ($('#zona').val() != "") && ($('#select_localidad_crearEmp').val() != null) && ($('#cp').val() !='' && $('#cp').val().length ==5 ) ){
      div2.style.display = "block";
      div1.style.display = "none";
      $("#img1").attr("src","modulos/crear_empresa/img/data_enterprise.png");
