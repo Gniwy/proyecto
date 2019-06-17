@@ -126,6 +126,8 @@
         <div class="borderBot" style=""></div>
       </section>
 
+      <input type="hidden" id="comprobacion" value="1">
+
 
       <!-- paso 2 UBICACION -->
       <section id="paso2" style="display: none;">
