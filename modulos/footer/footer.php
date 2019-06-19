@@ -43,17 +43,32 @@ $('#btn_enviar_correo').click(function(){
   var correo_cliente = $('#correo_cliente').val();
   var mensaje_cliente = $('#mensaje_cliente').val();
 
-  $.ajax({
-    type:'POST',
-    url:'modulos/footer/php/enviar_correo.php',
-    data:{
-      correo_cliente:correo_cliente,
-      mensaje_cliente:mensaje_cliente
-    }, success: function(data){
-      console.log(data);
+  var comprobar_email = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+;
 
+  if(mensaje_cliente!=''){
+    //comprobacion de email correcto
+    if(comprobar_email.test(correo_cliente)){
+      $.ajax({
+        type:'POST',
+        url:'modulos/footer/php/enviar_correo.php',
+        data:{
+          correo_cliente:correo_cliente,
+          mensaje_cliente:mensaje_cliente
+        }, success: function(data){
+          alert("Mensaje enviado correctamente.");
+
+        }
+      });
+    }else{
+      alert("Email introducido incorrecto.");
     }
-  });
+  }else{
+    alert("Introduce un mensaje.");
+  }
+
+
+
 
 });
 
