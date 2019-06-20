@@ -20,7 +20,7 @@ $consulta = "SELECT * FROM provincia WHERE 1 ORDER BY nombre";
 $aux_provincia = mysqli_query($link,$consulta);
 
 
-?><option value="0">Todas las Provincia</option><?php
+?><option value="0">Todas las Provincias</option><?php
 
 while($ex_provincia=mysqli_fetch_assoc($aux_provincia)){
 

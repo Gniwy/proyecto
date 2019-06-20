@@ -1,4 +1,13 @@
 <?php include ('conexion/conexion.php'); ?>
+
+<?php
+error_reporting(0);
+session_start();
+
+if( (isset($_SESSION['id_usuario'])) ){
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -226,3 +235,8 @@
 
   </body>
 </html>
+
+<?php
+}else{
+  echo "<script>window.location='https://ireferences.es'</script>";
+}?>

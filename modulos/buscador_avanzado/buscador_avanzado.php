@@ -33,7 +33,7 @@
   <?php }else{ ?>
     <div class="col-md-12 text-center">
       ¿No encuentras la empresa que buscas?
-      <a href="crear_empresa.php"><button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa"> Creala</button></a>
+      <a href="https://ireferences.es/crear_empresa.php"><button type="button" class="btn-warning btn" name="button" id="btn_modal_empresa"> Creala</button></a>
   <?php } ?>
 
   </div>

@@ -6,7 +6,7 @@ $sql_empresas="SELECT e.id, e.nombre, id_localidad, valoracion_media, e.calle, e
                                     ON e.id_localidad = l.id
                                     JOIN provincia p
                                     ON l.provincia_id = p.id
-                                    WHERE 1";
+                                    WHERE e.activo=1";
 
 if($lugarp!=null && $lugarp!=0 && $lugarp!=''){
 
